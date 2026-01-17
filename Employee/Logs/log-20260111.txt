@@ -1,0 +1,966 @@
+2026-01-11 19:24:39.289 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-11 19:24:39.621 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-11 19:24:39.623 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-11 19:24:39.709 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-11 19:24:39.711 +03:00 [INF] Hosting environment: Development
+2026-01-11 19:24:39.714 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-11 19:24:57.853 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-11 19:24:58.487 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 635.4621ms
+2026-01-11 19:24:58.504 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-11 19:24:58.515 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 10.5397ms
+2026-01-11 19:24:58.686 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-11 19:24:58.881 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 194.899ms
+2026-01-11 19:24:59.664 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-11 19:24:59.692 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.1738ms
+2026-01-11 21:33:16.237 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-11 21:33:21.347 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-11 21:33:21.349 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-11 21:33:21.600 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-11 21:33:21.603 +03:00 [INF] Hosting environment: Development
+2026-01-11 21:33:21.605 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-11 21:33:24.024 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-11 21:33:25.327 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 1307.209ms
+2026-01-11 21:33:25.442 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-11 21:33:25.544 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-11 21:33:25.603 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 159.2526ms
+2026-01-11 21:33:26.025 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 481.0653ms
+2026-01-11 21:33:26.546 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-11 21:33:26.625 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 78.3184ms
+2026-01-11 22:14:01.263 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-11 22:14:02.241 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-11 22:14:02.243 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-11 22:14:02.669 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-11 22:14:02.672 +03:00 [INF] Hosting environment: Development
+2026-01-11 22:14:02.673 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-11 22:14:10.758 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-11 22:14:11.778 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 1053.3732ms
+2026-01-11 22:14:12.349 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-11 22:14:12.363 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 13.9318ms
+2026-01-11 22:14:12.529 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-11 22:14:12.633 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 104.2303ms
+2026-01-11 22:14:13.119 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-11 22:14:13.173 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 54.2366ms
+2026-01-11 22:27:30.585 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/login - application/json 67
+2026-01-11 22:27:31.086 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-11 22:27:31.317 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EMPLOYEE.Application.Dtos.LoginDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-11 22:27:33.945 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-11 22:27:47.049 +03:00 [INF] Executed DbCommand (188ms) [Parameters=[@__normalizedEmail_0='KADESKADES77@GMAIL.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-11 22:27:48.399 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[@__userId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 22:27:48.503 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 22:27:48.713 +03:00 [INF] Executed DbCommand (51ms) [Parameters=[@__roles_0='["Admin"]' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[Name]
+FROM [RolePermissions] AS [r]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+WHERE [a].[Name] IN (
+    SELECT [r0].[value]
+    FROM OPENJSON(@__roles_0) WITH ([value] nvarchar(256) '$') AS [r0]
+)
+2026-01-11 22:27:48.944 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType19`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-11 22:27:48.997 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE) in 17665.7209ms
+2026-01-11 22:27:49.004 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-11 22:27:49.021 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/login - 200 null application/json; charset=utf-8 18435.9185ms
+2026-01-11 22:55:42.971 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-11 22:55:43.340 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-11 22:55:43.342 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-11 22:55:43.448 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-11 22:55:43.464 +03:00 [INF] Hosting environment: Development
+2026-01-11 22:55:43.466 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-11 22:55:45.902 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-11 22:55:46.822 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 920.7733ms
+2026-01-11 22:55:47.274 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-11 22:55:47.285 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 10.8647ms
+2026-01-11 22:55:47.293 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-11 22:55:47.336 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.3803ms
+2026-01-11 22:55:48.730 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-11 22:55:48.771 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 41.0255ms
+2026-01-11 22:55:51.851 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/login - application/json 68
+2026-01-11 22:55:54.380 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-11 22:55:54.447 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EMPLOYEE.Application.Dtos.LoginDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-11 22:55:58.370 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-11 22:56:00.319 +03:00 [INF] Executed DbCommand (211ms) [Parameters=[@__normalizedEmail_0='MANAGER1@COMPANY.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-11 22:56:01.252 +03:00 [INF] Executed DbCommand (118ms) [Parameters=[@__userId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 22:56:01.389 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@__userId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 22:56:02.352 +03:00 [INF] Executed DbCommand (285ms) [Parameters=[@__roles_0='["Manager"]' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[Name]
+FROM [RolePermissions] AS [r]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+WHERE [a].[Name] IN (
+    SELECT [r0].[value]
+    FROM OPENJSON(@__roles_0) WITH ([value] nvarchar(256) '$') AS [r0]
+)
+2026-01-11 22:56:02.731 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType20`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-11 22:56:02.877 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE) in 8414.5541ms
+2026-01-11 22:56:02.880 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-11 22:56:02.896 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/login - 200 null application/json; charset=utf-8 11045.4407ms
+2026-01-11 22:56:32.508 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/Departmen/all - null null
+2026-01-11 22:56:32.945 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/Departmen/all - 404 0 null 437.0502ms
+2026-01-11 22:56:33.041 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7212/api/Departmen/all, Response status code: 404
+2026-01-11 22:58:15.141 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-11 22:58:15.535 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-11 22:58:15.543 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-11 22:58:15.663 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-11 22:58:15.705 +03:00 [INF] Hosting environment: Development
+2026-01-11 22:58:15.707 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-11 22:58:15.893 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-11 22:58:16.212 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 321.392ms
+2026-01-11 22:58:16.342 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-11 22:58:16.342 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-11 22:58:16.357 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 14.1326ms
+2026-01-11 22:58:16.442 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 99.7876ms
+2026-01-11 22:58:16.630 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-11 22:58:16.673 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.1797ms
+2026-01-11 22:58:21.915 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/Departmen/all - null null
+2026-01-11 22:58:22.039 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/Departmen/all - 404 0 null 124.2419ms
+2026-01-11 22:58:22.052 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7212/api/Departmen/all, Response status code: 404
+2026-01-11 22:59:23.473 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/Department/all - null null
+2026-01-11 22:59:23.773 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.DepartmentController.GetAll (EMPLOYEE)'
+2026-01-11 22:59:23.805 +03:00 [INF] Route matched with {action = "GetAll", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller EMPLOYEE.Controllers.DepartmentController (EMPLOYEE).
+2026-01-11 22:59:24.978 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-11 22:59:26.551 +03:00 [INF] Executed DbCommand (199ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[Name], [a].[Id] AS [ManagerUserId], [a].[FirstName] + N' ' + [a].[LastName] AS [ManagerName]
+FROM [Departments] AS [d]
+INNER JOIN [AspNetUsers] AS [a] ON [d].[ManagerUserId] = [a].[Id]
+2026-01-11 22:59:26.847 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EMPLOYEE.Application.Features.Departments.DepartmentsDtos.DepartmentDto, EMPLOYEE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-11 22:59:26.933 +03:00 [INF] Executed action EMPLOYEE.Controllers.DepartmentController.GetAll (EMPLOYEE) in 3102.3597ms
+2026-01-11 22:59:26.947 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.DepartmentController.GetAll (EMPLOYEE)'
+2026-01-11 22:59:27.035 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/Department/all - 200 null application/json; charset=utf-8 3561.0695ms
+2026-01-11 23:00:47.819 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/Department/my-department - null null
+2026-01-11 23:00:47.832 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.DepartmentController.GetMyDepartment (EMPLOYEE)'
+2026-01-11 23:00:47.842 +03:00 [INF] Route matched with {action = "GetMyDepartment", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyDepartment() on controller EMPLOYEE.Controllers.DepartmentController (EMPLOYEE).
+2026-01-11 23:00:47.930 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@__managerUserId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [a].[Id] AS [ManagerUserId], [a].[FirstName] + N' ' + [a].[LastName] AS [ManagerName]
+FROM [Departments] AS [d]
+INNER JOIN [AspNetUsers] AS [a] ON [d].[ManagerUserId] = [a].[Id]
+WHERE [a].[Id] = @__managerUserId_0
+2026-01-11 23:00:47.935 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Application.Features.Departments.DepartmentsDtos.DepartmentDto'.
+2026-01-11 23:00:47.938 +03:00 [INF] Executed action EMPLOYEE.Controllers.DepartmentController.GetMyDepartment (EMPLOYEE) in 92.9234ms
+2026-01-11 23:00:47.941 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.DepartmentController.GetMyDepartment (EMPLOYEE)'
+2026-01-11 23:00:47.944 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/Department/my-department - 200 null application/json; charset=utf-8 124.7205ms
+2026-01-11 23:03:17.421 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/login - application/json 67
+2026-01-11 23:03:17.445 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-11 23:03:17.469 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EMPLOYEE.Application.Dtos.LoginDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-11 23:03:17.914 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__normalizedEmail_0='KADESKADES77@GMAIL.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-11 23:03:18.686 +03:00 [INF] Executed DbCommand (447ms) [Parameters=[@__userId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 23:03:18.709 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 23:03:18.872 +03:00 [INF] Executed DbCommand (44ms) [Parameters=[@__roles_0='["Admin"]' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[Name]
+FROM [RolePermissions] AS [r]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+WHERE [a].[Name] IN (
+    SELECT [r0].[value]
+    FROM OPENJSON(@__roles_0) WITH ([value] nvarchar(256) '$') AS [r0]
+)
+2026-01-11 23:03:18.899 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType20`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-11 23:03:18.904 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE) in 1429.3299ms
+2026-01-11 23:03:18.912 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-11 23:03:18.916 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/login - 200 null application/json; charset=utf-8 1495.4368ms
+2026-01-11 23:06:03.834 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/Department/add - application/json 86
+2026-01-11 23:06:03.841 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.DepartmentController.AddDepartment (EMPLOYEE)'
+2026-01-11 23:06:03.848 +03:00 [INF] Route matched with {action = "AddDepartment", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddDepartment(EMPLOYEE.Application.Features.Departments.DepartmentsDtos.CreateDepartmentDto) on controller EMPLOYEE.Controllers.DepartmentController (EMPLOYEE).
+2026-01-11 23:06:03.984 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2026-01-11 23:06:03.996 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 23:06:04.025 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[@__roles_0='["Admin"]' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[Name]
+FROM [RolePermissions] AS [r]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+WHERE [a].[Name] IN (
+    SELECT [r0].[value]
+    FROM OPENJSON(@__roles_0) WITH ([value] nvarchar(256) '$') AS [r0]
+)
+2026-01-11 23:06:04.073 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__managerUserId_0='b70e8d7b-ff84-49dd-81bb-3fdac7057ba6' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]
+        WHERE [d].[ManagerUserId] = @__managerUserId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-11 23:06:04.079 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-01-11 23:06:04.081 +03:00 [INF] Executed action EMPLOYEE.Controllers.DepartmentController.AddDepartment (EMPLOYEE) in 229.9793ms
+2026-01-11 23:06:04.083 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.DepartmentController.AddDepartment (EMPLOYEE)'
+2026-01-11 23:06:04.085 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/Department/add - 200 null text/plain; charset=utf-8 251.4937ms
+2026-01-11 23:07:09.469 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/Department/add - application/json 86
+2026-01-11 23:07:09.475 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.DepartmentController.AddDepartment (EMPLOYEE)'
+2026-01-11 23:07:09.476 +03:00 [INF] Route matched with {action = "AddDepartment", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddDepartment(EMPLOYEE.Application.Features.Departments.DepartmentsDtos.CreateDepartmentDto) on controller EMPLOYEE.Controllers.DepartmentController (EMPLOYEE).
+2026-01-11 23:07:09.487 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2026-01-11 23:07:09.498 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 23:07:09.536 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[@__roles_0='["Admin"]' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[Name]
+FROM [RolePermissions] AS [r]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+WHERE [a].[Name] IN (
+    SELECT [r0].[value]
+    FROM OPENJSON(@__roles_0) WITH ([value] nvarchar(256) '$') AS [r0]
+)
+2026-01-11 23:07:09.545 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__managerUserId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]
+        WHERE [d].[ManagerUserId] = @__managerUserId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-11 23:07:10.669 +03:00 [INF] Executed DbCommand (742ms) [Parameters=[@p0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Nullable = false) (Size = 450), @p1='Security' (Nullable = false) (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Departments] ([ManagerUserId], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2026-01-11 23:07:10.730 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-01-11 23:07:10.732 +03:00 [INF] Executed action EMPLOYEE.Controllers.DepartmentController.AddDepartment (EMPLOYEE) in 1253.3617ms
+2026-01-11 23:07:10.735 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.DepartmentController.AddDepartment (EMPLOYEE)'
+2026-01-11 23:07:10.737 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/Department/add - 200 null text/plain; charset=utf-8 1267.7355ms
+2026-01-11 23:08:26.824 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7212/api/Department/update/ - application/json 28
+2026-01-11 23:08:26.840 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7212/api/Department/update/ - 404 0 null 15.5623ms
+2026-01-11 23:08:26.890 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: PUT https://localhost:7212/api/Department/update/, Response status code: 404
+2026-01-11 23:09:00.549 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7212/api/Department/update/11 - application/json 28
+2026-01-11 23:09:00.553 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.DepartmentController.UpdateDepartment (EMPLOYEE)'
+2026-01-11 23:09:00.663 +03:00 [INF] Route matched with {action = "UpdateDepartment", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateDepartment(Int32, EMPLOYEE.Application.Features.Departments.DepartmentsDtos.UpdateDepartmentDto) on controller EMPLOYEE.Controllers.DepartmentController (EMPLOYEE).
+2026-01-11 23:09:00.687 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2026-01-11 23:09:00.697 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 23:09:00.732 +03:00 [INF] Executed DbCommand (31ms) [Parameters=[@__roles_0='["Admin"]' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[Name]
+FROM [RolePermissions] AS [r]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+WHERE [a].[Name] IN (
+    SELECT [r0].[value]
+    FROM OPENJSON(@__roles_0) WITH ([value] nvarchar(256) '$') AS [r0]
+)
+2026-01-11 23:09:00.746 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__departmentId_0='11'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Departments] AS [d]
+WHERE [d].[Id] = @__departmentId_0
+2026-01-11 23:09:00.853 +03:00 [INF] Executed DbCommand (97ms) [Parameters=[@p1='11', @p0='Security11' (Nullable = false) (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Departments] SET [Name] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2026-01-11 23:09:00.860 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-01-11 23:09:00.862 +03:00 [INF] Executed action EMPLOYEE.Controllers.DepartmentController.UpdateDepartment (EMPLOYEE) in 196.0038ms
+2026-01-11 23:09:00.864 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.DepartmentController.UpdateDepartment (EMPLOYEE)'
+2026-01-11 23:09:00.866 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7212/api/Department/update/11 - 200 null text/plain; charset=utf-8 316.9815ms
+2026-01-11 23:09:21.207 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7212/api/Department/update/11 - application/json 26
+2026-01-11 23:09:21.215 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.DepartmentController.UpdateDepartment (EMPLOYEE)'
+2026-01-11 23:09:21.216 +03:00 [INF] Route matched with {action = "UpdateDepartment", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateDepartment(Int32, EMPLOYEE.Application.Features.Departments.DepartmentsDtos.UpdateDepartmentDto) on controller EMPLOYEE.Controllers.DepartmentController (EMPLOYEE).
+2026-01-11 23:09:21.224 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2026-01-11 23:09:21.231 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 23:09:21.238 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__roles_0='["Admin"]' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[Name]
+FROM [RolePermissions] AS [r]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+WHERE [a].[Name] IN (
+    SELECT [r0].[value]
+    FROM OPENJSON(@__roles_0) WITH ([value] nvarchar(256) '$') AS [r0]
+)
+2026-01-11 23:09:21.246 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__departmentId_0='11'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Departments] AS [d]
+WHERE [d].[Id] = @__departmentId_0
+2026-01-11 23:09:21.252 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p1='11', @p0='Security' (Nullable = false) (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Departments] SET [Name] = @p0
+OUTPUT 1
+WHERE [Id] = @p1;
+2026-01-11 23:09:21.256 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-01-11 23:09:21.260 +03:00 [INF] Executed action EMPLOYEE.Controllers.DepartmentController.UpdateDepartment (EMPLOYEE) in 39.4482ms
+2026-01-11 23:09:21.266 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.DepartmentController.UpdateDepartment (EMPLOYEE)'
+2026-01-11 23:09:21.268 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7212/api/Department/update/11 - 200 null text/plain; charset=utf-8 61.1202ms
+2026-01-11 23:10:13.779 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/Department/my-department - null null
+2026-01-11 23:10:13.784 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.DepartmentController.GetMyDepartment (EMPLOYEE)'
+2026-01-11 23:10:13.785 +03:00 [INF] Route matched with {action = "GetMyDepartment", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyDepartment() on controller EMPLOYEE.Controllers.DepartmentController (EMPLOYEE).
+2026-01-11 23:10:13.797 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__managerUserId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[Name], [a].[Id] AS [ManagerUserId], [a].[FirstName] + N' ' + [a].[LastName] AS [ManagerName]
+FROM [Departments] AS [d]
+INNER JOIN [AspNetUsers] AS [a] ON [d].[ManagerUserId] = [a].[Id]
+WHERE [a].[Id] = @__managerUserId_0
+2026-01-11 23:10:13.800 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Application.Features.Departments.DepartmentsDtos.DepartmentDto'.
+2026-01-11 23:10:13.802 +03:00 [INF] Executed action EMPLOYEE.Controllers.DepartmentController.GetMyDepartment (EMPLOYEE) in 13.419ms
+2026-01-11 23:10:13.805 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.DepartmentController.GetMyDepartment (EMPLOYEE)'
+2026-01-11 23:10:13.806 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/Department/my-department - 200 null application/json; charset=utf-8 27.7252ms
+2026-01-11 23:10:23.162 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/Department/my-department - null null
+2026-01-11 23:10:23.167 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Manager)
+2026-01-11 23:10:23.288 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-01-11 23:10:23.290 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/Department/my-department - 403 0 null 128.1297ms
+2026-01-11 23:10:58.935 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/Department/my-department - null null
+2026-01-11 23:10:58.940 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Manager)
+2026-01-11 23:10:58.942 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2026-01-11 23:10:58.944 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/Department/my-department - 403 0 null 8.9697ms
+2026-01-11 23:11:53.878 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/Department/all - null null
+2026-01-11 23:11:53.882 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.DepartmentController.GetAll (EMPLOYEE)'
+2026-01-11 23:11:53.885 +03:00 [INF] Route matched with {action = "GetAll", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller EMPLOYEE.Controllers.DepartmentController (EMPLOYEE).
+2026-01-11 23:11:53.895 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[Name], [a].[Id] AS [ManagerUserId], [a].[FirstName] + N' ' + [a].[LastName] AS [ManagerName]
+FROM [Departments] AS [d]
+INNER JOIN [AspNetUsers] AS [a] ON [d].[ManagerUserId] = [a].[Id]
+2026-01-11 23:11:53.898 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EMPLOYEE.Application.Features.Departments.DepartmentsDtos.DepartmentDto, EMPLOYEE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-11 23:11:53.903 +03:00 [INF] Executed action EMPLOYEE.Controllers.DepartmentController.GetAll (EMPLOYEE) in 15.3885ms
+2026-01-11 23:11:53.910 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.DepartmentController.GetAll (EMPLOYEE)'
+2026-01-11 23:11:53.912 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/Department/all - 200 null application/json; charset=utf-8 33.9292ms
+2026-01-11 23:12:34.968 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/Department/change-manager - application/json 92
+2026-01-11 23:12:34.973 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2026-01-11 23:12:35.000 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2026-01-11 23:12:35.001 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/Department/change-manager - 405 0 null 33.2584ms
+2026-01-11 23:28:19.914 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-11 23:28:20.177 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-11 23:28:20.180 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-11 23:28:20.286 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-11 23:28:20.291 +03:00 [INF] Hosting environment: Development
+2026-01-11 23:28:20.293 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-11 23:28:24.608 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7212/api/Department/change-manager - application/json 92
+2026-01-11 23:28:24.785 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE)'
+2026-01-11 23:28:24.857 +03:00 [INF] Route matched with {action = "ChangeManager", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ChangeManager(EMPLOYEE.Application.Features.Departments.DepartmentsDtos.ChangeDepartmentManagerDto) on controller EMPLOYEE.Controllers.DepartmentController (EMPLOYEE).
+2026-01-11 23:28:28.371 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-11 23:28:29.637 +03:00 [INF] Executed DbCommand (53ms) [Parameters=[@__p_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2026-01-11 23:28:29.952 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 23:28:30.087 +03:00 [INF] Executed DbCommand (36ms) [Parameters=[@__roles_0='["Admin"]' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[Name]
+FROM [RolePermissions] AS [r]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+WHERE [a].[Name] IN (
+    SELECT [r0].[value]
+    FROM OPENJSON(@__roles_0) WITH ([value] nvarchar(256) '$') AS [r0]
+)
+2026-01-11 23:28:30.105 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__dto_departmentId_0='11'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Departments] AS [d]
+WHERE [d].[Id] = @__dto_departmentId_0
+2026-01-11 23:28:30.180 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__managerUserId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0ing' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]
+        WHERE [d].[ManagerUserId] = @__managerUserId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-11 23:28:31.307 +03:00 [INF] Executed action EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE) in 6407.02ms
+2026-01-11 23:28:31.386 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE)'
+2026-01-11 23:28:31.395 +03:00 [ERR] Unhandled Exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EMPLOYEE.Application.Features.Departments.DepartmentService.DepartmentService.ChangeManagerAsync(ChangeDepartmentManagerDto dto, String callerId) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Application\Features\Departments\DepartmentService\DepartmentService.cs:line 96
+   at EMPLOYEE.Controllers.DepartmentController.ChangeManager(ChangeDepartmentManagerDto dto) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\DepartmentController.cs:line 52
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2026-01-11 23:28:31.917 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7212/api/Department/change-manager - 500 null application/json; charset=utf-8 7310.9153ms
+2026-01-11 23:28:52.394 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-11 23:28:52.624 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 229.9023ms
+2026-01-11 23:28:52.708 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-11 23:28:52.720 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-11 23:28:52.745 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 36.1251ms
+2026-01-11 23:28:52.816 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 96.2407ms
+2026-01-11 23:28:52.909 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-11 23:28:52.944 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.6916ms
+2026-01-11 23:28:58.953 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7212/api/Department/change-manager - application/json 92
+2026-01-11 23:28:58.972 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE)'
+2026-01-11 23:28:58.977 +03:00 [INF] Route matched with {action = "ChangeManager", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ChangeManager(EMPLOYEE.Application.Features.Departments.DepartmentsDtos.ChangeDepartmentManagerDto) on controller EMPLOYEE.Controllers.DepartmentController (EMPLOYEE).
+2026-01-11 23:28:59.078 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2026-01-11 23:28:59.087 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 23:28:59.117 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[@__roles_0='["Admin"]' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[Name]
+FROM [RolePermissions] AS [r]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+WHERE [a].[Name] IN (
+    SELECT [r0].[value]
+    FROM OPENJSON(@__roles_0) WITH ([value] nvarchar(256) '$') AS [r0]
+)
+2026-01-11 23:28:59.122 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__dto_departmentId_0='11'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Departments] AS [d]
+WHERE [d].[Id] = @__dto_departmentId_0
+2026-01-11 23:28:59.128 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__managerUserId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0ing' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]
+        WHERE [d].[ManagerUserId] = @__managerUserId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-11 23:28:59.132 +03:00 [INF] Executed action EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE) in 152.1276ms
+2026-01-11 23:28:59.134 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE)'
+2026-01-11 23:28:59.137 +03:00 [ERR] Unhandled Exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EMPLOYEE.Application.Features.Departments.DepartmentService.DepartmentService.ChangeManagerAsync(ChangeDepartmentManagerDto dto, String callerId) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Application\Features\Departments\DepartmentService\DepartmentService.cs:line 96
+   at EMPLOYEE.Controllers.DepartmentController.ChangeManager(ChangeDepartmentManagerDto dto) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\DepartmentController.cs:line 52
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2026-01-11 23:28:59.144 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7212/api/Department/change-manager - 500 null application/json; charset=utf-8 191.5954ms
+2026-01-11 23:32:41.797 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7212/api/Department/change-manager - application/json 89
+2026-01-11 23:32:41.811 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE)'
+2026-01-11 23:32:41.813 +03:00 [INF] Route matched with {action = "ChangeManager", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ChangeManager(EMPLOYEE.Application.Features.Departments.DepartmentsDtos.ChangeDepartmentManagerDto) on controller EMPLOYEE.Controllers.DepartmentController (EMPLOYEE).
+2026-01-11 23:32:41.871 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2026-01-11 23:32:41.883 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 23:32:41.923 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[@__roles_0='["Admin"]' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[Name]
+FROM [RolePermissions] AS [r]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+WHERE [a].[Name] IN (
+    SELECT [r0].[value]
+    FROM OPENJSON(@__roles_0) WITH ([value] nvarchar(256) '$') AS [r0]
+)
+2026-01-11 23:32:41.931 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__dto_departmentId_0='11'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Departments] AS [d]
+WHERE [d].[Id] = @__dto_departmentId_0
+2026-01-11 23:32:41.938 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__managerUserId_0='d46d21cd-72df-4eec-84be-c7a2f7492d0d' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]
+        WHERE [d].[ManagerUserId] = @__managerUserId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-11 23:32:41.944 +03:00 [INF] Executed action EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE) in 128.4096ms
+2026-01-11 23:32:41.947 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE)'
+2026-01-11 23:32:41.949 +03:00 [ERR] Unhandled Exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EMPLOYEE.Application.Features.Departments.DepartmentService.DepartmentService.ChangeManagerAsync(ChangeDepartmentManagerDto dto, String callerId) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Application\Features\Departments\DepartmentService\DepartmentService.cs:line 96
+   at EMPLOYEE.Controllers.DepartmentController.ChangeManager(ChangeDepartmentManagerDto dto) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\DepartmentController.cs:line 52
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2026-01-11 23:32:41.967 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7212/api/Department/change-manager - 500 null application/json; charset=utf-8 169.4413ms
+2026-01-11 23:43:03.116 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7212/api/Department/change-manager - application/json 89
+2026-01-11 23:43:03.122 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE)'
+2026-01-11 23:43:03.123 +03:00 [INF] Route matched with {action = "ChangeManager", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ChangeManager(EMPLOYEE.Application.Features.Departments.DepartmentsDtos.ChangeDepartmentManagerDto) on controller EMPLOYEE.Controllers.DepartmentController (EMPLOYEE).
+2026-01-11 23:43:03.140 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2026-01-11 23:43:03.148 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 23:43:03.191 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[@__roles_0='["Admin"]' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[Name]
+FROM [RolePermissions] AS [r]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+WHERE [a].[Name] IN (
+    SELECT [r0].[value]
+    FROM OPENJSON(@__roles_0) WITH ([value] nvarchar(256) '$') AS [r0]
+)
+2026-01-11 23:43:03.196 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__dto_departmentId_0='11'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Departments] AS [d]
+WHERE [d].[Id] = @__dto_departmentId_0
+2026-01-11 23:43:03.202 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__managerUserId_0='d46d21cd-72df-4eec-84be-c7a2f7492d0d' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]
+        WHERE [d].[ManagerUserId] = @__managerUserId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-11 23:43:03.205 +03:00 [INF] Executed action EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE) in 77.7834ms
+2026-01-11 23:43:03.206 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE)'
+2026-01-11 23:43:03.208 +03:00 [ERR] Unhandled Exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EMPLOYEE.Application.Features.Departments.DepartmentService.DepartmentService.ChangeManagerAsync(ChangeDepartmentManagerDto dto, String callerId) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Application\Features\Departments\DepartmentService\DepartmentService.cs:line 96
+   at EMPLOYEE.Controllers.DepartmentController.ChangeManager(ChangeDepartmentManagerDto dto) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\DepartmentController.cs:line 52
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2026-01-11 23:43:03.216 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7212/api/Department/change-manager - 500 null application/json; charset=utf-8 100.1253ms
+2026-01-11 23:43:49.013 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-11 23:43:49.247 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-11 23:43:49.249 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-11 23:43:49.334 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-11 23:43:49.337 +03:00 [INF] Hosting environment: Development
+2026-01-11 23:43:49.338 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-11 23:43:50.431 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-11 23:43:50.887 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 463.2931ms
+2026-01-11 23:43:50.932 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-11 23:43:50.932 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-11 23:43:50.966 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 34.0781ms
+2026-01-11 23:43:51.201 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 268.355ms
+2026-01-11 23:43:51.652 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-11 23:43:52.103 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 451.3107ms
+2026-01-11 23:43:56.706 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7212/api/Department/change-manager - application/json 89
+2026-01-11 23:43:56.920 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE)'
+2026-01-11 23:43:56.973 +03:00 [INF] Route matched with {action = "ChangeManager", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ChangeManager(EMPLOYEE.Application.Features.Departments.DepartmentsDtos.ChangeDepartmentManagerDto) on controller EMPLOYEE.Controllers.DepartmentController (EMPLOYEE).
+2026-01-11 23:43:59.299 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-11 23:44:02.134 +03:00 [INF] Executed DbCommand (71ms) [Parameters=[@__p_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2026-01-11 23:44:02.627 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__userId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 23:44:02.845 +03:00 [INF] Executed DbCommand (52ms) [Parameters=[@__roles_0='["Admin"]' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[Name]
+FROM [RolePermissions] AS [r]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+WHERE [a].[Name] IN (
+    SELECT [r0].[value]
+    FROM OPENJSON(@__roles_0) WITH ([value] nvarchar(256) '$') AS [r0]
+)
+2026-01-11 23:44:02.864 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__dto_departmentId_0='11'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Departments] AS [d]
+WHERE [d].[Id] = @__dto_departmentId_0
+2026-01-11 23:44:03.057 +03:00 [INF] Executed DbCommand (47ms) [Parameters=[@__managerUserId_0='d46d21cd-72df-4eec-84be-c7a2f7492d0d' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]
+        WHERE [d].[ManagerUserId] = @__managerUserId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-11 23:44:03.173 +03:00 [INF] Executed action EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE) in 6166.4071ms
+2026-01-11 23:44:03.194 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE)'
+2026-01-11 23:44:03.877 +03:00 [ERR] Unhandled Exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EMPLOYEE.Application.Features.Departments.DepartmentService.DepartmentService.ChangeManagerAsync(ChangeDepartmentManagerDto dto, String callerId) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Application\Features\Departments\DepartmentService\DepartmentService.cs:line 96
+   at EMPLOYEE.Controllers.DepartmentController.ChangeManager(ChangeDepartmentManagerDto dto) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\DepartmentController.cs:line 52
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2026-01-11 23:44:04.157 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7212/api/Department/change-manager - 500 null application/json; charset=utf-8 7451.2624ms
+2026-01-11 23:50:19.673 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-11 23:50:19.923 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-11 23:50:19.926 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-11 23:50:20.032 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-11 23:50:20.035 +03:00 [INF] Hosting environment: Development
+2026-01-11 23:50:20.038 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-11 23:50:20.423 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-11 23:50:20.640 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 219.255ms
+2026-01-11 23:50:20.992 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-11 23:50:21.005 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-11 23:50:21.007 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 14.5226ms
+2026-01-11 23:50:21.101 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 96.1792ms
+2026-01-11 23:50:21.622 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-11 23:50:21.667 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 44.7768ms
+2026-01-11 23:50:22.159 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7212/api/Department/change-manager - application/json 89
+2026-01-11 23:50:22.356 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE)'
+2026-01-11 23:50:22.402 +03:00 [INF] Route matched with {action = "ChangeManager", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ChangeManager(EMPLOYEE.Application.Features.Departments.DepartmentsDtos.ChangeDepartmentManagerDto) on controller EMPLOYEE.Controllers.DepartmentController (EMPLOYEE).
+2026-01-11 23:50:23.743 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-11 23:50:25.166 +03:00 [INF] Executed DbCommand (59ms) [Parameters=[@__p_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2026-01-11 23:50:25.413 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 23:50:25.546 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__roles_0='["Admin"]' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[Name]
+FROM [RolePermissions] AS [r]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+WHERE [a].[Name] IN (
+    SELECT [r0].[value]
+    FROM OPENJSON(@__roles_0) WITH ([value] nvarchar(256) '$') AS [r0]
+)
+2026-01-11 23:50:25.916 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__dto_DepartmentId_0='11'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Departments] AS [d]
+WHERE [d].[Id] = @__dto_DepartmentId_0
+2026-01-11 23:50:25.965 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__managerUserId_0='d46d21cd-72df-4eec-84be-c7a2f7492d0d' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]
+        WHERE [d].[ManagerUserId] = @__managerUserId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-11 23:50:25.979 +03:00 [INF] Executed action EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE) in 3566.4685ms
+2026-01-11 23:50:25.982 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE)'
+2026-01-11 23:50:25.985 +03:00 [ERR] Unhandled Exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EMPLOYEE.Application.Features.Departments.DepartmentService.DepartmentService.ChangeManagerAsync(ChangeDepartmentManagerDto dto, String callerId) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Application\Features\Departments\DepartmentService\DepartmentService.cs:line 107
+   at EMPLOYEE.Controllers.DepartmentController.ChangeManager(ChangeDepartmentManagerDto dto) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\DepartmentController.cs:line 52
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2026-01-11 23:50:26.040 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7212/api/Department/change-manager - 500 null application/json; charset=utf-8 3881.6785ms
+2026-01-11 23:50:34.448 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-11 23:50:34.460 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 11.7612ms
+2026-01-11 23:50:34.529 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-11 23:50:34.538 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-11 23:50:34.544 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 14.1438ms
+2026-01-11 23:50:34.573 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.8242ms
+2026-01-11 23:50:34.674 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-11 23:50:34.756 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 81.7961ms
+2026-01-11 23:50:37.602 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7212/api/Department/change-manager - application/json 89
+2026-01-11 23:50:37.643 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE)'
+2026-01-11 23:50:37.648 +03:00 [INF] Route matched with {action = "ChangeManager", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ChangeManager(EMPLOYEE.Application.Features.Departments.DepartmentsDtos.ChangeDepartmentManagerDto) on controller EMPLOYEE.Controllers.DepartmentController (EMPLOYEE).
+2026-01-11 23:50:37.817 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2026-01-11 23:50:37.830 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 23:50:37.869 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[@__roles_0='["Admin"]' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[Name]
+FROM [RolePermissions] AS [r]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+WHERE [a].[Name] IN (
+    SELECT [r0].[value]
+    FROM OPENJSON(@__roles_0) WITH ([value] nvarchar(256) '$') AS [r0]
+)
+2026-01-11 23:50:37.876 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__dto_DepartmentId_0='11'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Departments] AS [d]
+WHERE [d].[Id] = @__dto_DepartmentId_0
+2026-01-11 23:50:37.884 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__managerUserId_0='d46d21cd-72df-4eec-84be-c7a2f7492d0d' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]
+        WHERE [d].[ManagerUserId] = @__managerUserId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-11 23:50:37.889 +03:00 [INF] Executed action EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE) in 233.6055ms
+2026-01-11 23:50:37.893 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE)'
+2026-01-11 23:50:37.895 +03:00 [ERR] Unhandled Exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EMPLOYEE.Application.Features.Departments.DepartmentService.DepartmentService.ChangeManagerAsync(ChangeDepartmentManagerDto dto, String callerId) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Application\Features\Departments\DepartmentService\DepartmentService.cs:line 107
+   at EMPLOYEE.Controllers.DepartmentController.ChangeManager(ChangeDepartmentManagerDto dto) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\DepartmentController.cs:line 52
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2026-01-11 23:50:37.906 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7212/api/Department/change-manager - 500 null application/json; charset=utf-8 303.7457ms
+2026-01-11 23:52:42.484 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-11 23:52:42.807 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-11 23:52:42.931 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-11 23:52:43.073 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-11 23:52:44.945 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-11 23:52:44.950 +03:00 [INF] Hosting environment: Development
+2026-01-11 23:52:45.010 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-11 23:52:46.241 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 1295.8487ms
+2026-01-11 23:52:46.299 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-11 23:52:46.299 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-11 23:52:46.318 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 19.2011ms
+2026-01-11 23:52:46.396 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 96.807ms
+2026-01-11 23:52:46.520 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-11 23:52:46.586 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 66.1313ms
+2026-01-11 23:53:01.531 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7212/api/Department/change-manager - application/json 89
+2026-01-11 23:53:02.363 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE)'
+2026-01-11 23:53:02.462 +03:00 [INF] Route matched with {action = "ChangeManager", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ChangeManager(EMPLOYEE.Application.Features.Departments.DepartmentsDtos.ChangeDepartmentManagerDto) on controller EMPLOYEE.Controllers.DepartmentController (EMPLOYEE).
+2026-01-11 23:53:04.994 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-11 23:53:08.242 +03:00 [INF] Executed DbCommand (588ms) [Parameters=[@__p_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2026-01-11 23:53:08.524 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 23:53:08.701 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[@__roles_0='["Admin"]' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[Name]
+FROM [RolePermissions] AS [r]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+WHERE [a].[Name] IN (
+    SELECT [r0].[value]
+    FROM OPENJSON(@__roles_0) WITH ([value] nvarchar(256) '$') AS [r0]
+)
+2026-01-11 23:53:08.717 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__dto_DepartmentId_0='11'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Departments] AS [d]
+WHERE [d].[Id] = @__dto_DepartmentId_0
+2026-01-11 23:53:08.776 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__managerUserId_0='d46d21cd-72df-4eec-84be-c7a2f7492d0d' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]
+        WHERE [d].[ManagerUserId] = @__managerUserId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-11 23:53:08.794 +03:00 [INF] Executed action EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE) in 6322.4504ms
+2026-01-11 23:53:08.800 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE)'
+2026-01-11 23:53:08.805 +03:00 [ERR] Unhandled Exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EMPLOYEE.Application.Features.Departments.DepartmentService.DepartmentService.ChangeManagerAsync(ChangeDepartmentManagerDto dto, String callerId) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Application\Features\Departments\DepartmentService\DepartmentService.cs:line 107
+   at EMPLOYEE.Controllers.DepartmentController.ChangeManager(ChangeDepartmentManagerDto dto) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\DepartmentController.cs:line 52
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2026-01-11 23:53:10.273 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7212/api/Department/change-manager - 500 null application/json; charset=utf-8 8741.4986ms
+2026-01-11 23:54:08.129 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-11 23:54:09.183 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-11 23:54:09.203 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-11 23:54:09.339 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-11 23:54:09.353 +03:00 [INF] Hosting environment: Development
+2026-01-11 23:54:09.357 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-11 23:54:09.512 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-11 23:54:09.779 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 268.5291ms
+2026-01-11 23:54:09.835 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-11 23:54:09.835 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-11 23:54:09.848 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 12.8299ms
+2026-01-11 23:54:09.901 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 65.7422ms
+2026-01-11 23:54:10.191 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-11 23:54:10.249 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 57.8752ms
+2026-01-11 23:54:11.615 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7212/api/Department/change-manager - application/json 89
+2026-01-11 23:54:11.829 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE)'
+2026-01-11 23:54:13.318 +03:00 [INF] Route matched with {action = "ChangeManager", controller = "Department"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ChangeManager(EMPLOYEE.Application.Features.Departments.DepartmentsDtos.ChangeDepartmentManagerDto) on controller EMPLOYEE.Controllers.DepartmentController (EMPLOYEE).
+2026-01-11 23:54:17.915 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-11 23:54:21.819 +03:00 [INF] Executed DbCommand (89ms) [Parameters=[@__p_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[Id] = @__p_0
+2026-01-11 23:54:22.220 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@__userId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-11 23:54:23.343 +03:00 [INF] Executed DbCommand (44ms) [Parameters=[@__roles_0='["Admin"]' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT [p].[Name]
+FROM [RolePermissions] AS [r]
+INNER JOIN [AspNetRoles] AS [a] ON [r].[RoleId] = [a].[Id]
+INNER JOIN [Permissions] AS [p] ON [r].[PermissionId] = [p].[Id]
+WHERE [a].[Name] IN (
+    SELECT [r0].[value]
+    FROM OPENJSON(@__roles_0) WITH ([value] nvarchar(256) '$') AS [r0]
+)
+2026-01-11 23:54:23.370 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__dto_DepartmentId_0='11'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Departments] AS [d]
+WHERE [d].[Id] = @__dto_DepartmentId_0
+2026-01-11 23:54:23.456 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__managerUserId_0='d46d21cd-72df-4eec-84be-c7a2f7492d0d' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Departments] AS [d]
+        WHERE [d].[ManagerUserId] = @__managerUserId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-11 23:54:23.476 +03:00 [INF] Executed action EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE) in 9559.0543ms
+2026-01-11 23:54:23.479 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.DepartmentController.ChangeManager (EMPLOYEE)'
+2026-01-11 23:54:23.487 +03:00 [ERR] Unhandled Exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EMPLOYEE.Application.Features.Departments.DepartmentService.DepartmentService.ChangeManagerAsync(ChangeDepartmentManagerDto dto, String callerId) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Application\Features\Departments\DepartmentService\DepartmentService.cs:line 107
+   at EMPLOYEE.Controllers.DepartmentController.ChangeManager(ChangeDepartmentManagerDto dto) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\DepartmentController.cs:line 52
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2026-01-11 23:54:23.686 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7212/api/Department/change-manager - 500 null application/json; charset=utf-8 12072.211ms
+2026-01-11 23:55:43.959 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-11 23:55:44.277 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-11 23:55:44.283 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-11 23:55:44.824 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-11 23:55:45.002 +03:00 [INF] Hosting environment: Development
+2026-01-11 23:55:45.992 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-11 23:55:46.050 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-11 23:55:47.062 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 1070.6087ms
+2026-01-11 23:55:47.612 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-11 23:55:47.626 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 13.4065ms
+2026-01-11 23:55:47.939 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-11 23:55:47.996 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.647ms
+2026-01-11 23:55:50.216 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-11 23:55:50.273 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 56.7114ms

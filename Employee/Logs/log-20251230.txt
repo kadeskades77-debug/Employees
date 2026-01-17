@@ -1,0 +1,1450 @@
+2025-12-30 21:32:40.687 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 21:32:40.963 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-30 21:32:40.965 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-30 21:32:41.040 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 21:32:41.042 +03:00 [INF] Hosting environment: Development
+2025-12-30 21:32:41.043 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-30 21:33:05.592 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 21:33:07.592 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 2001.6847ms
+2025-12-30 21:33:08.671 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 21:33:08.681 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 10.5707ms
+2025-12-30 21:33:09.586 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 21:33:19.129 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 9542.3172ms
+2025-12-30 21:33:25.685 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 21:33:26.189 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 504.2455ms
+2025-12-30 21:37:37.319 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 21:37:37.493 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 174.5587ms
+2025-12-30 21:37:37.606 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 21:37:37.691 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 84.7404ms
+2025-12-30 21:37:38.135 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 21:37:38.151 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.4056ms
+2025-12-30 21:37:38.922 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 21:37:38.941 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.4935ms
+2025-12-30 21:37:54.493 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/login - application/json 67
+2025-12-30 21:37:54.988 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2025-12-30 21:37:55.971 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EMPLOYEE.Dtos.LoginDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2025-12-30 21:37:59.346 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-30 21:37:59.361 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-30 21:37:59.555 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-30 21:37:59.559 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-30 21:38:37.545 +03:00 [INF] Executed DbCommand (253ms) [Parameters=[@__normalizedEmail_0='MANAGER1@COMPANY.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-12-30 21:38:39.165 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[@__userId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-12-30 21:38:39.498 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-12-30 21:38:39.583 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE) in 43594.6778ms
+2025-12-30 21:38:39.586 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2025-12-30 21:38:39.598 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/login - 200 null application/json; charset=utf-8 45105.2361ms
+2025-12-30 21:39:59.409 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------901009123473929812779112 720
+2025-12-30 21:40:00.927 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-30 21:40:00.953 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 21:40:00.991 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 35.8449ms
+2025-12-30 21:40:01.022 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-30 21:40:01.026 +03:00 [ERR] Unhandled Exception
+System.InvalidOperationException: Unable to resolve service for type 'EMPLOYEE.Application.Features.Evaluations.IEvaluationAppService' while attempting to activate 'EMPLOYEE.Controllers.EmployeeEvaluationController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method157(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2025-12-30 21:40:01.391 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 500 null application/json; charset=utf-8 1982.6128ms
+2025-12-30 21:44:43.988 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 21:44:44.967 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-30 21:44:44.969 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-30 21:44:45.072 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 21:44:45.074 +03:00 [INF] Hosting environment: Development
+2025-12-30 21:44:45.076 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-30 21:44:45.592 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 21:44:46.062 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 470.0143ms
+2025-12-30 21:44:46.109 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 21:44:46.109 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 21:44:46.126 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 17.1085ms
+2025-12-30 21:44:46.296 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 186.9569ms
+2025-12-30 21:44:46.406 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 21:44:46.432 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 26.3326ms
+2025-12-30 21:44:50.636 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------236865350747255781947585 720
+2025-12-30 21:44:50.771 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-30 21:44:50.882 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 21:44:51.049 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 159.9731ms
+2025-12-30 21:44:51.052 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-30 21:44:51.054 +03:00 [ERR] Unhandled Exception
+System.InvalidOperationException: Unable to resolve service for type 'EMPLOYEE.Application.Features.Evaluations.IEvaluationAppService' while attempting to activate 'EMPLOYEE.Controllers.EmployeeEvaluationController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2025-12-30 21:44:51.169 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 500 null application/json; charset=utf-8 532.8286ms
+2025-12-30 21:45:49.975 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 21:45:50.291 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-30 21:45:50.293 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-30 21:45:50.397 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 21:45:50.399 +03:00 [INF] Hosting environment: Development
+2025-12-30 21:45:50.401 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-30 21:45:50.801 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 21:45:51.303 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 502.6889ms
+2025-12-30 21:45:51.437 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 21:45:51.444 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 21:45:51.450 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 12.5442ms
+2025-12-30 21:45:51.517 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 73.247ms
+2025-12-30 21:45:51.772 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 21:45:51.820 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.4545ms
+2025-12-30 21:45:54.967 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------453440839955229742856652 720
+2025-12-30 21:45:55.444 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-30 21:45:55.565 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 21:45:55.837 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 261.5284ms
+2025-12-30 21:45:55.845 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-30 21:45:55.850 +03:00 [ERR] Unhandled Exception
+System.InvalidOperationException: Unable to resolve service for type 'EMPLOYEE.Application.Features.Evaluations.IEvaluationAppService' while attempting to activate 'EMPLOYEE.Controllers.EmployeeEvaluationController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2025-12-30 21:45:56.112 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 500 null application/json; charset=utf-8 1144.45ms
+2025-12-30 21:53:14.445 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 21:53:14.658 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-30 21:53:14.660 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-30 21:53:14.733 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 21:53:14.735 +03:00 [INF] Hosting environment: Development
+2025-12-30 21:53:14.737 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-30 21:53:14.981 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 21:53:15.235 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 255.689ms
+2025-12-30 21:53:15.392 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 21:53:15.400 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 21:53:15.403 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 11.5141ms
+2025-12-30 21:53:15.469 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.7898ms
+2025-12-30 21:53:15.787 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 21:53:15.824 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 36.1496ms
+2025-12-30 21:53:17.370 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------031377335696259377229765 720
+2025-12-30 21:53:17.506 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-30 21:53:17.536 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 21:53:17.729 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 150.5243ms
+2025-12-30 21:53:17.847 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-30 21:53:17.852 +03:00 [ERR] Unhandled Exception
+System.InvalidOperationException: Unable to resolve service for type 'EMPLOYEE.Application.Features.Evaluations.IEvaluationAppService' while attempting to activate 'EMPLOYEE.Controllers.EmployeeEvaluationController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2025-12-30 21:53:17.926 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 500 null application/json; charset=utf-8 556.1376ms
+2025-12-30 21:58:13.081 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 21:58:13.311 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-30 21:58:13.313 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-30 21:58:13.389 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 21:58:13.392 +03:00 [INF] Hosting environment: Development
+2025-12-30 21:58:13.394 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-30 21:58:13.851 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 21:58:14.094 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 245.3301ms
+2025-12-30 21:58:14.138 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 21:58:14.156 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 21:58:14.213 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 75.2008ms
+2025-12-30 21:58:14.303 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 147.2131ms
+2025-12-30 21:58:14.410 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 21:58:14.448 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 38.6563ms
+2025-12-30 21:59:30.403 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 21:59:30.608 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-30 21:59:30.611 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-30 21:59:30.688 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 21:59:30.691 +03:00 [INF] Hosting environment: Development
+2025-12-30 21:59:30.693 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-30 21:59:31.600 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 21:59:32.017 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 420.2109ms
+2025-12-30 21:59:32.017 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 21:59:32.017 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 21:59:32.085 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 67.2443ms
+2025-12-30 21:59:33.029 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1004.3175ms
+2025-12-30 21:59:33.123 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 21:59:33.171 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.6943ms
+2025-12-30 22:04:27.114 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 22:04:27.358 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-30 22:04:27.361 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-30 22:04:27.445 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 22:04:27.447 +03:00 [INF] Hosting environment: Development
+2025-12-30 22:04:27.448 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-30 22:04:28.954 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 22:04:29.649 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 707.312ms
+2025-12-30 22:04:29.712 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 22:04:29.712 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 22:04:29.733 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 20.9107ms
+2025-12-30 22:04:30.416 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 704.4845ms
+2025-12-30 22:04:30.764 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 22:04:30.860 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 95.9354ms
+2025-12-30 22:04:34.140 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------678622117415940066232740 720
+2025-12-30 22:04:34.280 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-30 22:04:34.377 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 22:04:38.176 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-30 22:04:38.186 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-30 22:04:38.292 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 3904.8242ms
+2025-12-30 22:04:38.295 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-30 22:04:38.298 +03:00 [ERR] Unhandled Exception
+System.InvalidOperationException: Cannot use table 'EmployeeEvaluations' for entity type 'EmployeeEvaluation' since it is being used for entity type 'EmployeeEvaluation' and potentially other entity types, but there is no linking relationship. Add a foreign key to 'EmployeeEvaluation' on the primary key properties and pointing to the primary key on another entity type mapped to 'EmployeeEvaluations'.
+   at Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.ValidateSharedTableCompatibility(IReadOnlyList`1 mappedTypes, StoreObjectIdentifier& storeObject, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.SqlServer.Infrastructure.Internal.SqlServerModelValidator.ValidateSharedTableCompatibility(IReadOnlyList`1 mappedTypes, StoreObjectIdentifier& storeObject, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.ValidateSharedTableCompatibility(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.SqlServer.Infrastructure.Internal.SqlServerModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelRuntimeInitializer.Initialize(IModel model, Boolean designTime, IDiagnosticsLogger`1 validationLogger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, ModelCreationDependencies modelCreationDependencies, Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel(Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__8_4(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_ContextServices()
+   at Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.Include[TEntity,TProperty](IQueryable`1 source, Expression`1 navigationPropertyPath)
+   at EMPLOYEE.Application.Features.Evaluations.Create.CreateEvaluationService.HandleAsync(CreateEvaluationDto dto, String callerId, Boolean isAdmin) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Application\Features\Evaluations\Create\CreateEvaluationService.cs:line 29
+   at EMPLOYEE.Controllers.EmployeeEvaluationController.Create(CreateEvaluationDto dto) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\EmployeeEvaluationController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2025-12-30 22:04:38.441 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 500 null application/json; charset=utf-8 4301.0004ms
+2025-12-30 22:52:19.475 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 22:52:19.979 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-30 22:52:19.993 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-30 22:52:20.161 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 22:52:20.164 +03:00 [INF] Hosting environment: Development
+2025-12-30 22:52:20.165 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-30 22:52:21.167 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 22:52:21.624 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 458.207ms
+2025-12-30 22:52:21.759 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 22:52:21.772 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 13.1824ms
+2025-12-30 22:52:21.790 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 22:52:21.991 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 200.4854ms
+2025-12-30 22:52:22.181 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 22:52:22.215 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.9497ms
+2025-12-30 22:52:27.522 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------666474025770302899211270 720
+2025-12-30 22:52:27.684 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-30 22:52:27.730 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 22:52:28.972 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluationRead'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-30 22:52:28.984 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-30 22:52:29.071 +03:00 [WRN] The foreign key property 'EmployeeEvaluation.EmployeeId1' was created in shadow state because a conflicting property with the simple name 'EmployeeId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-12-30 22:52:29.140 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 1401.6003ms
+2025-12-30 22:52:29.144 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-30 22:52:29.147 +03:00 [ERR] Unhandled Exception
+System.InvalidOperationException: Cannot use table 'EmployeeEvaluations' for entity type 'EmployeeEvaluation' since it is being used for entity type 'EmployeeEvaluationRead' and potentially other entity types, but there is no linking relationship. Add a foreign key to 'EmployeeEvaluation' on the primary key properties and pointing to the primary key on another entity type mapped to 'EmployeeEvaluations'.
+   at Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.ValidateSharedTableCompatibility(IReadOnlyList`1 mappedTypes, StoreObjectIdentifier& storeObject, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.SqlServer.Infrastructure.Internal.SqlServerModelValidator.ValidateSharedTableCompatibility(IReadOnlyList`1 mappedTypes, StoreObjectIdentifier& storeObject, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.ValidateSharedTableCompatibility(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.SqlServer.Infrastructure.Internal.SqlServerModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelRuntimeInitializer.Initialize(IModel model, Boolean designTime, IDiagnosticsLogger`1 validationLogger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, ModelCreationDependencies modelCreationDependencies, Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel(Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__8_4(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_ContextServices()
+   at Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.Include[TEntity,TProperty](IQueryable`1 source, Expression`1 navigationPropertyPath)
+   at EMPLOYEE.Application.Features.Evaluations.Create.CreateEvaluationService.HandleAsync(CreateEvaluationDto dto, String callerId, Boolean isAdmin) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Application\Features\Evaluations\Create\CreateEvaluationService.cs:line 29
+   at EMPLOYEE.Controllers.EmployeeEvaluationController.Create(CreateEvaluationDto dto) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\EmployeeEvaluationController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2025-12-30 22:52:29.242 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 500 null application/json; charset=utf-8 1720.0199ms
+2025-12-30 23:15:45.840 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 23:15:46.110 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-30 23:15:46.112 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-30 23:15:46.231 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 23:15:46.234 +03:00 [INF] Hosting environment: Development
+2025-12-30 23:15:46.236 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-30 23:15:46.744 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 23:15:47.220 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 475.1ms
+2025-12-30 23:15:47.297 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 23:15:47.317 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 23:15:47.356 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 59.3184ms
+2025-12-30 23:15:47.458 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 141.078ms
+2025-12-30 23:15:47.604 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 23:15:47.644 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 39.0585ms
+2025-12-30 23:15:58.121 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 23:15:58.134 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 12.8685ms
+2025-12-30 23:15:58.198 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 23:15:58.198 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 23:15:58.211 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 12.9888ms
+2025-12-30 23:15:58.233 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.2567ms
+2025-12-30 23:15:58.739 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 23:15:58.759 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.0302ms
+2025-12-30 23:16:03.214 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------981780583837547085814859 720
+2025-12-30 23:16:03.362 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-30 23:16:03.579 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 23:16:05.029 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluationRead'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-30 23:16:05.042 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-30 23:16:05.094 +03:00 [WRN] The foreign key property 'EmployeeEvaluation.EmployeeId1' was created in shadow state because a conflicting property with the simple name 'EmployeeId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-12-30 23:16:05.156 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 1567.1829ms
+2025-12-30 23:16:05.160 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-30 23:16:05.163 +03:00 [ERR] Unhandled Exception
+System.InvalidOperationException: Cannot use table 'EmployeeEvaluations' for entity type 'EmployeeEvaluation' since it is being used for entity type 'EmployeeEvaluationRead' and potentially other entity types, but there is no linking relationship. Add a foreign key to 'EmployeeEvaluation' on the primary key properties and pointing to the primary key on another entity type mapped to 'EmployeeEvaluations'.
+   at Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.ValidateSharedTableCompatibility(IReadOnlyList`1 mappedTypes, StoreObjectIdentifier& storeObject, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.SqlServer.Infrastructure.Internal.SqlServerModelValidator.ValidateSharedTableCompatibility(IReadOnlyList`1 mappedTypes, StoreObjectIdentifier& storeObject, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.ValidateSharedTableCompatibility(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.SqlServer.Infrastructure.Internal.SqlServerModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelRuntimeInitializer.Initialize(IModel model, Boolean designTime, IDiagnosticsLogger`1 validationLogger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, ModelCreationDependencies modelCreationDependencies, Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel(Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__8_4(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_ContextServices()
+   at Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.CheckState()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.Include[TEntity,TProperty](IQueryable`1 source, Expression`1 navigationPropertyPath)
+   at EMPLOYEE.Application.Features.Evaluations.Create.CreateEvaluationService.HandleAsync(CreateEvaluationDto dto, String callerId, Boolean isAdmin) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Application\Features\Evaluations\Create\CreateEvaluationService.cs:line 29
+   at EMPLOYEE.Controllers.EmployeeEvaluationController.Create(CreateEvaluationDto dto) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\EmployeeEvaluationController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2025-12-30 23:16:05.410 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 500 null application/json; charset=utf-8 2196.5879ms
+2025-12-30 23:16:46.616 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 23:16:46.895 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-30 23:16:46.900 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-30 23:16:46.979 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 23:16:46.981 +03:00 [INF] Hosting environment: Development
+2025-12-30 23:16:46.982 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-30 23:16:47.210 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 23:16:47.648 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 441.5662ms
+2025-12-30 23:16:47.717 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 23:16:47.717 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 23:16:47.734 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 17.2612ms
+2025-12-30 23:16:47.794 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 77.2972ms
+2025-12-30 23:16:47.999 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 23:16:48.051 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 52.5032ms
+2025-12-30 23:16:48.119 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------406067766399769402994385 720
+2025-12-30 23:16:48.412 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-30 23:16:48.637 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 23:16:51.534 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-30 23:16:51.585 +03:00 [WRN] The foreign key property 'EmployeeEvaluation.EmployeeId1' was created in shadow state because a conflicting property with the simple name 'EmployeeId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-12-30 23:17:11.847 +03:00 [INF] Executed DbCommand (170ms) [Parameters=[@__dto_EmployeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DepartmentId], [e].[IsActive], [e].[Position], [e].[Salary], [e].[UserId], [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Employees] AS [e]
+LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__dto_EmployeeId_0
+2025-12-30 23:17:12.284 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[@__dto_EmployeeId_0='31', @__period_Value_1='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND [e].[Period] = @__period_Value_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-30 23:17:12.433 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-12-30 23:17:12.496 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 23773.8366ms
+2025-12-30 23:17:12.540 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-30 23:17:12.648 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 400 null text/plain; charset=utf-8 24527.8113ms
+2025-12-30 23:17:40.880 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly?month=12 - null null
+2025-12-30 23:17:40.897 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-30 23:17:40.941 +03:00 [INF] Route matched with {action = "GetMyTeamEvaluations", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTeamEvaluationsAsync(System.Nullable`1[System.Int32]) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 23:17:41.373 +03:00 [ERR] Failed executing DbCommand (298ms) [Parameters=[@__callerId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450), @__year_1='2025', @__month_Value_2='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[EmployeeId1], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[ManagerId] = @__callerId_0 AND DATEPART(year, [e].[CreatedAt]) = @__year_1 AND DATEPART(month, [e].[CreatedAt]) = @__month_Value_2
+2025-12-30 23:17:41.514 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'EMPLOYEE.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'EmployeeId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:84fa1814-7667-4661-a5e5-6f111185fc8e
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'EmployeeId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:84fa1814-7667-4661-a5e5-6f111185fc8e
+Error Number:207,State:1,Class:16
+2025-12-30 23:17:41.530 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE) in 585.6889ms
+2025-12-30 23:17:41.533 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-30 23:17:41.536 +03:00 [ERR] Unhandled Exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'EmployeeId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at EMPLOYEE.Service.EmployeeEvaluationService.GetTeamEvaluationsAsync(String callerId, Boolean isAdmin, Nullable`1 month) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Service\EmployeeEvaluationService.cs:line 86
+   at EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync(Nullable`1 month) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\EmployeeEvaluationController.cs:line 82
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+ClientConnectionId:84fa1814-7667-4661-a5e5-6f111185fc8e
+Error Number:207,State:1,Class:16
+2025-12-30 23:17:41.645 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly?month=12 - 500 null application/json; charset=utf-8 764.9511ms
+2025-12-30 23:24:31.468 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/my-team - null null
+2025-12-30 23:24:31.477 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/my-team - 404 0 null 9.4826ms
+2025-12-30 23:24:31.756 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7212/api/evaluations/my-team, Response status code: 404
+2025-12-30 23:25:16.442 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/12/dashboard/yearly - null null
+2025-12-30 23:25:16.620 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE)'
+2025-12-30 23:25:16.634 +03:00 [INF] Route matched with {action = "GetEmployeeYearlyDashboard", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeYearlyDashboard(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 23:25:17.674 +03:00 [INF] Executed DbCommand (57ms) [Parameters=[@__employeeId_0='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]
+        WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-30 23:25:17.721 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__employeeId_0='12', @__callerUid_1='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[ManagerId] = @__callerUid_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-30 23:25:17.726 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE) in 1086.0628ms
+2025-12-30 23:25:17.728 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE)'
+2025-12-30 23:25:17.730 +03:00 [ERR] Unhandled Exception
+BusinessException: Not in your Team
+   at EMPLOYEE.Service.EmployeeEvaluationService.GetEmployeeYearlyDashboardAsync(Int32 employeeId, String callerUid, String callerRole) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Service\EmployeeEvaluationService.cs:line 204
+   at EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard(Int32 employeeId) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\EmployeeEvaluationController.cs:line 157
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2025-12-30 23:25:17.741 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/12/dashboard/yearly - 403 null application/json; charset=utf-8 1296.5309ms
+2025-12-30 23:25:31.913 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly - null null
+2025-12-30 23:25:31.919 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE)'
+2025-12-30 23:25:31.921 +03:00 [INF] Route matched with {action = "GetEmployeeYearlyDashboard", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeYearlyDashboard(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 23:25:31.935 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]
+        WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-30 23:25:31.943 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__employeeId_0='31', @__callerUid_1='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[ManagerId] = @__callerUid_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-30 23:25:32.849 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-01-01T00:00:00.0000000', @__end_2='2026-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:25:32.858 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-10-01T00:00:00.0000000', @__end_2='2026-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:25:32.920 +03:00 [INF] Executed DbCommand (47ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) COALESCE([a].[FirstName], N'') + N' ' + COALESCE([a].[LastName], N'') AS [Name]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0
+2025-12-30 23:25:32.925 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Dtos.EmployeeYearlyDashboardDto'.
+2025-12-30 23:25:32.975 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE) in 1051.6192ms
+2025-12-30 23:25:32.977 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE)'
+2025-12-30 23:25:32.979 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly - 200 null application/json; charset=utf-8 1066.0332ms
+2025-12-30 23:26:01.507 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/31/monthly-dashboard - null null
+2025-12-30 23:26:01.512 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/31/monthly-dashboard - 404 0 null 4.4664ms
+2025-12-30 23:26:01.517 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7212/api/evaluations/31/monthly-dashboard, Response status code: 404
+2025-12-30 23:27:20.257 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/31/dashboard/monthly - null null
+2025-12-30 23:27:20.263 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/31/dashboard/monthly - 404 0 null 5.6401ms
+2025-12-30 23:27:20.271 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7212/api/evaluations/31/dashboard/monthly, Response status code: 404
+2025-12-30 23:28:21.868 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/monthly - null null
+2025-12-30 23:28:21.874 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE)'
+2025-12-30 23:28:21.882 +03:00 [INF] Route matched with {action = "GetEmployeeMonthlyDashboard", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeMonthlyDashboard(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 23:28:21.894 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]
+        WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-30 23:28:21.905 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__employeeId_0='31', @__callerUid_1='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[ManagerId] = @__callerUid_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-30 23:28:21.918 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-01-01T00:00:00.0000000', @__end_2='2025-02-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:28:21.925 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-02-01T00:00:00.0000000', @__end_2='2025-03-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:28:21.931 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-03-01T00:00:00.0000000', @__end_2='2025-04-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:28:21.938 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-04-01T00:00:00.0000000', @__end_2='2025-05-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:28:21.944 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-05-01T00:00:00.0000000', @__end_2='2025-06-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:28:21.950 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-06-01T00:00:00.0000000', @__end_2='2025-07-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:28:21.958 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-07-01T00:00:00.0000000', @__end_2='2025-08-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:28:21.964 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-08-01T00:00:00.0000000', @__end_2='2025-09-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:28:21.968 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-09-01T00:00:00.0000000', @__end_2='2025-10-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:28:21.983 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-10-01T00:00:00.0000000', @__end_2='2025-11-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:28:21.990 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-11-01T00:00:00.0000000', @__end_2='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:28:21.996 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-12-01T00:00:00.0000000', @__end_2='2026-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:28:22.015 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[FirstName], [a].[LastName]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0
+2025-12-30 23:28:22.022 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Dtos.EmployeeEvaluationDashboardDto'.
+2025-12-30 23:28:22.094 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE) in 209.0899ms
+2025-12-30 23:28:22.096 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE)'
+2025-12-30 23:28:22.098 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/monthly - 200 null application/json; charset=utf-8 230.0219ms
+2025-12-30 23:29:47.419 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly?month=12 - null null
+2025-12-30 23:29:47.440 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-30 23:29:47.443 +03:00 [INF] Route matched with {action = "GetMyTeamEvaluations", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTeamEvaluationsAsync(System.Nullable`1[System.Int32]) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 23:29:47.462 +03:00 [ERR] Failed executing DbCommand (11ms) [Parameters=[@__callerId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450), @__year_1='2025', @__month_Value_2='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[EmployeeId1], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[ManagerId] = @__callerId_0 AND DATEPART(year, [e].[CreatedAt]) = @__year_1 AND DATEPART(month, [e].[CreatedAt]) = @__month_Value_2
+2025-12-30 23:29:47.469 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'EMPLOYEE.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'EmployeeId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:bbf20833-5636-45e4-b48a-4b7ab17fccb2
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'EmployeeId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:bbf20833-5636-45e4-b48a-4b7ab17fccb2
+Error Number:207,State:1,Class:16
+2025-12-30 23:29:47.483 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE) in 35.9464ms
+2025-12-30 23:29:47.485 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-30 23:29:47.487 +03:00 [ERR] Unhandled Exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'EmployeeId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at EMPLOYEE.Service.EmployeeEvaluationService.GetTeamEvaluationsAsync(String callerId, Boolean isAdmin, Nullable`1 month) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Service\EmployeeEvaluationService.cs:line 86
+   at EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync(Nullable`1 month) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\EmployeeEvaluationController.cs:line 82
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+ClientConnectionId:bbf20833-5636-45e4-b48a-4b7ab17fccb2
+Error Number:207,State:1,Class:16
+2025-12-30 23:29:47.504 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly?month=12 - 500 null application/json; charset=utf-8 84.5618ms
+2025-12-30 23:35:27.153 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 23:35:28.368 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-30 23:35:28.797 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-30 23:35:29.490 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 23:35:29.773 +03:00 [INF] Hosting environment: Development
+2025-12-30 23:35:29.775 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-30 23:35:30.232 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 23:35:30.242 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly?month=12 - null null
+2025-12-30 23:35:30.632 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-30 23:35:30.866 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 636.0868ms
+2025-12-30 23:35:30.946 +03:00 [INF] Route matched with {action = "GetMyTeamEvaluations", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTeamEvaluationsAsync(System.Nullable`1[System.Int32]) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 23:35:31.957 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 23:35:32.002 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 44.9258ms
+2025-12-30 23:35:32.067 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 23:35:32.150 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 82.9969ms
+2025-12-30 23:35:35.357 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 23:35:35.397 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 39.9639ms
+2025-12-30 23:35:36.098 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-30 23:35:36.478 +03:00 [WRN] The foreign key property 'EmployeeEvaluation.EmployeeId1' was created in shadow state because a conflicting property with the simple name 'EmployeeId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-12-30 23:35:44.186 +03:00 [ERR] Failed executing DbCommand (130ms) [Parameters=[@__callerId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450), @__year_1='2025', @__month_Value_2='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[EmployeeId1], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[ManagerId] = @__callerId_0 AND DATEPART(year, [e].[CreatedAt]) = @__year_1 AND DATEPART(month, [e].[CreatedAt]) = @__month_Value_2
+2025-12-30 23:35:44.305 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'EMPLOYEE.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'EmployeeId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:1bfac6c8-32da-4db3-85a7-03f21920ce2c
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'EmployeeId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:1bfac6c8-32da-4db3-85a7-03f21920ce2c
+Error Number:207,State:1,Class:16
+2025-12-30 23:35:44.414 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE) in 13196.4488ms
+2025-12-30 23:35:44.421 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-30 23:35:44.428 +03:00 [ERR] Unhandled Exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'EmployeeId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at EMPLOYEE.Service.EmployeeEvaluationService.GetTeamEvaluationsAsync(String callerId, Boolean isAdmin, Nullable`1 month) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Service\EmployeeEvaluationService.cs:line 77
+   at EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync(Nullable`1 month) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\EmployeeEvaluationController.cs:line 82
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+ClientConnectionId:1bfac6c8-32da-4db3-85a7-03f21920ce2c
+Error Number:207,State:1,Class:16
+2025-12-30 23:35:45.601 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly?month=12 - 500 null application/json; charset=utf-8 15358.8673ms
+2025-12-30 23:40:57.746 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 23:40:58.312 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-30 23:40:58.316 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-30 23:40:58.465 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 23:41:00.628 +03:00 [INF] Hosting environment: Development
+2025-12-30 23:41:00.637 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-30 23:41:00.886 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 23:41:01.345 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 464.2061ms
+2025-12-30 23:41:01.430 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 23:41:01.439 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 23:41:01.444 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 14.1525ms
+2025-12-30 23:41:01.511 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 71.6688ms
+2025-12-30 23:41:02.222 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 23:41:02.454 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 231.802ms
+2025-12-30 23:41:04.022 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly?month=12 - null null
+2025-12-30 23:41:04.180 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-30 23:41:04.227 +03:00 [INF] Route matched with {action = "GetMyTeamEvaluations", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTeamEvaluationsAsync(System.Nullable`1[System.Int32]) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 23:41:07.280 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-30 23:41:07.340 +03:00 [WRN] The foreign key property 'EmployeeEvaluation.EmployeeId1' was created in shadow state because a conflicting property with the simple name 'EmployeeId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-12-30 23:41:13.353 +03:00 [ERR] Failed executing DbCommand (196ms) [Parameters=[@__callerId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450), @__year_1='2025', @__month_Value_2='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[EmployeeId1], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[ManagerId] = @__callerId_0 AND DATEPART(year, [e].[CreatedAt]) = @__year_1 AND DATEPART(month, [e].[CreatedAt]) = @__month_Value_2
+2025-12-30 23:41:13.449 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'EMPLOYEE.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'EmployeeId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:b9a7f6ce-2a0c-47b6-8073-49f1b3a6bfaf
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'EmployeeId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:b9a7f6ce-2a0c-47b6-8073-49f1b3a6bfaf
+Error Number:207,State:1,Class:16
+2025-12-30 23:41:13.593 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE) in 9353.876ms
+2025-12-30 23:41:13.598 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-30 23:41:13.603 +03:00 [ERR] Unhandled Exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'EmployeeId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at EMPLOYEE.Service.EmployeeEvaluationService.GetTeamEvaluationsAsync(String callerId, Boolean isAdmin, Nullable`1 month) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Service\EmployeeEvaluationService.cs:line 79
+   at EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync(Nullable`1 month) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\EmployeeEvaluationController.cs:line 82
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+ClientConnectionId:b9a7f6ce-2a0c-47b6-8073-49f1b3a6bfaf
+Error Number:207,State:1,Class:16
+2025-12-30 23:41:13.856 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly?month=12 - 500 null application/json; charset=utf-8 9832.5731ms
+2025-12-30 23:41:44.612 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 23:41:44.624 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 11.6545ms
+2025-12-30 23:41:44.683 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 23:41:44.693 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 23:41:44.699 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 16.5542ms
+2025-12-30 23:41:44.723 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.6954ms
+2025-12-30 23:41:44.850 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 23:41:44.892 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 42.3692ms
+2025-12-30 23:42:03.493 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly - null null
+2025-12-30 23:42:03.506 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Manager|Admin)
+2025-12-30 23:42:03.517 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-12-30 23:42:03.519 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly - 401 0 null 25.9701ms
+2025-12-30 23:44:29.529 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 23:44:29.811 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-30 23:44:29.814 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-30 23:44:29.912 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 23:44:29.978 +03:00 [INF] Hosting environment: Development
+2025-12-30 23:44:29.980 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-30 23:44:30.421 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 23:44:30.722 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 302.0631ms
+2025-12-30 23:44:30.782 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 23:44:30.783 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 23:44:30.799 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 15.9876ms
+2025-12-30 23:44:31.646 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 864.3413ms
+2025-12-30 23:44:31.817 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 23:44:31.844 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 27.1638ms
+2025-12-30 23:44:42.485 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 23:44:42.508 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 22.501ms
+2025-12-30 23:44:42.585 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 23:44:42.586 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 23:44:42.592 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 7.0481ms
+2025-12-30 23:44:42.620 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.2973ms
+2025-12-30 23:44:42.801 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 23:44:42.862 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 61.3747ms
+2025-12-30 23:44:57.235 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/monthly - null null
+2025-12-30 23:44:57.379 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE)'
+2025-12-30 23:44:57.416 +03:00 [INF] Route matched with {action = "GetEmployeeMonthlyDashboard", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeMonthlyDashboard(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 23:44:58.531 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-30 23:44:58.579 +03:00 [WRN] The foreign key property 'EmployeeEvaluation.EmployeeId1' was created in shadow state because a conflicting property with the simple name 'EmployeeId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-12-30 23:45:00.443 +03:00 [INF] Executed DbCommand (80ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]
+        WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-30 23:45:00.508 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__employeeId_0='31', @__callerUid_1='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[ManagerId] = @__callerUid_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-30 23:45:00.666 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-01-01T00:00:00.0000000', @__end_2='2025-02-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:45:00.677 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-02-01T00:00:00.0000000', @__end_2='2025-03-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:45:00.683 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-03-01T00:00:00.0000000', @__end_2='2025-04-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:45:00.688 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-04-01T00:00:00.0000000', @__end_2='2025-05-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:45:00.693 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-05-01T00:00:00.0000000', @__end_2='2025-06-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:45:00.698 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-06-01T00:00:00.0000000', @__end_2='2025-07-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:45:00.703 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-07-01T00:00:00.0000000', @__end_2='2025-08-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:45:00.707 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-08-01T00:00:00.0000000', @__end_2='2025-09-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:45:00.711 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-09-01T00:00:00.0000000', @__end_2='2025-10-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:45:00.718 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-10-01T00:00:00.0000000', @__end_2='2025-11-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:45:00.722 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-11-01T00:00:00.0000000', @__end_2='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:45:00.726 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-12-01T00:00:00.0000000', @__end_2='2026-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:45:00.811 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[FirstName], [a].[LastName]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0
+2025-12-30 23:45:00.825 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Dtos.EmployeeEvaluationDashboardDto'.
+2025-12-30 23:45:00.884 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE) in 3439.7392ms
+2025-12-30 23:45:00.887 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE)'
+2025-12-30 23:45:00.904 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/monthly - 200 null application/json; charset=utf-8 3669.3454ms
+2025-12-30 23:45:52.758 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly - null null
+2025-12-30 23:45:52.771 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE)'
+2025-12-30 23:45:52.781 +03:00 [INF] Route matched with {action = "GetEmployeeYearlyDashboard", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeYearlyDashboard(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 23:45:52.822 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]
+        WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-30 23:45:52.831 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__callerUid_1='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[ManagerId] = @__callerUid_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-30 23:45:52.836 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-01-01T00:00:00.0000000', @__end_2='2026-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:45:52.841 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-10-01T00:00:00.0000000', @__end_2='2026-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:45:52.862 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) COALESCE([a].[FirstName], N'') + N' ' + COALESCE([a].[LastName], N'') AS [Name]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0
+2025-12-30 23:45:52.866 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Dtos.EmployeeYearlyDashboardDto'.
+2025-12-30 23:45:52.870 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE) in 85.7164ms
+2025-12-30 23:45:52.874 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE)'
+2025-12-30 23:45:52.877 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly - 200 null application/json; charset=utf-8 119.0456ms
+2025-12-30 23:46:24.942 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 23:46:25.229 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-30 23:46:25.233 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-30 23:46:25.340 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 23:46:25.341 +03:00 [INF] Hosting environment: Development
+2025-12-30 23:46:25.342 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-30 23:46:26.721 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 23:46:27.432 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly - null null
+2025-12-30 23:46:27.573 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 857.1898ms
+2025-12-30 23:46:27.653 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 23:46:27.684 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE)'
+2025-12-30 23:46:27.946 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 292.2318ms
+2025-12-30 23:46:28.044 +03:00 [INF] Route matched with {action = "GetEmployeeYearlyDashboard", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeYearlyDashboard(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 23:46:28.935 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 23:46:28.962 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 27.439ms
+2025-12-30 23:46:30.180 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 23:46:30.767 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 586.6389ms
+2025-12-30 23:46:31.545 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-30 23:46:31.617 +03:00 [WRN] The foreign key property 'EmployeeEvaluation.EmployeeId1' was created in shadow state because a conflicting property with the simple name 'EmployeeId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-12-30 23:46:39.920 +03:00 [INF] Executed DbCommand (116ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]
+        WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-30 23:46:40.056 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__employeeId_0='31', @__callerUid_1='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[ManagerId] = @__callerUid_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-30 23:46:40.373 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-01-01T00:00:00.0000000', @__end_2='2026-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:46:40.401 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-10-01T00:00:00.0000000', @__end_2='2026-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:46:40.526 +03:00 [INF] Executed DbCommand (53ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) COALESCE([a].[FirstName], N'') + N' ' + COALESCE([a].[LastName], N'') AS [Name]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0
+2025-12-30 23:46:40.551 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Dtos.EmployeeYearlyDashboardDto'.
+2025-12-30 23:46:40.663 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE) in 11912.1854ms
+2025-12-30 23:46:40.674 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE)'
+2025-12-30 23:46:40.700 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly - 200 null application/json; charset=utf-8 13268.5342ms
+2025-12-30 23:46:48.135 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/monthly - null null
+2025-12-30 23:46:48.168 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE)'
+2025-12-30 23:46:48.179 +03:00 [INF] Route matched with {action = "GetEmployeeMonthlyDashboard", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeMonthlyDashboard(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 23:46:48.228 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]
+        WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-30 23:46:48.247 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__employeeId_0='31', @__callerUid_1='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[ManagerId] = @__callerUid_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-30 23:46:48.263 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-01-01T00:00:00.0000000', @__end_2='2025-02-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:46:48.274 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-02-01T00:00:00.0000000', @__end_2='2025-03-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:46:48.281 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-03-01T00:00:00.0000000', @__end_2='2025-04-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:46:48.286 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-04-01T00:00:00.0000000', @__end_2='2025-05-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:46:48.294 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-05-01T00:00:00.0000000', @__end_2='2025-06-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:46:48.299 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-06-01T00:00:00.0000000', @__end_2='2025-07-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:46:48.307 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-07-01T00:00:00.0000000', @__end_2='2025-08-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:46:48.312 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-08-01T00:00:00.0000000', @__end_2='2025-09-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:46:48.318 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-09-01T00:00:00.0000000', @__end_2='2025-10-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:46:48.325 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-10-01T00:00:00.0000000', @__end_2='2025-11-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:46:48.331 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-11-01T00:00:00.0000000', @__end_2='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:46:48.336 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-12-01T00:00:00.0000000', @__end_2='2026-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-30 23:46:48.358 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[FirstName], [a].[LastName]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0
+2025-12-30 23:46:48.364 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Dtos.EmployeeEvaluationDashboardDto'.
+2025-12-30 23:46:48.371 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE) in 188.7091ms
+2025-12-30 23:46:48.384 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE)'
+2025-12-30 23:46:48.388 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/monthly - 200 null application/json; charset=utf-8 253.4852ms
+2025-12-30 23:47:00.587 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly?month=12 - null null
+2025-12-30 23:47:00.596 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-30 23:47:00.605 +03:00 [INF] Route matched with {action = "GetMyTeamEvaluations", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTeamEvaluationsAsync(System.Nullable`1[System.Int32]) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 23:47:01.090 +03:00 [ERR] Failed executing DbCommand (25ms) [Parameters=[@__callerId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450), @__year_1='2025', @__month_Value_2='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[EmployeeId1], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[ManagerId] = @__callerId_0 AND DATEPART(year, [e].[CreatedAt]) = @__year_1 AND DATEPART(month, [e].[CreatedAt]) = @__month_Value_2
+2025-12-30 23:47:01.273 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'EMPLOYEE.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'EmployeeId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:f06f3512-24c5-45d7-9329-06749877dbc5
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'EmployeeId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:f06f3512-24c5-45d7-9329-06749877dbc5
+Error Number:207,State:1,Class:16
+2025-12-30 23:47:01.339 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE) in 732.6343ms
+2025-12-30 23:47:01.349 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-30 23:47:01.361 +03:00 [ERR] Unhandled Exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'EmployeeId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at EMPLOYEE.Service.EmployeeEvaluationService.GetTeamEvaluationsAsync(String callerId, Boolean isAdmin, Nullable`1 month) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Service\EmployeeEvaluationService.cs:line 77
+   at EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync(Nullable`1 month) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\EmployeeEvaluationController.cs:line 82
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+ClientConnectionId:f06f3512-24c5-45d7-9329-06749877dbc5
+Error Number:207,State:1,Class:16
+2025-12-30 23:47:01.640 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly?month=12 - 500 null application/json; charset=utf-8 1053.3773ms
+2025-12-30 23:51:16.696 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-30 23:51:17.811 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-30 23:51:17.856 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-30 23:51:18.004 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-30 23:51:18.063 +03:00 [INF] Hosting environment: Development
+2025-12-30 23:51:18.065 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-30 23:51:18.643 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly?month=12 - null null
+2025-12-30 23:51:18.643 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-30 23:51:19.901 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-30 23:51:19.924 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 1285.2525ms
+2025-12-30 23:51:19.989 +03:00 [INF] Route matched with {action = "GetMyTeamEvaluations", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTeamEvaluationsAsync(System.Nullable`1[System.Int32]) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-30 23:51:21.885 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-30 23:51:21.898 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 12.8554ms
+2025-12-30 23:51:21.921 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-30 23:51:21.995 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 74.6131ms
+2025-12-30 23:51:22.727 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-30 23:51:22.773 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-30 23:51:22.958 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 184.7726ms
+2025-12-30 23:51:22.970 +03:00 [WRN] The foreign key property 'EmployeeEvaluation.EmployeeId1' was created in shadow state because a conflicting property with the simple name 'EmployeeId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-12-30 23:51:28.438 +03:00 [INF] Executed DbCommand (448ms) [Parameters=[@__callerId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450), @__year_1='2025', @__month_Value_2='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeId], COALESCE([a0].[FirstName], N'') + N' ' + COALESCE([a0].[LastName], N'') AS [EmployeeName], [e].[Attendance], [e].[Quality], [e].[Productivity], [e].[Teamwork], [e].[FinalScore], [e].[CreatedAt]
+FROM [EmployeeEvaluations] AS [e]
+INNER JOIN (
+    SELECT [e0].[Id], [e0].[UserId]
+    FROM [Employees] AS [e0]
+    WHERE [e0].[IsActive] = CAST(1 AS bit)
+) AS [t] ON [e].[EmployeeId] = [t].[Id]
+INNER JOIN [AspNetUsers] AS [a] ON [e].[ManagerId] = [a].[Id]
+LEFT JOIN [AspNetUsers] AS [a0] ON [t].[UserId] = [a0].[Id]
+WHERE [e].[ManagerId] = @__callerId_0 AND DATEPART(year, [e].[CreatedAt]) = @__year_1 AND DATEPART(month, [e].[CreatedAt]) = @__month_Value_2
+2025-12-30 23:51:28.686 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EMPLOYEE.Dtos.EmployeeEvaluationDashboardDto, EMPLOYEE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-30 23:51:28.723 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE) in 8692.705ms
+2025-12-30 23:51:28.728 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-30 23:51:28.748 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly?month=12 - 200 null application/json; charset=utf-8 10109.8964ms

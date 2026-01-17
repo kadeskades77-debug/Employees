@@ -1,0 +1,431 @@
+2025-12-31 00:18:24.981 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-31 00:18:25.263 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-31 00:18:25.266 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-31 00:18:25.372 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-31 00:18:25.419 +03:00 [INF] Hosting environment: Development
+2025-12-31 00:18:25.434 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-31 00:18:27.018 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-31 00:18:29.019 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 2003.2198ms
+2025-12-31 00:18:29.133 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-31 00:18:29.133 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-31 00:18:29.165 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 31.9788ms
+2025-12-31 00:18:29.224 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 91.7143ms
+2025-12-31 00:18:29.472 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-31 00:18:29.518 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 46.2312ms
+2025-12-31 01:42:17.473 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-31 01:42:17.678 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-31 01:42:17.680 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-31 01:42:17.971 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-31 01:42:17.977 +03:00 [INF] Hosting environment: Development
+2025-12-31 01:42:17.979 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-31 01:42:18.511 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-31 01:42:18.745 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 236.1357ms
+2025-12-31 01:42:19.039 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-31 01:42:19.054 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 14.742ms
+2025-12-31 01:42:19.221 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-31 01:42:19.355 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 134.8614ms
+2025-12-31 01:42:19.594 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-31 01:42:19.637 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 42.8127ms
+2025-12-31 22:12:12.015 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-31 22:12:12.331 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-31 22:12:12.334 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-31 22:12:12.429 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-31 22:12:12.431 +03:00 [INF] Hosting environment: Development
+2025-12-31 22:12:12.433 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-31 22:12:22.284 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-31 22:12:26.049 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 3646.8977ms
+2025-12-31 22:12:26.210 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-31 22:12:26.224 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 13.6172ms
+2025-12-31 22:12:26.917 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-31 22:12:28.115 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1197.1159ms
+2025-12-31 22:12:28.198 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-31 22:12:28.334 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 135.9362ms
+2025-12-31 22:12:29.663 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/login - application/json 67
+2025-12-31 22:12:32.943 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2025-12-31 22:12:33.445 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EMPLOYEE.Dtos.LoginDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2025-12-31 22:12:39.127 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-31 22:12:39.228 +03:00 [WRN] The foreign key property 'EmployeeEvaluation.EmployeeId1' was created in shadow state because a conflicting property with the simple name 'EmployeeId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2025-12-31 22:12:57.606 +03:00 [INF] Executed DbCommand (246ms) [Parameters=[@__normalizedEmail_0='MANAGER1@COMPANY.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-12-31 22:12:59.024 +03:00 [INF] Executed DbCommand (123ms) [Parameters=[@__userId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-12-31 22:12:59.266 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-12-31 22:12:59.436 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE) in 25981.812ms
+2025-12-31 22:12:59.440 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2025-12-31 22:12:59.457 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/login - 200 null application/json; charset=utf-8 29793.3912ms
+2025-12-31 22:13:59.532 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------034170017640102945269664 720
+2025-12-31 22:14:00.426 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-31 22:14:00.584 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-31 22:14:01.334 +03:00 [INF] Executed DbCommand (308ms) [Parameters=[@__dto_EmployeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DepartmentId], [e].[IsActive], [e].[Position], [e].[Salary], [e].[UserId], [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Employees] AS [e]
+LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__dto_EmployeeId_0
+2025-12-31 22:14:01.477 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__dto_EmployeeId_0='31', @__period_Value_1='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND [e].[Period] = @__period_Value_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-31 22:14:01.486 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-12-31 22:14:01.489 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 900.967ms
+2025-12-31 22:14:01.490 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-31 22:14:01.492 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 400 null text/plain; charset=utf-8 1960.6724ms
+2025-12-31 22:15:13.224 +03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------569590927905974726756729 283
+2025-12-31 22:15:13.236 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Delete (EMPLOYEE)'
+2025-12-31 22:15:13.244 +03:00 [INF] Route matched with {action = "Delete", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(EMPLOYEE.Dtos.EmployeeEvaluationByPeriodDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-31 22:15:13.401 +03:00 [ERR] Failed executing DbCommand (110ms) [Parameters=[@__dto_EmployeeId_0='31', @__dto_Period_Year_1='2025', @__dto_Period_Month_2='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[EmployeeId1], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND DATEPART(year, [e].[Period]) = @__dto_Period_Year_1 AND DATEPART(month, [e].[Period]) = @__dto_Period_Month_2
+2025-12-31 22:15:14.413 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'EMPLOYEE.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'EmployeeId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:726a6c93-a319-4878-9281-1056d85708dc
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'EmployeeId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:726a6c93-a319-4878-9281-1056d85708dc
+Error Number:207,State:1,Class:16
+2025-12-31 22:15:14.456 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Delete (EMPLOYEE) in 1208.718ms
+2025-12-31 22:15:14.475 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Delete (EMPLOYEE)'
+2025-12-31 22:15:14.479 +03:00 [ERR] Unhandled Exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'EmployeeId1'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at EMPLOYEE.Application.Features.Evaluations.Delete.DeleteEvaluationService.HandleAsync(EmployeeEvaluationByPeriodDto dto, String callerId, Boolean isAdmin) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Application\Features\Evaluations\Delete\DeleteEvaluationService.cs:line 26
+   at EMPLOYEE.Controllers.EmployeeEvaluationController.Delete(EmployeeEvaluationByPeriodDto dto) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\EmployeeEvaluationController.cs:line 61
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+ClientConnectionId:726a6c93-a319-4878-9281-1056d85708dc
+Error Number:207,State:1,Class:16
+2025-12-31 22:15:14.670 +03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7212/api/evaluations - 500 null application/json; charset=utf-8 1446.3553ms
+2025-12-31 22:17:38.812 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7212/api/evaluations/update?EmployeeId=31&PeriodText=2025-12&Attendance=5&Quality=4&Productivity=4&Teamwork=5&Comments=good%20jobe - null 0
+2025-12-31 22:17:38.890 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.UpdateEvaluation (EMPLOYEE)'
+2025-12-31 22:17:38.896 +03:00 [INF] Route matched with {action = "UpdateEvaluation", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateEvaluation(EMPLOYEE.Dtos.EmployeeEvaluationByPeriodDto, EMPLOYEE.Dtos.UpdateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-31 22:17:39.074 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.UpdateEvaluation (EMPLOYEE) in 174.6937ms
+2025-12-31 22:17:39.077 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.UpdateEvaluation (EMPLOYEE)'
+2025-12-31 22:17:39.079 +03:00 [ERR] Unhandled Exception
+System.ArgumentException: Invalid Period format. Use yyyy-MM.
+   at EMPLOYEE.Dtos.EmployeeEvaluationByPeriodDto.get_Period() in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Dtos\EmployeeEvaluationByPeriodDto.cs:line 13
+   at Microsoft.Extensions.Internal.PropertyHelper.CallNullSafePropertyGetter[TDeclaringType,TValue](Func`2 getter, Object target)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationEntry.get_Model()
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitChildren(IValidationStrategy strategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitComplexType(IValidationStrategy defaultStrategy)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.VisitImplementation(ModelMetadata& metadata, String& key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.Validation.ValidationVisitor.Visit(ModelMetadata metadata, String key, Object model)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ObjectModelValidator.Validate(ActionContext actionContext, ValidationStateDictionary validationState, String prefix, Object model, ModelMetadata metadata, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.EnforceBindRequiredAndValidate(ObjectModelValidator baseObjectValidator, ActionContext actionContext, ParameterDescriptor parameter, ModelMetadata metadata, ModelBindingContext modelBindingContext, ModelBindingResult modelBindingResult, Object container)
+   at Microsoft.AspNetCore.Mvc.ModelBinding.ParameterBinder.BindModelAsync(ActionContext actionContext, IModelBinder modelBinder, IValueProvider valueProvider, ParameterDescriptor parameter, ModelMetadata metadata, Object value, Object container)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerBinderDelegateProvider.<>c__DisplayClass0_0.<<CreateBinderDelegate>g__Bind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2025-12-31 22:17:39.192 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7212/api/evaluations/update?EmployeeId=31&PeriodText=2025-12&Attendance=5&Quality=4&Productivity=4&Teamwork=5&Comments=good%20jobe - 500 null application/json; charset=utf-8 379.8975ms
+2025-12-31 22:33:23.087 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-31 22:33:23.388 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-31 22:33:23.391 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-31 22:33:23.460 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-31 22:33:23.461 +03:00 [INF] Hosting environment: Development
+2025-12-31 22:33:23.463 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-31 22:33:26.863 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-31 22:33:27.766 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 905.2105ms
+2025-12-31 22:33:28.114 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-31 22:33:28.114 +03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------030856021256572744956202 283
+2025-12-31 22:33:28.130 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 15.9448ms
+2025-12-31 22:33:28.416 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-31 22:33:29.040 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 623.9543ms
+2025-12-31 22:33:29.201 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-31 22:33:29.255 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 53.6489ms
+2025-12-31 22:33:29.270 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Delete (EMPLOYEE)'
+2025-12-31 22:33:29.462 +03:00 [INF] Route matched with {action = "Delete", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(EMPLOYEE.Dtos.EmployeeEvaluationByPeriodDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-31 22:33:31.885 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-31 22:33:34.458 +03:00 [INF] Executed DbCommand (213ms) [Parameters=[@__dto_EmployeeId_0='31', @__dto_Period_Year_1='2025', @__dto_Period_Month_2='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND DATEPART(year, [e].[Period]) = @__dto_Period_Year_1 AND DATEPART(month, [e].[Period]) = @__dto_Period_Month_2
+2025-12-31 22:33:35.556 +03:00 [INF] Executed DbCommand (440ms) [Parameters=[@p0='92'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [EmployeeEvaluations]
+OUTPUT 1
+WHERE [Id] = @p0;
+2025-12-31 22:33:35.595 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-12-31 22:33:35.605 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Delete (EMPLOYEE) in 6133.8755ms
+2025-12-31 22:33:35.608 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Delete (EMPLOYEE)'
+2025-12-31 22:33:35.628 +03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7212/api/evaluations - 200 0 null 7513.7535ms
+2025-12-31 22:34:42.195 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------336099837399186705573799 720
+2025-12-31 22:34:42.222 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-31 22:34:42.240 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-31 22:34:43.435 +03:00 [INF] Executed DbCommand (88ms) [Parameters=[@__dto_EmployeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DepartmentId], [e].[IsActive], [e].[Position], [e].[Salary], [e].[UserId], [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Employees] AS [e]
+LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__dto_EmployeeId_0
+2025-12-31 22:34:43.553 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[@__dto_EmployeeId_0='31', @__period_Value_1='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND [e].[Period] = @__period_Value_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-31 22:34:43.955 +03:00 [INF] Executed DbCommand (305ms) [Parameters=[@p0='5', @p1='good jobe' (Nullable = false) (Size = 2000), @p2='2025-12-31T19:34:43.5599334Z', @p3='31', @p4='4.75' (Precision = 5) (Scale = 2), @p5='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Nullable = false) (Size = 450), @p6='2025-12-01T00:00:00.0000000', @p7='5', @p8='4', @p9='5'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [EmployeeEvaluations] ([Attendance], [Comments], [CreatedAt], [EmployeeId], [FinalScore], [ManagerId], [Period], [Productivity], [Quality], [Teamwork])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2025-12-31 22:34:44.015 +03:00 [INF] Executing OkObjectResult, writing value of type 'EmployeeDomain.Entities.EmployeeEvaluation'.
+2025-12-31 22:34:44.072 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 1827.1208ms
+2025-12-31 22:34:44.075 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-31 22:34:44.077 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 200 null application/json; charset=utf-8 1881.4816ms
+2025-12-31 22:39:15.203 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7212/api/evaluations/update - multipart/form-data; boundary=--------------------------002966966925118149587279 836
+2025-12-31 22:39:15.237 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Manager|Admin)
+2025-12-31 22:39:15.389 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-12-31 22:39:15.391 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7212/api/evaluations/update - 401 0 null 188.1279ms
+2025-12-31 22:39:42.942 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7212/api/evaluations/update - multipart/form-data; boundary=--------------------------128058247280330528485415 836
+2025-12-31 22:39:42.949 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.UpdateEvaluation (EMPLOYEE)'
+2025-12-31 22:39:42.957 +03:00 [INF] Route matched with {action = "UpdateEvaluation", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateEvaluation(EMPLOYEE.Dtos.EmployeeEvaluationByPeriodDto, EMPLOYEE.Dtos.UpdateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-31 22:39:43.203 +03:00 [INF] Executed DbCommand (204ms) [Parameters=[@__dto_EmployeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DepartmentId], [e].[IsActive], [e].[Position], [e].[Salary], [e].[UserId], [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Employees] AS [e]
+LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__dto_EmployeeId_0
+2025-12-31 22:39:43.296 +03:00 [INF] Executed DbCommand (84ms) [Parameters=[@__dto_EmployeeId_0='31', @__dto_Period_Year_1='2025', @__dto_Period_Month_2='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND DATEPART(year, [e].[Period]) = @__dto_Period_Year_1 AND DATEPART(month, [e].[Period]) = @__dto_Period_Month_2
+2025-12-31 22:39:43.439 +03:00 [INF] Executed DbCommand (129ms) [Parameters=[@p2='93', @p0='5' (Precision = 5) (Scale = 2), @p1='5'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [EmployeeEvaluations] SET [FinalScore] = @p0, [Quality] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2025-12-31 22:39:43.444 +03:00 [INF] Executing OkObjectResult, writing value of type 'EmployeeDomain.Entities.EmployeeEvaluation'.
+2025-12-31 22:39:43.447 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.UpdateEvaluation (EMPLOYEE) in 487.2262ms
+2025-12-31 22:39:43.450 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.UpdateEvaluation (EMPLOYEE)'
+2025-12-31 22:39:43.452 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7212/api/evaluations/update - 200 null application/json; charset=utf-8 509.8808ms
+2025-12-31 23:02:18.890 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-31 23:02:19.159 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-31 23:02:19.161 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-31 23:02:19.237 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-31 23:02:19.238 +03:00 [INF] Hosting environment: Development
+2025-12-31 23:02:19.240 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-31 23:02:20.090 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-31 23:02:20.343 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 255.0002ms
+2025-12-31 23:02:20.800 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-31 23:02:20.813 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 13.2759ms
+2025-12-31 23:02:20.839 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-31 23:02:20.930 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 91.3248ms
+2025-12-31 23:02:21.224 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-31 23:02:21.247 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.896ms
+2025-12-31 23:02:31.033 +03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------346910579826826642184539 283
+2025-12-31 23:02:31.162 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Delete (EMPLOYEE)'
+2025-12-31 23:02:31.238 +03:00 [INF] Route matched with {action = "Delete", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(EMPLOYEE.Dtos.EmployeeEvaluationByPeriodDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-31 23:02:32.688 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-31 23:02:34.735 +03:00 [INF] Executed DbCommand (757ms) [Parameters=[@__dto_EmployeeId_0='31', @__dto_Period_Year_1='2025', @__dto_Period_Month_2='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND DATEPART(year, [e].[Period]) = @__dto_Period_Year_1 AND DATEPART(month, [e].[Period]) = @__dto_Period_Month_2
+2025-12-31 23:02:35.288 +03:00 [INF] Executed DbCommand (188ms) [Parameters=[@p0='93'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [EmployeeEvaluations]
+OUTPUT 1
+WHERE [Id] = @p0;
+2025-12-31 23:02:35.325 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-12-31 23:02:35.339 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Delete (EMPLOYEE) in 4093.7157ms
+2025-12-31 23:02:35.343 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Delete (EMPLOYEE)'
+2025-12-31 23:02:35.361 +03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7212/api/evaluations - 200 null application/json; charset=utf-8 4328.3663ms
+2025-12-31 23:02:45.852 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------575068706421893845691548 720
+2025-12-31 23:02:45.862 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-31 23:02:45.875 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-31 23:02:46.241 +03:00 [INF] Executed DbCommand (138ms) [Parameters=[@__dto_EmployeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DepartmentId], [e].[IsActive], [e].[Position], [e].[Salary], [e].[UserId], [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Employees] AS [e]
+LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__dto_EmployeeId_0
+2025-12-31 23:02:46.335 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__dto_EmployeeId_0='31', @__period_Value_1='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND [e].[Period] = @__period_Value_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-31 23:02:46.425 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='5', @p1='good jobe' (Nullable = false) (Size = 2000), @p2='2025-12-31T20:02:46.3418022Z', @p3='31', @p4='4.75' (Precision = 5) (Scale = 2), @p5='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Nullable = false) (Size = 450), @p6='2025-12-01T00:00:00.0000000', @p7='5', @p8='4', @p9='5'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [EmployeeEvaluations] ([Attendance], [Comments], [CreatedAt], [EmployeeId], [FinalScore], [ManagerId], [Period], [Productivity], [Quality], [Teamwork])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2025-12-31 23:02:46.454 +03:00 [INF] Executing OkObjectResult, writing value of type 'EmployeeDomain.Entities.EmployeeEvaluation'.
+2025-12-31 23:02:46.472 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 593.654ms
+2025-12-31 23:02:46.475 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-31 23:02:46.477 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 200 null application/json; charset=utf-8 625.3473ms
+2025-12-31 23:03:07.149 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7212/api/evaluations/update - multipart/form-data; boundary=--------------------------560516868138941523305284 836
+2025-12-31 23:03:07.162 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.UpdateEvaluation (EMPLOYEE)'
+2025-12-31 23:03:07.172 +03:00 [INF] Route matched with {action = "UpdateEvaluation", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateEvaluation(EMPLOYEE.Dtos.EmployeeEvaluationByPeriodDto, EMPLOYEE.Dtos.UpdateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-31 23:03:07.217 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__dto_EmployeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DepartmentId], [e].[IsActive], [e].[Position], [e].[Salary], [e].[UserId], [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Employees] AS [e]
+LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__dto_EmployeeId_0
+2025-12-31 23:03:07.226 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__dto_EmployeeId_0='31', @__dto_Period_Year_1='2025', @__dto_Period_Month_2='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND DATEPART(year, [e].[Period]) = @__dto_Period_Year_1 AND DATEPART(month, [e].[Period]) = @__dto_Period_Month_2
+2025-12-31 23:03:07.240 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p2='94', @p0='5' (Precision = 5) (Scale = 2), @p1='5'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [EmployeeEvaluations] SET [FinalScore] = @p0, [Quality] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2025-12-31 23:03:07.244 +03:00 [INF] Executing OkObjectResult, writing value of type 'EmployeeDomain.Entities.EmployeeEvaluation'.
+2025-12-31 23:03:07.246 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.UpdateEvaluation (EMPLOYEE) in 71.8188ms
+2025-12-31 23:03:07.248 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.UpdateEvaluation (EMPLOYEE)'
+2025-12-31 23:03:07.253 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7212/api/evaluations/update - 200 null application/json; charset=utf-8 104.0666ms
+2025-12-31 23:05:14.308 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-31 23:05:14.723 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-31 23:05:14.725 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-31 23:05:14.824 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-31 23:05:14.825 +03:00 [INF] Hosting environment: Development
+2025-12-31 23:05:14.829 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-31 23:05:15.155 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-31 23:05:15.471 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 316.9968ms
+2025-12-31 23:05:15.732 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-31 23:05:15.732 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-31 23:05:15.742 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 10.4464ms
+2025-12-31 23:05:15.780 +03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------705226625590213006888844 283
+2025-12-31 23:05:15.820 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 88.349ms
+2025-12-31 23:05:15.970 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Delete (EMPLOYEE)'
+2025-12-31 23:05:16.021 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-31 23:05:16.050 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.7523ms
+2025-12-31 23:05:16.111 +03:00 [INF] Route matched with {action = "Delete", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(EMPLOYEE.Dtos.EmployeeEvaluationByPeriodDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-31 23:05:20.422 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-31 23:05:23.717 +03:00 [INF] Executed DbCommand (89ms) [Parameters=[@__dto_EmployeeId_0='31', @__dto_Period_Year_1='2025', @__dto_Period_Month_2='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND DATEPART(year, [e].[Period]) = @__dto_Period_Year_1 AND DATEPART(month, [e].[Period]) = @__dto_Period_Month_2
+2025-12-31 23:05:24.156 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='94'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [EmployeeEvaluations]
+OUTPUT 1
+WHERE [Id] = @p0;
+2025-12-31 23:05:24.204 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-12-31 23:05:24.226 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Delete (EMPLOYEE) in 8102.7182ms
+2025-12-31 23:05:24.232 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Delete (EMPLOYEE)'
+2025-12-31 23:05:24.249 +03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7212/api/evaluations - 200 null application/json; charset=utf-8 8469.2329ms
+2025-12-31 23:05:35.791 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------884283595830900514645125 720
+2025-12-31 23:05:35.805 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-31 23:05:35.818 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-31 23:05:36.096 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__dto_EmployeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DepartmentId], [e].[IsActive], [e].[Position], [e].[Salary], [e].[UserId], [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Employees] AS [e]
+LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__dto_EmployeeId_0
+2025-12-31 23:05:36.283 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__dto_EmployeeId_0='31', @__period_Value_1='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND [e].[Period] = @__period_Value_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-31 23:05:36.455 +03:00 [INF] Executed DbCommand (72ms) [Parameters=[@p0='5', @p1='good jobe' (Nullable = false) (Size = 2000), @p2='2025-12-31T20:05:36.2924428Z', @p3='31', @p4='4.75' (Precision = 5) (Scale = 2), @p5='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Nullable = false) (Size = 450), @p6='2025-12-01T00:00:00.0000000', @p7='5', @p8='4', @p9='5'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [EmployeeEvaluations] ([Attendance], [Comments], [CreatedAt], [EmployeeId], [FinalScore], [ManagerId], [Period], [Productivity], [Quality], [Teamwork])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2025-12-31 23:05:36.525 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[EmployeeDomain.Entities.EmployeeEvaluation, EmployeeDomain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-31 23:05:36.544 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 720.5404ms
+2025-12-31 23:05:36.546 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-31 23:05:36.550 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 200 null application/json; charset=utf-8 759.6738ms
+2025-12-31 23:05:55.006 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7212/api/evaluations/update - multipart/form-data; boundary=--------------------------567634365397176574313266 836
+2025-12-31 23:05:55.093 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.UpdateEvaluation (EMPLOYEE)'
+2025-12-31 23:05:55.109 +03:00 [INF] Route matched with {action = "UpdateEvaluation", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateEvaluation(EMPLOYEE.Dtos.EmployeeEvaluationByPeriodDto, EMPLOYEE.Dtos.UpdateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-31 23:05:55.180 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__dto_EmployeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DepartmentId], [e].[IsActive], [e].[Position], [e].[Salary], [e].[UserId], [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Employees] AS [e]
+LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__dto_EmployeeId_0
+2025-12-31 23:05:55.190 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__dto_EmployeeId_0='31', @__dto_Period_Year_1='2025', @__dto_Period_Month_2='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND DATEPART(year, [e].[Period]) = @__dto_Period_Year_1 AND DATEPART(month, [e].[Period]) = @__dto_Period_Month_2
+2025-12-31 23:05:55.207 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p2='95', @p0='5' (Precision = 5) (Scale = 2), @p1='5'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [EmployeeEvaluations] SET [FinalScore] = @p0, [Quality] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2025-12-31 23:05:55.210 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[EmployeeDomain.Entities.EmployeeEvaluation, EmployeeDomain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-31 23:05:55.213 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.UpdateEvaluation (EMPLOYEE) in 97.6332ms
+2025-12-31 23:05:55.224 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.UpdateEvaluation (EMPLOYEE)'
+2025-12-31 23:05:55.226 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7212/api/evaluations/update - 200 null application/json; charset=utf-8 220.0101ms

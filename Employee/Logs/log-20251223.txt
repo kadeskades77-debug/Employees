@@ -1,0 +1,1095 @@
+2025-12-23 00:01:24.559 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/12/dashboard/yearly - null null
+2025-12-23 00:01:24.569 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE)'
+2025-12-23 00:01:24.571 +03:00 [INF] Route matched with {action = "GetEmployeeYearlyDashboard", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeYearlyDashboard(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-23 00:01:24.643 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__employeeId_0='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]
+        WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-23 00:01:24.651 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__employeeId_0='12', @__callerUid_1='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[ManagerId] = @__callerUid_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-23 00:01:24.656 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE) in 18.193ms
+2025-12-23 00:01:24.657 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE)'
+2025-12-23 00:01:24.659 +03:00 [ERR] Unhandled Exception
+BusinessException: هذا الموظف ليس من ضمن الموظفين الذين قمت بتقييمهم
+   at EMPLOYEE.Service.EmployeeEvaluationService.GetEmployeeYearlyDashboardAsync(Int32 employeeId, String callerUid, String callerRole) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Service\EmployeeEvaluationService.cs:line 267
+   at EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard(Int32 employeeId) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\EmployeeEvaluationController.cs:line 141
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 00:01:25.963 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/12/dashboard/yearly - 403 null application/json; charset=utf-8 1403.1357ms
+2025-12-23 00:26:40.861 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-23 00:26:41.064 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-23 00:26:41.066 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-23 00:26:41.141 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-23 00:26:41.157 +03:00 [INF] Hosting environment: Development
+2025-12-23 00:26:41.159 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-23 00:26:41.948 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 00:26:42.495 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 581.222ms
+2025-12-23 00:26:42.531 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 00:26:42.531 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 00:26:42.578 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 47.1508ms
+2025-12-23 00:26:43.863 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1329.8277ms
+2025-12-23 00:26:43.984 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 00:26:44.011 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 00:26:44.143 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/12/monthly-dashboard - null null
+2025-12-23 00:26:44.383 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/22/2025 9:17:23 PM', Current time (UTC): '12/22/2025 9:26:44 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-12-23 00:26:44.400 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/22/2025 9:17:23 PM', Current time (UTC): '12/22/2025 9:26:44 PM'.
+2025-12-23 00:26:44.418 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Manager|Admin)
+2025-12-23 00:26:44.440 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-12-23 00:26:44.443 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/12/monthly-dashboard - 401 0 null 299.8876ms
+2025-12-23 00:26:45.229 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null application/json; charset=utf-8 1244.3963ms
+2025-12-23 00:27:12.111 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/employees/my-employees - null null
+2025-12-23 00:27:12.119 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/22/2025 9:17:23 PM', Current time (UTC): '12/22/2025 9:27:12 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-12-23 00:27:12.123 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/22/2025 9:17:23 PM', Current time (UTC): '12/22/2025 9:27:12 PM'.
+2025-12-23 00:27:12.127 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Manager)
+2025-12-23 00:27:12.130 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-12-23 00:27:12.132 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/employees/my-employees - 401 0 null 21.6083ms
+2025-12-23 00:27:16.830 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/login - application/json 67
+2025-12-23 00:27:16.838 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2025-12-23 00:27:16.914 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EMPLOYEE.Dtos.LoginDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2025-12-23 00:27:18.168 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-23 00:27:18.177 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-23 00:27:18.254 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-23 00:27:19.493 +03:00 [INF] Executed DbCommand (185ms) [Parameters=[@__normalizedEmail_0='MANAGER1@COMPANY.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-12-23 00:27:20.066 +03:00 [INF] Executed DbCommand (51ms) [Parameters=[@__userId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-12-23 00:27:20.100 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-12-23 00:27:20.110 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE) in 3188.9924ms
+2025-12-23 00:27:20.113 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2025-12-23 00:27:20.127 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/login - 200 null application/json; charset=utf-8 3296.4475ms
+2025-12-23 00:27:31.065 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/12/monthly-dashboard - null null
+2025-12-23 00:27:31.085 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE)'
+2025-12-23 00:27:31.095 +03:00 [INF] Route matched with {action = "GetEmployeeMonthlyDashboard", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeMonthlyDashboard(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-23 00:27:31.231 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__employeeId_0='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]
+        WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-23 00:27:31.255 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__employeeId_0='12', @__callerUid_1='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[ManagerId] = @__callerUid_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-23 00:27:31.262 +03:00 [INF] Executing ForbidResult with authentication schemes (["Not in your Team"]).
+2025-12-23 00:27:31.271 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE) in 173.54ms
+2025-12-23 00:27:31.274 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE)'
+2025-12-23 00:27:31.276 +03:00 [ERR] Unhandled Exception
+System.InvalidOperationException: No authentication handler is registered for the scheme 'Not in your Team'. The registered schemes are: Identity.Application, Identity.External, Identity.TwoFactorRememberMe, Identity.TwoFactorUserId, Bearer. Did you forget to call AddAuthentication().Add[SomeAuthHandler]("Not in your Team",...)?
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ForbidAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Mvc.ForbidResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 00:27:32.348 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/12/monthly-dashboard - 500 null application/json; charset=utf-8 1283.6797ms
+2025-12-23 00:28:29.042 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-23 00:28:29.254 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-23 00:28:29.256 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-23 00:28:29.325 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-23 00:28:29.328 +03:00 [INF] Hosting environment: Development
+2025-12-23 00:28:29.329 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-23 00:28:29.554 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 00:28:29.783 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 231.6603ms
+2025-12-23 00:28:29.862 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 00:28:29.867 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 00:28:29.874 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 10.9134ms
+2025-12-23 00:28:29.922 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.4369ms
+2025-12-23 00:28:30.047 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 00:28:30.072 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 00:28:31.032 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/12/monthly-dashboard - null null
+2025-12-23 00:28:31.172 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE)'
+2025-12-23 00:28:31.207 +03:00 [INF] Route matched with {action = "GetEmployeeMonthlyDashboard", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeMonthlyDashboard(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-23 00:28:32.199 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-23 00:28:32.210 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-23 00:28:32.286 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-23 00:28:33.089 +03:00 [INF] Executed DbCommand (56ms) [Parameters=[@__employeeId_0='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]
+        WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-23 00:28:33.155 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__employeeId_0='12', @__callerUid_1='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[ManagerId] = @__callerUid_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-23 00:28:33.166 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE) in 1952.1983ms
+2025-12-23 00:28:33.169 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE)'
+2025-12-23 00:28:33.172 +03:00 [ERR] Unhandled Exception
+BusinessException: Not in your Team
+   at EMPLOYEE.Service.EmployeeEvaluationService.GetEmployeeMonthlyDashboardAsync(Int32 employeeId, String callerUid, String callerRole) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Service\EmployeeEvaluationService.cs:line 333
+   at EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard(Int32 employeeId) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\EmployeeEvaluationController.cs:line 127
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 00:28:33.595 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null application/json; charset=utf-8 3548.1493ms
+2025-12-23 00:28:33.989 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/12/monthly-dashboard - 403 null application/json; charset=utf-8 2957.2472ms
+2025-12-23 00:28:46.954 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/31/monthly-dashboard - null null
+2025-12-23 00:28:46.972 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE)'
+2025-12-23 00:28:46.977 +03:00 [INF] Route matched with {action = "GetEmployeeMonthlyDashboard", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeMonthlyDashboard(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-23 00:28:47.027 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]
+        WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-23 00:28:47.037 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__employeeId_0='31', @__callerUid_1='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[ManagerId] = @__callerUid_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-23 00:28:47.259 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-01-01T00:00:00.0000000', @__end_2='2025-02-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:28:47.280 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-02-01T00:00:00.0000000', @__end_2='2025-03-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:28:47.287 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-03-01T00:00:00.0000000', @__end_2='2025-04-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:28:47.295 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-04-01T00:00:00.0000000', @__end_2='2025-05-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:28:47.301 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-05-01T00:00:00.0000000', @__end_2='2025-06-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:28:47.310 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-06-01T00:00:00.0000000', @__end_2='2025-07-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:28:47.317 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-07-01T00:00:00.0000000', @__end_2='2025-08-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:28:47.323 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-08-01T00:00:00.0000000', @__end_2='2025-09-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:28:47.332 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-09-01T00:00:00.0000000', @__end_2='2025-10-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:28:47.340 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-10-01T00:00:00.0000000', @__end_2='2025-11-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:28:47.348 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-11-01T00:00:00.0000000', @__end_2='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:28:47.355 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-12-01T00:00:00.0000000', @__end_2='2026-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:28:47.406 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[FirstName], [a].[LastName]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0
+2025-12-23 00:28:47.473 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE) in 493.2827ms
+2025-12-23 00:28:47.477 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE)'
+2025-12-23 00:28:47.479 +03:00 [ERR] Unhandled Exception
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard(Int32 employeeId) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\EmployeeEvaluationController.cs:line 129
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 00:28:49.757 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/31/monthly-dashboard - 500 null application/json; charset=utf-8 2803.1331ms
+2025-12-23 00:30:07.312 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-23 00:30:07.577 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-23 00:30:07.580 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-23 00:30:07.659 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-23 00:30:07.661 +03:00 [INF] Hosting environment: Development
+2025-12-23 00:30:07.662 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-23 00:30:07.833 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 00:30:08.072 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 239.769ms
+2025-12-23 00:30:08.179 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 00:30:08.189 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 10.1666ms
+2025-12-23 00:30:08.213 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 00:30:08.297 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 84.323ms
+2025-12-23 00:30:08.509 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 00:30:08.545 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 00:30:09.976 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null application/json; charset=utf-8 1466.9751ms
+2025-12-23 00:30:10.528 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/31/monthly-dashboard - null null
+2025-12-23 00:30:10.689 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE)'
+2025-12-23 00:30:10.725 +03:00 [INF] Route matched with {action = "GetEmployeeMonthlyDashboard", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeMonthlyDashboard(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-23 00:30:12.047 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-23 00:30:12.056 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-23 00:30:12.184 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-23 00:30:13.051 +03:00 [INF] Executed DbCommand (54ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]
+        WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-23 00:30:13.106 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__employeeId_0='31', @__callerUid_1='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[ManagerId] = @__callerUid_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-23 00:30:13.251 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-01-01T00:00:00.0000000', @__end_2='2025-02-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:30:13.264 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-02-01T00:00:00.0000000', @__end_2='2025-03-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:30:13.270 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-03-01T00:00:00.0000000', @__end_2='2025-04-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:30:13.276 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-04-01T00:00:00.0000000', @__end_2='2025-05-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:30:13.284 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-05-01T00:00:00.0000000', @__end_2='2025-06-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:30:13.290 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-06-01T00:00:00.0000000', @__end_2='2025-07-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:30:13.294 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-07-01T00:00:00.0000000', @__end_2='2025-08-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:30:13.302 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-08-01T00:00:00.0000000', @__end_2='2025-09-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:30:13.307 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-09-01T00:00:00.0000000', @__end_2='2025-10-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:30:13.315 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-10-01T00:00:00.0000000', @__end_2='2025-11-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:30:13.321 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-11-01T00:00:00.0000000', @__end_2='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:30:13.326 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__employeeId_0='31', @__start_1='2025-12-01T00:00:00.0000000', @__end_2='2026-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2025-12-23 00:30:13.374 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[FirstName], [a].[LastName]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0
+2025-12-23 00:30:13.387 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Dtos.EmployeeEvaluationDashboardDto'.
+2025-12-23 00:30:13.414 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE) in 2677.2721ms
+2025-12-23 00:30:13.419 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeMonthlyDashboard (EMPLOYEE)'
+2025-12-23 00:30:13.434 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/31/monthly-dashboard - 200 null application/json; charset=utf-8 2905.5748ms
+2025-12-23 00:32:24.381 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/dashboard/12 - null null
+2025-12-23 00:32:24.393 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/22/2025 9:17:23 PM', Current time (UTC): '12/22/2025 9:32:24 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-12-23 00:32:24.401 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/22/2025 9:17:23 PM', Current time (UTC): '12/22/2025 9:32:24 PM'.
+2025-12-23 00:32:24.403 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/dashboard/12 - 404 0 null 21.9863ms
+2025-12-23 00:32:24.410 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7212/api/evaluations/dashboard/12, Response status code: 404
+2025-12-23 00:32:38.897 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/dashboard/12 - null null
+2025-12-23 00:32:38.905 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/dashboard/12 - 404 0 null 8.1712ms
+2025-12-23 00:32:38.912 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7212/api/evaluations/dashboard/12, Response status code: 404
+2025-12-23 00:33:02.462 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 00:33:02.476 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 13.4889ms
+2025-12-23 00:33:02.550 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 00:33:02.551 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 00:33:02.558 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 15.5215ms
+2025-12-23 00:33:02.587 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.817ms
+2025-12-23 00:33:02.705 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 00:33:02.767 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 00:33:04.117 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null application/json; charset=utf-8 1412.2402ms
+2025-12-23 00:38:21.731 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-23 00:38:21.941 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-23 00:38:21.943 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-23 00:38:22.020 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-23 00:38:22.021 +03:00 [INF] Hosting environment: Development
+2025-12-23 00:38:22.026 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-23 00:38:22.188 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 00:38:22.414 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 226.6038ms
+2025-12-23 00:38:22.471 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 00:38:22.476 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 00:38:22.481 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 10.2264ms
+2025-12-23 00:38:22.526 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.8625ms
+2025-12-23 00:38:23.246 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 00:38:23.274 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 00:38:25.679 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null application/json; charset=utf-8 2433.3767ms
+2025-12-23 00:40:19.925 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-23 00:40:20.298 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-23 00:40:20.302 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-23 00:40:20.390 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-23 00:40:20.391 +03:00 [INF] Hosting environment: Development
+2025-12-23 00:40:20.394 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-23 00:40:21.418 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 00:40:21.834 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 435.67ms
+2025-12-23 00:40:21.916 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 00:40:21.928 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 12.0029ms
+2025-12-23 00:40:21.945 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 00:40:21.999 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.4099ms
+2025-12-23 00:40:22.326 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 00:40:22.358 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 00:40:23.624 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null application/json; charset=utf-8 1298.0107ms
+2025-12-23 00:41:39.617 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-23 00:41:39.828 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-23 00:41:39.830 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-23 00:41:39.901 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-23 00:41:39.903 +03:00 [INF] Hosting environment: Development
+2025-12-23 00:41:39.905 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-23 00:41:40.064 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 00:41:40.309 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 248.7995ms
+2025-12-23 00:41:40.475 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 00:41:40.475 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 00:41:40.498 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 22.5947ms
+2025-12-23 00:41:40.572 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 97.0555ms
+2025-12-23 00:41:40.774 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 00:41:40.806 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 00:41:42.576 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null application/json; charset=utf-8 1802.5531ms
+2025-12-23 00:43:54.149 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-23 00:43:54.358 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-23 00:43:54.360 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-23 00:43:54.432 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-23 00:43:54.434 +03:00 [INF] Hosting environment: Development
+2025-12-23 00:43:54.437 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-23 00:43:54.997 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 00:43:55.302 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 303.7026ms
+2025-12-23 00:43:55.349 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 00:43:55.349 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 00:43:55.377 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 27.5933ms
+2025-12-23 00:43:55.420 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 70.4657ms
+2025-12-23 00:43:55.581 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 00:43:55.626 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 00:43:57.029 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null application/json; charset=utf-8 1447.7893ms
+2025-12-23 00:44:37.058 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-23 00:44:37.316 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-23 00:44:37.324 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-23 00:44:37.397 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-23 00:44:37.400 +03:00 [INF] Hosting environment: Development
+2025-12-23 00:44:37.401 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-23 00:44:38.101 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 00:44:38.381 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 283.6972ms
+2025-12-23 00:44:38.475 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 00:44:38.485 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 00:44:38.486 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 11.6641ms
+2025-12-23 00:44:38.581 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 96.3375ms
+2025-12-23 00:44:38.990 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 00:44:39.020 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 00:44:40.136 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null application/json; charset=utf-8 1145.9813ms
+2025-12-23 00:44:59.023 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-23 00:44:59.232 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-23 00:44:59.238 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-23 00:44:59.344 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-23 00:44:59.349 +03:00 [INF] Hosting environment: Development
+2025-12-23 00:44:59.351 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-23 00:44:59.623 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 00:44:59.813 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 190.8946ms
+2025-12-23 00:44:59.870 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 00:44:59.880 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 10.4893ms
+2025-12-23 00:44:59.890 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 00:44:59.942 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.4543ms
+2025-12-23 00:45:00.057 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 00:45:00.080 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 00:45:01.438 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null application/json; charset=utf-8 1381.7695ms
+2025-12-23 00:46:35.001 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-23 00:46:35.199 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-23 00:46:35.201 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-23 00:46:35.268 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-23 00:46:35.270 +03:00 [INF] Hosting environment: Development
+2025-12-23 00:46:35.310 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-23 00:46:35.549 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 00:46:35.757 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 209.466ms
+2025-12-23 00:46:35.799 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 00:46:35.799 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 00:46:35.811 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 12.6651ms
+2025-12-23 00:46:35.843 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.9962ms
+2025-12-23 00:46:36.565 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 00:46:36.595 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 00:46:38.419 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null application/json; charset=utf-8 1853.6984ms
+2025-12-23 00:56:03.430 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-23 00:56:03.646 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-23 00:56:03.648 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-23 00:56:03.726 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-23 00:56:03.728 +03:00 [INF] Hosting environment: Development
+2025-12-23 00:56:03.730 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-23 00:57:02.025 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-23 00:57:02.218 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-23 00:57:02.222 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-23 00:57:02.297 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-23 00:57:02.304 +03:00 [INF] Hosting environment: Development
+2025-12-23 00:57:02.305 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-23 00:58:58.788 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-23 00:58:59.028 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-23 00:58:59.030 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-23 00:58:59.132 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-23 00:58:59.135 +03:00 [INF] Hosting environment: Development
+2025-12-23 00:58:59.136 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-23 00:58:59.470 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 00:58:59.592 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 00:58:59.888 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 418.9701ms
+2025-12-23 00:58:59.959 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 367.2479ms
+2025-12-23 00:58:59.964 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 00:58:59.971 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 00:59:00.076 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 111.4112ms
+2025-12-23 00:59:00.167 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 196.0886ms
+2025-12-23 00:59:00.298 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 00:59:00.427 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 00:59:01.933 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null application/json; charset=utf-8 1634.7302ms
+2025-12-23 01:02:39.123 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 01:02:39.208 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 84.8092ms
+2025-12-23 01:02:39.350 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 01:02:39.356 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 01:02:39.356 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 6.1938ms
+2025-12-23 01:02:39.383 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.7067ms
+2025-12-23 01:02:39.602 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 01:02:39.636 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 01:02:40.680 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null application/json; charset=utf-8 1078.0216ms
+2025-12-23 01:03:07.335 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 01:03:07.343 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 8.3122ms
+2025-12-23 01:03:07.462 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 01:03:07.468 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 6.3491ms
+2025-12-23 01:03:07.480 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 01:03:07.496 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.204ms
+2025-12-23 01:03:07.718 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 01:03:07.745 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 01:03:09.111 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null application/json; charset=utf-8 1393.1286ms
+2025-12-23 01:04:08.050 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 01:04:08.056 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 5.9207ms
+2025-12-23 01:04:08.142 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 01:04:08.142 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 01:04:08.146 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 4.4756ms
+2025-12-23 01:04:08.158 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.4231ms
+2025-12-23 01:04:08.912 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 01:04:08.927 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 01:04:11.279 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null application/json; charset=utf-8 2367.1834ms
+2025-12-23 01:08:15.514 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-23 01:08:15.787 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-23 01:08:15.794 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-23 01:08:15.893 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-23 01:08:15.898 +03:00 [INF] Hosting environment: Development
+2025-12-23 01:08:15.900 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-23 01:08:15.941 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 01:08:16.201 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 260.9369ms
+2025-12-23 01:08:16.304 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 01:08:16.304 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 01:08:16.315 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 11.0796ms
+2025-12-23 01:08:16.366 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 62.4305ms
+2025-12-23 01:08:17.529 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 01:08:17.775 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 01:08:20.296 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null application/json; charset=utf-8 2766.3843ms
+2025-12-23 01:10:00.349 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 01:10:00.361 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 11.6136ms
+2025-12-23 01:10:00.419 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 01:10:00.420 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 01:10:00.438 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 18.8513ms
+2025-12-23 01:10:00.465 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.1254ms
+2025-12-23 01:10:00.588 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 01:10:00.626 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 01:10:01.565 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null application/json; charset=utf-8 977.2439ms
+2025-12-23 01:15:34.500 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-23 01:15:34.777 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-23 01:15:34.781 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-23 01:15:34.868 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-23 01:15:34.870 +03:00 [INF] Hosting environment: Development
+2025-12-23 01:15:34.871 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-23 01:15:35.073 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 01:15:35.318 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 245.5761ms
+2025-12-23 01:15:35.544 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 01:15:35.560 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 15.5472ms
+2025-12-23 01:15:35.580 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 01:15:35.658 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 77.935ms
+2025-12-23 01:15:36.326 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 01:15:36.359 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 01:15:37.558 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null application/json; charset=utf-8 1231.566ms
+2025-12-23 19:04:14.920 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-23 19:04:15.154 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-23 19:04:15.157 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-23 19:04:15.219 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-23 19:04:15.221 +03:00 [INF] Hosting environment: Development
+2025-12-23 19:04:15.223 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-23 19:04:22.259 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 19:04:22.609 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 346.2867ms
+2025-12-23 19:04:22.713 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 19:04:22.713 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 19:04:22.731 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 17.5357ms
+2025-12-23 19:04:23.243 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 530.0394ms
+2025-12-23 19:04:23.701 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 19:04:23.764 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 19:04:25.097 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Http.HttpRequestException: No such host is known. (hooks.slack.com:443)
+ ---> System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at SlackExceptionMiddleware.SendToSlack(HttpContext context, Exception ex) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 107
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 43
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-23 19:04:25.572 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 1871.0902ms
+2025-12-23 19:06:58.608 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 19:06:58.628 +03:00 [ERR] Unhandled Exception
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 38
+2025-12-23 19:06:58.639 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Http.HttpRequestException: No such host is known. (hooks.slack.com:443)
+ ---> System.Net.Sockets.SocketException (11001): No such host is known.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at SlackExceptionMiddleware.SendToSlack(HttpContext context, Exception ex) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 107
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 43
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-23 19:06:59.200 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null text/html; charset=utf-8 591.7521ms
+2025-12-23 19:06:59.274 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 19:06:59.274 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 19:06:59.284 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 9.2609ms
+2025-12-23 19:06:59.291 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.9237ms
+2025-12-23 19:06:59.679 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/favicon.ico - null null
+2025-12-23 19:06:59.772 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/favicon.ico - 404 0 null 93.3599ms
+2025-12-23 19:06:59.791 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7212/favicon.ico, Response status code: 404
+2025-12-23 19:30:30.807 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-23 19:30:30.995 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-23 19:30:30.998 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-23 19:30:31.061 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-23 19:30:31.062 +03:00 [INF] Hosting environment: Development
+2025-12-23 19:30:31.064 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-23 19:30:31.338 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 19:30:31.449 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-23 19:30:31.491 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null text/html; charset=utf-8 155.7835ms
+2025-12-23 19:30:31.550 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 19:30:31.589 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.2628ms
+2025-12-23 19:30:32.059 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 19:30:32.069 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 9.9241ms
+2025-12-23 19:31:06.929 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 19:31:07.010 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 81.6161ms
+2025-12-23 19:31:07.075 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 19:31:07.075 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 19:31:07.087 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 11.8441ms
+2025-12-23 19:31:07.106 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.3788ms
+2025-12-23 19:31:07.228 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 19:31:07.283 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-23 19:31:07.307 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 79.289ms
+2025-12-23 19:31:15.722 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 19:31:15.732 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 9.8672ms
+2025-12-23 19:31:15.789 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 19:31:15.792 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 19:31:15.816 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 27.1168ms
+2025-12-23 19:31:15.829 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.0747ms
+2025-12-23 19:31:15.922 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 19:31:15.958 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-23 19:31:15.963 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 41.1449ms
+2025-12-23 19:31:25.631 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 19:31:25.643 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 11.251ms
+2025-12-23 19:31:25.698 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 19:31:25.698 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 19:31:25.704 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 5.6566ms
+2025-12-23 19:31:25.717 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.0263ms
+2025-12-23 19:31:25.861 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 19:31:25.895 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-23 19:31:25.898 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 36.9811ms
+2025-12-23 19:33:07.182 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 19:33:07.193 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 10.459ms
+2025-12-23 19:33:07.245 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 19:33:07.245 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 19:33:07.255 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 10.2766ms
+2025-12-23 19:33:07.257 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.8302ms
+2025-12-23 19:33:07.434 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 19:33:07.449 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-23 19:33:07.453 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 19.7123ms
+2025-12-23 19:34:28.710 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-23 19:34:29.180 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-23 19:34:29.242 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-23 19:34:29.378 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-23 19:34:29.389 +03:00 [INF] Hosting environment: Development
+2025-12-23 19:34:29.390 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-23 19:34:29.808 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 19:34:30.259 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 455.144ms
+2025-12-23 19:34:30.293 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 19:34:30.305 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 11.8446ms
+2025-12-23 19:34:30.382 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 19:34:30.387 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 19:34:30.408 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 25.277ms
+2025-12-23 19:34:30.460 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 73.4553ms
+2025-12-23 19:34:30.774 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 19:34:30.799 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-23 19:34:30.808 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 33.4354ms
+2025-12-23 19:42:49.168 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 19:42:49.180 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 11.9967ms
+2025-12-23 19:42:49.245 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 19:42:49.254 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 19:42:49.261 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 18.8489ms
+2025-12-23 19:42:49.286 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.5507ms
+2025-12-23 19:42:49.435 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 19:42:49.468 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-23 19:42:49.472 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 36.6981ms
+2025-12-23 19:43:06.386 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 19:43:06.402 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-23 19:43:06.426 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null text/html; charset=utf-8 40.4186ms
+2025-12-23 19:43:06.504 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 19:43:06.504 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 19:43:06.517 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 13.6836ms
+2025-12-23 19:43:07.023 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 519.9097ms
+2025-12-23 19:52:14.777 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 19:52:14.786 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 8.9998ms
+2025-12-23 19:52:14.942 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 19:52:14.943 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 19:52:14.947 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 4.8034ms
+2025-12-23 19:52:14.976 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.0843ms
+2025-12-23 19:52:15.396 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 19:52:15.434 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-23 19:52:15.441 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 45.2653ms
+2025-12-23 19:53:16.334 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 19:53:16.351 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-23 19:53:16.356 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null text/html; charset=utf-8 23.2824ms
+2025-12-23 19:53:16.420 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 19:53:16.420 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 19:53:16.428 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 7.3259ms
+2025-12-23 19:53:16.435 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.0583ms
+2025-12-23 19:53:21.002 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 19:53:21.012 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-23 19:53:21.018 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null text/html; charset=utf-8 15.6182ms
+2025-12-23 19:53:21.073 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 19:53:21.073 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 19:53:21.080 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 6.7315ms
+2025-12-23 19:53:21.086 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.8959ms
+2025-12-23 19:57:49.326 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 19:57:49.346 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 20.3671ms
+2025-12-23 19:57:49.418 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 19:57:49.418 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 19:57:49.426 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 7.9199ms
+2025-12-23 19:57:49.443 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.1159ms
+2025-12-23 19:57:49.606 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 19:57:49.627 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-23 19:57:49.650 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 57.6109ms
+2025-12-23 20:03:44.904 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 20:03:44.936 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 31.6619ms
+2025-12-23 20:03:45.251 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 20:03:45.258 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 7.7646ms
+2025-12-23 20:03:45.875 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 20:03:45.884 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 8.9261ms
+2025-12-23 20:03:46.708 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 20:03:46.754 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-23 20:03:46.758 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 49.9646ms
+2025-12-23 20:05:53.924 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-23 20:05:53.939 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 14.565ms
+2025-12-23 20:05:54.011 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 20:05:54.012 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 20:05:54.017 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 6.5517ms
+2025-12-23 20:05:54.031 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.7062ms
+2025-12-23 20:05:54.245 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 20:05:54.261 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-23 20:05:54.301 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null text/plain; charset=utf-8 56.1142ms
+2025-12-23 20:06:02.443 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 20:06:02.458 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-23 20:06:02.464 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null text/html; charset=utf-8 21.3161ms
+2025-12-23 20:06:02.521 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 20:06:02.521 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 20:06:02.530 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 8.4979ms
+2025-12-23 20:06:02.540 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.0316ms
+2025-12-23 20:06:26.170 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-23 20:06:26.183 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - EMPLOYEE.Controllers.EmployeeEvaluationController.Get (EMPLOYEE). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-23 20:06:26.189 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 500 null text/html; charset=utf-8 18.2224ms
+2025-12-23 20:06:26.247 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-23 20:06:26.247 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-23 20:06:26.255 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 8.5295ms
+2025-12-23 20:06:26.261 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.0939ms

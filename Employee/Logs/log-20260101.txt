@@ -1,0 +1,864 @@
+2026-01-01 00:34:56.370 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-01 00:34:56.622 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-01 00:34:56.624 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-01 00:34:56.728 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-01 00:34:56.733 +03:00 [INF] Hosting environment: Development
+2026-01-01 00:34:56.737 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-01 00:34:56.996 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-01 00:34:57.298 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 303.8009ms
+2026-01-01 00:34:57.439 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-01 00:34:57.450 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 11.3381ms
+2026-01-01 00:34:57.480 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-01 00:34:57.562 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 81.8716ms
+2026-01-01 00:34:58.165 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-01 00:34:58.198 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.1569ms
+2026-01-01 00:35:00.898 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-01 00:35:00.913 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 14.9616ms
+2026-01-01 00:35:00.991 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-01 00:35:00.994 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-01 00:35:01.010 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 18.959ms
+2026-01-01 00:35:01.097 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 103.3328ms
+2026-01-01 00:35:01.209 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-01 00:35:01.468 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 259.3198ms
+2026-01-01 00:35:05.719 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/login - application/json 67
+2026-01-01 00:35:06.028 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-01 00:35:06.081 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EMPLOYEE.Dtos.LoginDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-01 00:35:11.403 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-01 00:35:24.978 +03:00 [INF] Executed DbCommand (306ms) [Parameters=[@__normalizedEmail_0='MANAGER1@COMPANY.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-01 00:35:25.655 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-01 00:35:25.817 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType9`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-01 00:35:25.830 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE) in 19738.7818ms
+2026-01-01 00:35:25.832 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-01 00:35:25.848 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/login - 200 null application/json; charset=utf-8 20128.1777ms
+2026-01-01 00:35:51.173 +03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------043349763421765348758935 283
+2026-01-01 00:35:52.507 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Delete (EMPLOYEE)'
+2026-01-01 00:35:52.516 +03:00 [INF] Route matched with {action = "Delete", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(EMPLOYEE.Dtos.EmployeeEvaluationByPeriodDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2026-01-01 00:35:52.845 +03:00 [INF] Executed DbCommand (55ms) [Parameters=[@__dto_EmployeeId_0='31', @__dto_Period_Year_1='2025', @__dto_Period_Month_2='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND DATEPART(year, [e].[Period]) = @__dto_Period_Year_1 AND DATEPART(month, [e].[Period]) = @__dto_Period_Month_2
+2026-01-01 00:35:53.187 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[@p0='95'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [EmployeeEvaluations]
+OUTPUT 1
+WHERE [Id] = @p0;
+2026-01-01 00:35:53.210 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2026-01-01 00:35:53.212 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Delete (EMPLOYEE) in 691.7201ms
+2026-01-01 00:35:53.213 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Delete (EMPLOYEE)'
+2026-01-01 00:35:53.215 +03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7212/api/evaluations - 200 0 null 2042.2164ms
+2026-01-01 00:36:00.839 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------715248104106260234748304 720
+2026-01-01 00:36:00.848 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2026-01-01 00:36:00.856 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2026-01-01 00:36:01.209 +03:00 [INF] Executed DbCommand (140ms) [Parameters=[@__dto_EmployeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DepartmentId], [e].[IsActive], [e].[Position], [e].[Salary], [e].[UserId], [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Employees] AS [e]
+LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__dto_EmployeeId_0
+2026-01-01 00:36:01.314 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__dto_EmployeeId_0='31', @__period_Value_1='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND [e].[Period] = @__period_Value_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-01 00:36:01.457 +03:00 [INF] Executed DbCommand (33ms) [Parameters=[@p0='5', @p1='good jobe' (Nullable = false) (Size = 2000), @p2='2025-12-31T21:36:01.3237009Z', @p3='31', @p4='4.75' (Precision = 5) (Scale = 2), @p5='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Nullable = false) (Size = 450), @p6='2025-12-01T00:00:00.0000000', @p7='5', @p8='4', @p9='5'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [EmployeeEvaluations] ([Attendance], [Comments], [CreatedAt], [EmployeeId], [FinalScore], [ManagerId], [Period], [Productivity], [Quality], [Teamwork])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2026-01-01 00:36:01.487 +03:00 [INF] Executing OkObjectResult, writing value of type 'EmployeeDomain.Entities.EmployeeEvaluation'.
+2026-01-01 00:36:01.507 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 648.789ms
+2026-01-01 00:36:01.513 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2026-01-01 00:36:01.515 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 200 null application/json; charset=utf-8 675.7137ms
+2026-01-01 00:36:11.014 +03:00 [INF] Request starting HTTP/1.1 PUT https://localhost:7212/api/evaluations/update - multipart/form-data; boundary=--------------------------783285627712157036337525 836
+2026-01-01 00:36:11.037 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.UpdateEvaluation (EMPLOYEE)'
+2026-01-01 00:36:11.049 +03:00 [INF] Route matched with {action = "UpdateEvaluation", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateEvaluation(EMPLOYEE.Dtos.EmployeeEvaluationByPeriodDto, EMPLOYEE.Dtos.UpdateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2026-01-01 00:36:11.091 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__dto_EmployeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DepartmentId], [e].[IsActive], [e].[Position], [e].[Salary], [e].[UserId], [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Employees] AS [e]
+LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__dto_EmployeeId_0
+2026-01-01 00:36:11.099 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__dto_EmployeeId_0='31', @__dto_Period_Year_1='2025', @__dto_Period_Month_2='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND DATEPART(year, [e].[Period]) = @__dto_Period_Year_1 AND DATEPART(month, [e].[Period]) = @__dto_Period_Month_2
+2026-01-01 00:36:11.191 +03:00 [INF] Executed DbCommand (79ms) [Parameters=[@p2='96', @p0='5' (Precision = 5) (Scale = 2), @p1='5'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [EmployeeEvaluations] SET [FinalScore] = @p0, [Quality] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2026-01-01 00:36:11.195 +03:00 [INF] Executing OkObjectResult, writing value of type 'EmployeeDomain.Entities.EmployeeEvaluation'.
+2026-01-01 00:36:11.197 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.UpdateEvaluation (EMPLOYEE) in 136.1776ms
+2026-01-01 00:36:11.198 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.UpdateEvaluation (EMPLOYEE)'
+2026-01-01 00:36:11.200 +03:00 [INF] Request finished HTTP/1.1 PUT https://localhost:7212/api/evaluations/update - 200 null application/json; charset=utf-8 185.74ms
+2026-01-01 21:32:38.113 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-01 21:32:38.909 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-01 21:32:38.911 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-01 21:32:38.985 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-01 21:32:38.988 +03:00 [INF] Hosting environment: Development
+2026-01-01 21:32:38.990 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-01 21:32:54.944 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-01 21:32:56.661 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 1719.8184ms
+2026-01-01 21:32:57.763 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-01 21:32:57.772 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 8.9159ms
+2026-01-01 21:32:57.951 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-01 21:32:58.952 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1001.1565ms
+2026-01-01 21:33:00.806 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-01 21:33:00.831 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.5461ms
+2026-01-01 21:38:03.989 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-01 21:38:04.194 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-01 21:38:04.197 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-01 21:38:04.269 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-01 21:38:04.271 +03:00 [INF] Hosting environment: Development
+2026-01-01 21:38:04.306 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-01 21:38:04.867 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-01 21:38:05.490 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 627.04ms
+2026-01-01 21:38:05.770 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-01 21:38:05.771 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-01 21:38:05.803 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 33.2284ms
+2026-01-01 21:38:06.189 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 419.6805ms
+2026-01-01 21:38:13.121 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-01 21:38:13.147 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 25.9927ms
+2026-01-01 21:42:05.689 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/register - application/json 115
+2026-01-01 21:42:06.053 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.Register (EMPLOYEE)'
+2026-01-01 21:42:06.416 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EMPLOYEE.Dtos.RegisterDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-01 21:42:08.542 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-01 21:42:40.480 +03:00 [INF] Executed DbCommand (266ms) [Parameters=[@__normalizedEmail_0='EMP12@COMPANY.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-01 21:42:40.916 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-01-01 21:42:40.972 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.Register (EMPLOYEE) in 34544.3141ms
+2026-01-01 21:42:40.975 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.Register (EMPLOYEE)'
+2026-01-01 21:42:40.991 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/register - 400 null text/plain; charset=utf-8 35302.3171ms
+2026-01-01 21:43:07.157 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/register - application/json 115
+2026-01-01 21:43:07.166 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.Register (EMPLOYEE)'
+2026-01-01 21:43:07.169 +03:00 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(EMPLOYEE.Dtos.RegisterDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-01 21:43:07.281 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@__normalizedEmail_0='EMP40@COMPANY.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-01 21:43:08.603 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__normalizedUserName_0='EMP40@COMPANY.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-01-01 21:43:08.834 +03:00 [INF] Executed DbCommand (31ms) [Parameters=[@p0='a0f7b69a-d4af-48c4-8f34-ad6c0afa1d84' (Nullable = false) (Size = 450), @p1='0', @p2='2d25fed1-fb1d-41a1-b528-8130a64b3835' (Size = 4000), @p3='emp40@company.com' (Size = 256), @p4='False', @p5='Hitham' (Nullable = false) (Size = 100), @p6='Ali' (Nullable = false) (Size = 100), @p7='True', @p8=NULL (DbType = DateTimeOffset), @p9='EMP40@COMPANY.COM' (Size = 256), @p10='EMP40@COMPANY.COM' (Size = 256), @p11='AQAAAAIAAYagAAAAEKicjD+hKMlPcb2CrSrarWGJjq5pIuXPhPQJr6S1iOhRmKky8CqiMsIdf1pBkjOAaA==' (Size = 4000), @p12=NULL (Size = 4000), @p13='False', @p14='RAK63FQOMK7AAWG63UQNLYJWEDCE7SO5' (Size = 4000), @p15='False', @p16='emp40@company.com' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2026-01-01 21:43:08.935 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[@__normalizedRoleName_0='EMPLOYEE' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-01-01 21:43:09.103 +03:00 [INF] Executed DbCommand (31ms) [Parameters=[@__p_0='a0f7b69a-d4af-48c4-8f34-ad6c0afa1d84' (Size = 450), @__p_1='413372c3-5b44-4b4c-a2b6-ca3bdb2375c5' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2026-01-01 21:43:09.117 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedRoleName_0='EMPLOYEE' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-01-01 21:43:09.150 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedUserName_0='EMP40@COMPANY.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-01-01 21:43:09.294 +03:00 [INF] Executed DbCommand (53ms) [Parameters=[@p0='413372c3-5b44-4b4c-a2b6-ca3bdb2375c5' (Nullable = false) (Size = 450), @p1='a0f7b69a-d4af-48c4-8f34-ad6c0afa1d84' (Nullable = false) (Size = 450), @p18='a0f7b69a-d4af-48c4-8f34-ad6c0afa1d84' (Nullable = false) (Size = 450), @p2='0', @p3='c14ec59b-de8c-4e53-9493-ac38219fb56d' (Size = 4000), @p19='2d25fed1-fb1d-41a1-b528-8130a64b3835' (Size = 4000), @p4='emp40@company.com' (Size = 256), @p5='False', @p6='Hitham' (Nullable = false) (Size = 100), @p7='Ali' (Nullable = false) (Size = 100), @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='EMP40@COMPANY.COM' (Size = 256), @p11='EMP40@COMPANY.COM' (Size = 256), @p12='AQAAAAIAAYagAAAAEKicjD+hKMlPcb2CrSrarWGJjq5pIuXPhPQJr6S1iOhRmKky8CqiMsIdf1pBkjOAaA==' (Size = 4000), @p13=NULL (Size = 4000), @p14='False', @p15='RAK63FQOMK7AAWG63UQNLYJWEDCE7SO5' (Size = 4000), @p16='False', @p17='emp40@company.com' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2026-01-01 21:43:09.316 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2026-01-01 21:43:09.318 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.Register (EMPLOYEE) in 2147.0168ms
+2026-01-01 21:43:09.320 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.Register (EMPLOYEE)'
+2026-01-01 21:43:09.322 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/register - 200 0 null 2165.2529ms
+2026-01-01 21:44:47.856 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/login - application/json 62
+2026-01-01 21:44:47.863 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-01 21:44:47.874 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EMPLOYEE.Dtos.LoginDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-01 21:44:50.410 +03:00 [INF] Executed DbCommand (2,463ms) [Parameters=[@__normalizedEmail_0='EMP40@COMPANY.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-01 21:44:51.924 +03:00 [INF] Executed DbCommand (449ms) [Parameters=[@__userId_0='a0f7b69a-d4af-48c4-8f34-ad6c0afa1d84' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-01 21:44:52.825 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType9`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-01 21:44:52.988 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE) in 5111.4979ms
+2026-01-01 21:44:52.995 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-01 21:44:52.998 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/login - 200 null application/json; charset=utf-8 5142.1772ms
+2026-01-01 21:49:21.593 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-01 21:49:21.831 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-01 21:49:21.833 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-01 21:49:21.919 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-01 21:49:21.934 +03:00 [INF] Hosting environment: Development
+2026-01-01 21:49:21.937 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-01 21:49:22.335 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-01 21:49:23.204 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 871.3492ms
+2026-01-01 21:49:23.301 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-01 21:49:23.311 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 10.1172ms
+2026-01-01 21:49:23.364 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-01 21:49:23.410 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.5557ms
+2026-01-01 21:49:24.250 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-01 21:49:24.278 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.148ms
+2026-01-01 21:49:27.136 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/login - application/json 66
+2026-01-01 21:49:27.192 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-01 21:49:27.229 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EMPLOYEE.Dtos.LoginDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-01 21:49:28.958 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-01 21:49:31.689 +03:00 [INF] Executed DbCommand (222ms) [Parameters=[@__normalizedEmail_0='KADESKADES77@GMAIL.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-01 21:49:33.259 +03:00 [INF] Executed DbCommand (973ms) [Parameters=[@__userId_0='d3318a8e-0d29-4a3c-81ee-8d28f5757ab3' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-01 21:49:33.310 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType9`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-01 21:49:33.592 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE) in 6353.2952ms
+2026-01-01 21:49:33.599 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-01 21:49:33.615 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/login - 200 null application/json; charset=utf-8 6479.4873ms
+2026-01-01 21:51:18.336 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/add-role - application/json 54
+2026-01-01 21:51:19.644 +03:00 [INF] Failed to validate the token.
+System.ArgumentException: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+ ---> System.FormatException: IDX10400: Unable to decode: '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64url encoded string.
+   at Microsoft.IdentityModel.Tokens.Base64UrlEncoding.ValidateAndGetOutputSize(ReadOnlySpan`1 strSpan, Int32 offset, Int32 length)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.CreateClaimSet(ReadOnlySpan`1 strSpan, Int32 startIndex, Int32 length, Boolean createHeaderClaimSet)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString, TryReadJwtClaim tryReadJwtClaim)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-01-01 21:51:20.963 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14102: Unable to decode the header '[PII of type 'Microsoft.IdentityModel.Logging.SecurityArtifact' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]' as Base64Url encoded string.
+2026-01-01 21:51:20.997 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2026-01-01 21:51:21.062 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-01 21:51:21.064 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/add-role - 401 0 null 2727.4147ms
+2026-01-01 21:51:57.375 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/add-role - application/json 54
+2026-01-01 21:51:57.721 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.AddRoleToUser (EMPLOYEE)'
+2026-01-01 21:51:57.753 +03:00 [INF] Route matched with {action = "AddRoleToUser", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddRoleToUser(EMPLOYEE.Models.AddRoleModel) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-01 21:51:57.904 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='EMP40@COMPANY.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-01 21:51:57.925 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='MANAGER' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2026-01-01 21:51:57.991 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='MANAGER' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-01-01 21:51:58.077 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[@__p_0='a0f7b69a-d4af-48c4-8f34-ad6c0afa1d84' (Size = 450), @__p_1='dc1d735f-3673-4374-a381-335d0c699c78' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2026-01-01 21:51:58.085 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='MANAGER' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-01-01 21:51:58.091 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='a0f7b69a-d4af-48c4-8f34-ad6c0afa1d84' (Size = 450), @__p_1='dc1d735f-3673-4374-a381-335d0c699c78' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2026-01-01 21:51:58.102 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='MANAGER' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2026-01-01 21:51:58.195 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='EMP40@COMPANY.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-01-01 21:51:58.749 +03:00 [INF] Executed DbCommand (343ms) [Parameters=[@p0='dc1d735f-3673-4374-a381-335d0c699c78' (Nullable = false) (Size = 450), @p1='a0f7b69a-d4af-48c4-8f34-ad6c0afa1d84' (Nullable = false) (Size = 450), @p18='a0f7b69a-d4af-48c4-8f34-ad6c0afa1d84' (Nullable = false) (Size = 450), @p2='0', @p3='8ffe064c-e407-445f-bbb4-5699770ae25b' (Size = 4000), @p19='c14ec59b-de8c-4e53-9493-ac38219fb56d' (Size = 4000), @p4='emp40@company.com' (Size = 256), @p5='False', @p6='Hitham' (Nullable = false) (Size = 100), @p7='Ali' (Nullable = false) (Size = 100), @p8='True', @p9=NULL (DbType = DateTimeOffset), @p10='EMP40@COMPANY.COM' (Size = 256), @p11='EMP40@COMPANY.COM' (Size = 256), @p12='AQAAAAIAAYagAAAAEKicjD+hKMlPcb2CrSrarWGJjq5pIuXPhPQJr6S1iOhRmKky8CqiMsIdf1pBkjOAaA==' (Size = 4000), @p13=NULL (Size = 4000), @p14='False', @p15='RAK63FQOMK7AAWG63UQNLYJWEDCE7SO5' (Size = 4000), @p16='False', @p17='emp40@company.com' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2026-01-01 21:51:58.789 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-01-01 21:51:58.792 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.AddRoleToUser (EMPLOYEE) in 1034.7794ms
+2026-01-01 21:51:58.797 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.AddRoleToUser (EMPLOYEE)'
+2026-01-01 21:51:58.800 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/add-role - 200 null text/plain; charset=utf-8 1424.244ms
+2026-01-01 22:26:42.316 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-01 22:26:42.513 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-01 22:26:42.516 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-01 22:26:42.593 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-01 22:26:42.597 +03:00 [INF] Hosting environment: Development
+2026-01-01 22:26:42.598 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-01 22:27:16.444 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-01 22:27:16.996 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 552.7003ms
+2026-01-01 22:27:17.042 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-01 22:27:17.055 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 13.5935ms
+2026-01-01 22:27:17.059 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-01 22:27:17.304 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 244.9708ms
+2026-01-01 22:27:17.604 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-01 22:27:17.638 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.8447ms
+2026-01-01 22:27:55.380 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/request-otp - application/json 39
+2026-01-01 22:27:55.689 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.RequestOtp (EMPLOYEE)'
+2026-01-01 22:27:55.761 +03:00 [INF] Route matched with {action = "RequestOtp", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RequestOtp(EMPLOYEE.Dtos.RequestResetDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-01 22:27:57.351 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-01 22:28:13.196 +03:00 [ERR] An error occurred using the connection to database 'Employee' on server '(localdb)\MSSQLLocalDB'.
+2026-01-01 22:28:13.463 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'EMPLOYEE.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=12799; handshake=252; [Login] initialization=2; authentication=32; [Post-Login] complete=1227; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:a7a4ba94-9500-46c3-bc6f-6722344dadb7
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=12799; handshake=252; [Login] initialization=2; authentication=32; [Post-Login] complete=1227; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:a7a4ba94-9500-46c3-bc6f-6722344dadb7
+Error Number:-2,State:0,Class:11
+2026-01-01 22:28:13.538 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.RequestOtp (EMPLOYEE) in 17561.8523ms
+2026-01-01 22:28:13.592 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.RequestOtp (EMPLOYEE)'
+2026-01-01 22:28:13.596 +03:00 [ERR] Unhandled Exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=12799; handshake=252; [Login] initialization=2; authentication=32; [Post-Login] complete=1227; 
+ ---> System.ComponentModel.Win32Exception (258): The wait operation timed out.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.FindByEmailAsync(String email)
+   at EMPLOYEE.Application.Abstractions.OtpService.SendOtpAsync(String email) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Application\Abstractions\OtpService.cs:line 24
+   at EMPLOYEE.Controllers.AuthController.RequestOtp(RequestResetDto model) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\AuthController.cs:line 74
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+ClientConnectionId:a7a4ba94-9500-46c3-bc6f-6722344dadb7
+Error Number:-2,State:0,Class:11
+2026-01-01 22:28:14.107 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/request-otp - 500 null application/json; charset=utf-8 18727.3084ms
+2026-01-01 22:31:50.574 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-01 22:31:50.840 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-01 22:31:50.843 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-01 22:31:51.046 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-01 22:31:51.049 +03:00 [INF] Hosting environment: Development
+2026-01-01 22:31:51.051 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-01 22:31:55.493 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-01 22:31:55.728 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 237.6197ms
+2026-01-01 22:31:55.796 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-01 22:31:55.796 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-01 22:31:55.807 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 11.5891ms
+2026-01-01 22:31:55.852 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.5153ms
+2026-01-01 22:31:56.147 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-01 22:31:56.190 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.1356ms
+2026-01-01 22:32:15.546 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/request-otp - application/json 39
+2026-01-01 22:32:15.674 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.RequestOtp (EMPLOYEE)'
+2026-01-01 22:32:17.179 +03:00 [INF] Route matched with {action = "RequestOtp", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RequestOtp(EMPLOYEE.Dtos.RequestResetDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-01 22:32:19.692 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-01 22:32:26.654 +03:00 [INF] Executed DbCommand (439ms) [Parameters=[@__normalizedEmail_0='ALISALEH77ALI@GMAIL.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-01 22:32:27.937 +03:00 [INF] Executed DbCommand (258ms) [Parameters=[@p0='2026-01-01T19:42:27.2525536Z', @p1='607799' (Nullable = false) (Size = 4000), @p2='c448faf3-53d5-411f-91c6-2a28ef0fbd94' (Nullable = false) (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [PasswordResetOtps] ([ExpiresAt], [OtpCode], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2026-01-01 22:32:39.493 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-01-01 22:32:39.504 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.RequestOtp (EMPLOYEE) in 22315.9207ms
+2026-01-01 22:32:39.507 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.RequestOtp (EMPLOYEE)'
+2026-01-01 22:32:39.528 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/request-otp - 200 null text/plain; charset=utf-8 23981.618ms
+2026-01-01 22:33:35.136 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/request-otp - application/json 39
+2026-01-01 22:33:35.144 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.RequestOtp (EMPLOYEE)'
+2026-01-01 22:33:35.147 +03:00 [INF] Route matched with {action = "RequestOtp", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RequestOtp(EMPLOYEE.Dtos.RequestResetDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-01 22:33:35.244 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='ALISALEH77ALI@GMAIL.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-01 22:33:35.560 +03:00 [INF] Executed DbCommand (307ms) [Parameters=[@p0='2026-01-01T19:43:35.2503707Z', @p1='319349' (Nullable = false) (Size = 4000), @p2='c448faf3-53d5-411f-91c6-2a28ef0fbd94' (Nullable = false) (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [PasswordResetOtps] ([ExpiresAt], [OtpCode], [UserId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2);
+2026-01-01 22:33:38.614 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-01-01 22:33:38.617 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.RequestOtp (EMPLOYEE) in 3467.2948ms
+2026-01-01 22:33:38.622 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.RequestOtp (EMPLOYEE)'
+2026-01-01 22:33:38.624 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/request-otp - 200 null text/plain; charset=utf-8 3487.6264ms
+2026-01-01 22:35:16.388 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/reset-password-otp - application/json 87
+2026-01-01 22:35:16.395 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.ResetPasswordOtp (EMPLOYEE)'
+2026-01-01 22:35:16.405 +03:00 [INF] Route matched with {action = "ResetPasswordOtp", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ResetPasswordOtp(EMPLOYEE.Dtos.ResetPasswordOtpDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-01 22:35:16.526 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-01-01 22:35:16.594 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.ResetPasswordOtp (EMPLOYEE) in 186.8306ms
+2026-01-01 22:35:16.597 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.ResetPasswordOtp (EMPLOYEE)'
+2026-01-01 22:35:16.599 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/reset-password-otp - 400 null application/problem+json; charset=utf-8 210.5981ms
+2026-01-01 22:35:49.623 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/reset-password-otp - application/json 90
+2026-01-01 22:35:49.627 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.ResetPasswordOtp (EMPLOYEE)'
+2026-01-01 22:35:49.629 +03:00 [INF] Route matched with {action = "ResetPasswordOtp", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ResetPasswordOtp(EMPLOYEE.Dtos.ResetPasswordOtpDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-01 22:35:49.664 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='ALISALEH77ALI@GMAIL.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-01 22:35:49.732 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='c448faf3-53d5-411f-91c6-2a28ef0fbd94' (Size = 4000), @__otp_1='string' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ExpiresAt], [p].[OtpCode], [p].[UserId]
+FROM [PasswordResetOtps] AS [p]
+WHERE [p].[UserId] = @__user_Id_0 AND [p].[OtpCode] = @__otp_1
+ORDER BY [p].[Id] DESC
+2026-01-01 22:35:49.738 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2026-01-01 22:35:49.740 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.ResetPasswordOtp (EMPLOYEE) in 108.9891ms
+2026-01-01 22:35:49.742 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.ResetPasswordOtp (EMPLOYEE)'
+2026-01-01 22:35:49.744 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/reset-password-otp - 400 null text/plain; charset=utf-8 121.059ms
+2026-01-01 22:36:11.370 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/reset-password-otp - application/json 90
+2026-01-01 22:36:11.374 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.ResetPasswordOtp (EMPLOYEE)'
+2026-01-01 22:36:11.375 +03:00 [INF] Route matched with {action = "ResetPasswordOtp", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ResetPasswordOtp(EMPLOYEE.Dtos.ResetPasswordOtpDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-01 22:36:11.381 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='ALISALEH77ALI@GMAIL.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-01 22:36:11.387 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__user_Id_0='c448faf3-53d5-411f-91c6-2a28ef0fbd94' (Size = 4000), @__otp_1='607799' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[Id], [p].[ExpiresAt], [p].[OtpCode], [p].[UserId]
+FROM [PasswordResetOtps] AS [p]
+WHERE [p].[UserId] = @__user_Id_0 AND [p].[OtpCode] = @__otp_1
+ORDER BY [p].[Id] DESC
+2026-01-01 22:36:11.394 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='ALISALEH77ALI@GMAIL.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-01 22:36:11.776 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='ALISALEH77ALI@GMAIL.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2026-01-01 22:36:11.832 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[@p16='c448faf3-53d5-411f-91c6-2a28ef0fbd94' (Nullable = false) (Size = 450), @p0='0', @p1='ca4aaafb-cdf9-46e9-9e34-e454116b0f23' (Size = 4000), @p17='5462e600-1865-4fdb-a7e0-8454ac113adb' (Size = 4000), @p2='alisaleh77ali@gmail.com' (Size = 256), @p3='False', @p4='Ali' (Nullable = false) (Size = 100), @p5='Saleh' (Nullable = false) (Size = 100), @p6='True', @p7=NULL (DbType = DateTimeOffset), @p8='ALISALEH77ALI@GMAIL.COM' (Size = 256), @p9='ALISALEH77ALI@GMAIL.COM' (Size = 256), @p10='AQAAAAIAAYagAAAAEObh4fbYjDlgFyicrwj82MicN32M3UyfU3TmM4NtdzlkgakIVnjWi29aCOykxmNyiA==' (Size = 4000), @p11=NULL (Size = 4000), @p12='False', @p13='RAB6ZXQZNQWEUBJEA7R3DJ3SAC5EXJVU' (Size = 4000), @p14='False', @p15='alisaleh77ali@gmail.com' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [FirstName] = @p4, [LastName] = @p5, [LockoutEnabled] = @p6, [LockoutEnd] = @p7, [NormalizedEmail] = @p8, [NormalizedUserName] = @p9, [PasswordHash] = @p10, [PhoneNumber] = @p11, [PhoneNumberConfirmed] = @p12, [SecurityStamp] = @p13, [TwoFactorEnabled] = @p14, [UserName] = @p15
+OUTPUT 1
+WHERE [Id] = @p16 AND [ConcurrencyStamp] = @p17;
+2026-01-01 22:36:11.839 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-01-01 22:36:11.841 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.ResetPasswordOtp (EMPLOYEE) in 462.9172ms
+2026-01-01 22:36:11.843 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.ResetPasswordOtp (EMPLOYEE)'
+2026-01-01 22:36:11.846 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/reset-password-otp - 200 null text/plain; charset=utf-8 476.2833ms
+2026-01-01 22:36:32.195 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/login - application/json 65
+2026-01-01 22:36:32.201 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-01 22:36:32.209 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EMPLOYEE.Dtos.LoginDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-01 22:36:32.221 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='ALISALEH77ALI@GMAIL.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-01 22:36:32.514 +03:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2026-01-01 22:36:32.516 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE) in 304.8196ms
+2026-01-01 22:36:32.519 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-01 22:36:32.520 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/login - 401 null text/plain; charset=utf-8 325.2833ms
+2026-01-01 22:36:49.629 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/login - application/json 66
+2026-01-01 22:36:49.634 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-01 22:36:49.636 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EMPLOYEE.Dtos.LoginDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-01 22:36:49.641 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='ALISALEH77ALI@GMAIL.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-01 22:36:49.935 +03:00 [INF] Executed DbCommand (28ms) [Parameters=[@__userId_0='c448faf3-53d5-411f-91c6-2a28ef0fbd94' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-01 22:36:50.086 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType9`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-01 22:36:50.091 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE) in 451.8753ms
+2026-01-01 22:36:50.093 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-01 22:36:50.094 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/login - 200 null application/json; charset=utf-8 464.9335ms
+2026-01-01 23:10:00.597 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-01 23:10:00.909 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-01 23:10:00.912 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-01 23:10:01.005 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-01 23:10:01.012 +03:00 [INF] Hosting environment: Development
+2026-01-01 23:10:01.013 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-01 23:10:01.419 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-01 23:10:01.701 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 284.3593ms
+2026-01-01 23:10:01.789 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-01 23:10:01.795 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-01 23:10:01.802 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 12.6853ms
+2026-01-01 23:10:01.851 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 56.3801ms
+2026-01-01 23:10:02.421 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-01 23:10:02.468 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 47.4856ms
+2026-01-01 23:10:18.976 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/login - application/json 65
+2026-01-01 23:10:19.020 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-01 23:10:19.054 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EMPLOYEE.Dtos.LoginDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-01 23:10:20.239 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-01 23:10:32.481 +03:00 [INF] Executed DbCommand (238ms) [Parameters=[@__normalizedEmail_0='EMP12@COMPANY.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-01 23:10:33.309 +03:00 [INF] Executed DbCommand (333ms) [Parameters=[@__userId_0='5b66d222-cf2c-4316-918a-8938fb1ef712' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-01 23:10:33.367 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType9`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-01 23:10:33.383 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE) in 14317.7965ms
+2026-01-01 23:10:33.386 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-01 23:10:33.410 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/login - 200 null application/json; charset=utf-8 14434.6989ms
+2026-01-01 23:12:11.549 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/login - application/json 68
+2026-01-01 23:12:11.570 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-01 23:12:11.572 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EMPLOYEE.Dtos.LoginDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-01 23:12:11.699 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='MANAGER1@COMPANY.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-01 23:12:11.915 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-01 23:12:11.925 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType9`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-01 23:12:11.964 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE) in 386.736ms
+2026-01-01 23:12:11.966 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-01 23:12:11.968 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/login - 200 null application/json; charset=utf-8 419.5223ms
+2026-01-01 23:21:02.574 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-01 23:21:02.858 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-01 23:21:02.867 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-01 23:21:03.008 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-01 23:21:03.010 +03:00 [INF] Hosting environment: Development
+2026-01-01 23:21:03.011 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-01 23:21:17.845 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly - null null
+2026-01-01 23:21:18.210 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/23/2025 11:39:21 PM', Current time (UTC): '1/1/2026 8:21:18 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2026-01-01 23:21:18.232 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/23/2025 11:39:21 PM', Current time (UTC): '1/1/2026 8:21:18 PM'.
+2026-01-01 23:21:18.242 +03:00 [INF] Authorization failed. These requirements were not met:
+ClaimsAuthorizationRequirement:Claim.Type=permission and Claim.Value is one of the following values: (Permissions.Evaluations.Manage)
+2026-01-01 23:21:18.250 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-01-01 23:21:18.259 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly - 401 0 null 416.2463ms
+2026-01-01 23:21:29.708 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly - null null
+2026-01-01 23:21:29.754 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2026-01-01 23:21:29.848 +03:00 [INF] Route matched with {action = "GetMyTeamEvaluations", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTeamEvaluationsAsync(System.Nullable`1[System.Int32]) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2026-01-01 23:21:30.927 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-01 23:21:33.755 +03:00 [INF] Executed DbCommand (181ms) [Parameters=[@__callerId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450), @__year_1='2026'], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeId], COALESCE([a0].[FirstName], N'') + N' ' + COALESCE([a0].[LastName], N'') AS [EmployeeName], [e].[Attendance], [e].[Quality], [e].[Productivity], [e].[Teamwork], [e].[FinalScore], [e].[CreatedAt]
+FROM [EmployeeEvaluations] AS [e]
+INNER JOIN (
+    SELECT [e0].[Id], [e0].[UserId]
+    FROM [Employees] AS [e0]
+    WHERE [e0].[IsActive] = CAST(1 AS bit)
+) AS [t] ON [e].[EmployeeId] = [t].[Id]
+INNER JOIN [AspNetUsers] AS [a] ON [e].[ManagerId] = [a].[Id]
+LEFT JOIN [AspNetUsers] AS [a0] ON [t].[UserId] = [a0].[Id]
+WHERE [e].[ManagerId] = @__callerId_0 AND DATEPART(year, [e].[CreatedAt]) = @__year_1
+2026-01-01 23:21:33.846 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EMPLOYEE.Dtos.EmployeeEvaluationDashboardDto, EMPLOYEE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-01 23:21:33.877 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE) in 4018.8504ms
+2026-01-01 23:21:33.881 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2026-01-01 23:21:33.903 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly - 200 null application/json; charset=utf-8 4195.7281ms
+2026-01-01 23:22:16.722 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly - null null
+2026-01-01 23:22:16.762 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE)'
+2026-01-01 23:22:16.775 +03:00 [INF] Route matched with {action = "GetEmployeeYearlyDashboard", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeYearlyDashboard(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2026-01-01 23:22:17.054 +03:00 [INF] Executed DbCommand (103ms) [Parameters=[@__employeeId_0='31', @__callerUid_1='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[ManagerId] = @__callerUid_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-01 23:22:17.085 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]
+        WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-01 23:22:17.169 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__employeeId_0='31', @__start_1='2026-01-01T00:00:00.0000000', @__end_2='2027-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2026-01-01 23:22:17.179 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__start_1='2026-01-01T00:00:00.0000000', @__end_2='2026-04-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2026-01-01 23:22:17.199 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) COALESCE([a].[FirstName], N'') + N' ' + COALESCE([a].[LastName], N'') AS [Name]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0
+2026-01-01 23:22:17.205 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Dtos.EmployeeYearlyDashboardDto'.
+2026-01-01 23:22:17.210 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE) in 432.2125ms
+2026-01-01 23:22:17.213 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE)'
+2026-01-01 23:22:17.216 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly - 200 null application/json; charset=utf-8 493.4829ms
+2026-01-01 23:22:36.591 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/login - application/json 68
+2026-01-01 23:22:36.597 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-01 23:22:36.604 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EMPLOYEE.Dtos.LoginDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2026-01-01 23:22:36.942 +03:00 [INF] Executed DbCommand (145ms) [Parameters=[@__normalizedEmail_0='MANAGER1@COMPANY.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2026-01-01 23:22:37.449 +03:00 [INF] Executed DbCommand (95ms) [Parameters=[@__userId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2026-01-01 23:22:37.475 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType9`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-01-01 23:22:37.479 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE) in 871.9012ms
+2026-01-01 23:22:37.485 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2026-01-01 23:22:37.488 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/login - 200 null application/json; charset=utf-8 897.227ms
+2026-01-01 23:22:51.991 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly - null null
+2026-01-01 23:22:52.006 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE)'
+2026-01-01 23:22:52.010 +03:00 [INF] Route matched with {action = "GetEmployeeYearlyDashboard", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeYearlyDashboard(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2026-01-01 23:22:52.107 +03:00 [INF] Executed DbCommand (78ms) [Parameters=[@__employeeId_0='31', @__callerUid_1='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[ManagerId] = @__callerUid_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-01 23:22:52.128 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]
+        WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-01 23:22:52.136 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__employeeId_0='31', @__start_1='2026-01-01T00:00:00.0000000', @__end_2='2027-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2026-01-01 23:22:52.140 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__employeeId_0='31', @__start_1='2026-01-01T00:00:00.0000000', @__end_2='2026-04-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__start_1 AND [e].[Period] < @__end_2
+GROUP BY [e].[EmployeeId]
+2026-01-01 23:22:52.151 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) COALESCE([a].[FirstName], N'') + N' ' + COALESCE([a].[LastName], N'') AS [Name]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0
+2026-01-01 23:22:52.154 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Dtos.EmployeeYearlyDashboardDto'.
+2026-01-01 23:22:52.155 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE) in 139.4568ms
+2026-01-01 23:22:52.157 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE)'
+2026-01-01 23:22:52.160 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly - 200 null application/json; charset=utf-8 170.0698ms
+2026-01-01 23:23:10.537 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly - null null
+2026-01-01 23:23:10.545 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2026-01-01 23:23:10.549 +03:00 [INF] Route matched with {action = "GetMyTeamEvaluations", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTeamEvaluationsAsync(System.Nullable`1[System.Int32]) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2026-01-01 23:23:11.244 +03:00 [INF] Executed DbCommand (688ms) [Parameters=[@__callerId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450), @__year_1='2026'], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeId], COALESCE([a0].[FirstName], N'') + N' ' + COALESCE([a0].[LastName], N'') AS [EmployeeName], [e].[Attendance], [e].[Quality], [e].[Productivity], [e].[Teamwork], [e].[FinalScore], [e].[CreatedAt]
+FROM [EmployeeEvaluations] AS [e]
+INNER JOIN (
+    SELECT [e0].[Id], [e0].[UserId]
+    FROM [Employees] AS [e0]
+    WHERE [e0].[IsActive] = CAST(1 AS bit)
+) AS [t] ON [e].[EmployeeId] = [t].[Id]
+INNER JOIN [AspNetUsers] AS [a] ON [e].[ManagerId] = [a].[Id]
+LEFT JOIN [AspNetUsers] AS [a0] ON [t].[UserId] = [a0].[Id]
+WHERE [e].[ManagerId] = @__callerId_0 AND DATEPART(year, [e].[CreatedAt]) = @__year_1
+2026-01-01 23:23:11.254 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EMPLOYEE.Dtos.EmployeeEvaluationDashboardDto, EMPLOYEE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-01 23:23:11.256 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE) in 703.8201ms
+2026-01-01 23:23:11.272 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2026-01-01 23:23:11.274 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly - 200 null application/json; charset=utf-8 736.7862ms
+2026-01-01 23:23:23.909 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/21/dashboard/yearly - null null
+2026-01-01 23:23:23.918 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE)'
+2026-01-01 23:23:23.920 +03:00 [INF] Route matched with {action = "GetEmployeeYearlyDashboard", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeYearlyDashboard(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2026-01-01 23:23:24.027 +03:00 [INF] Executed DbCommand (100ms) [Parameters=[@__employeeId_0='21', @__callerUid_1='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[ManagerId] = @__callerUid_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-01 23:23:24.047 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@__employeeId_0='21'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Employees] AS [e]
+        WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-01-01 23:23:24.053 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE) in 127.8602ms
+2026-01-01 23:23:24.055 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE)'
+2026-01-01 23:23:24.057 +03:00 [ERR] Unhandled Exception
+BusinessException: Not in your Team
+   at EMPLOYEE.Application.Features.Evaluations.Query.EmployeeEvaluationService.GetEmployeeYearlyDashboardAsync(Int32 employeeId, String callerUid, String callerRole) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Application\Features\Evaluations\Query\EmployeeEvaluationService.cs:line 195
+   at EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard(Int32 employeeId) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Controllers\EmployeeEvaluationController.cs:line 168
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\ExceptionHandlingMiddleware.cs:line 22
+2026-01-01 23:23:24.138 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/21/dashboard/yearly - 403 null application/json; charset=utf-8 228.8539ms
+2026-01-01 23:27:39.622 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-01 23:27:40.498 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 875.4952ms
+2026-01-01 23:27:52.851 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-01 23:27:52.890 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 39.3533ms
+2026-01-01 23:27:55.292 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-01 23:27:55.399 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 105.9872ms
+2026-01-01 23:27:55.672 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-01 23:27:55.794 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 121.7248ms
+2026-01-01 23:27:59.836 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-01 23:27:59.925 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 89.1124ms
+2026-01-01 23:28:00.381 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly - null null
+2026-01-01 23:28:00.859 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2026-01-01 23:28:00.869 +03:00 [INF] Route matched with {action = "GetMyTeamEvaluations", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTeamEvaluationsAsync(System.Nullable`1[System.Int32]) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2026-01-01 23:28:07.525 +03:00 [INF] Executed DbCommand (356ms) [Parameters=[@__callerId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450), @__year_1='2026'], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeId], COALESCE([a0].[FirstName], N'') + N' ' + COALESCE([a0].[LastName], N'') AS [EmployeeName], [e].[Attendance], [e].[Quality], [e].[Productivity], [e].[Teamwork], [e].[FinalScore], [e].[CreatedAt]
+FROM [EmployeeEvaluations] AS [e]
+INNER JOIN (
+    SELECT [e0].[Id], [e0].[UserId]
+    FROM [Employees] AS [e0]
+    WHERE [e0].[IsActive] = CAST(1 AS bit)
+) AS [t] ON [e].[EmployeeId] = [t].[Id]
+INNER JOIN [AspNetUsers] AS [a] ON [e].[ManagerId] = [a].[Id]
+LEFT JOIN [AspNetUsers] AS [a0] ON [t].[UserId] = [a0].[Id]
+WHERE [e].[ManagerId] = @__callerId_0 AND DATEPART(year, [e].[CreatedAt]) = @__year_1
+2026-01-01 23:28:07.529 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EMPLOYEE.Dtos.EmployeeEvaluationDashboardDto, EMPLOYEE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-01 23:28:07.531 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE) in 6646.9649ms
+2026-01-01 23:28:07.534 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2026-01-01 23:28:07.538 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly - 200 null application/json; charset=utf-8 7157.0593ms
+2026-01-01 23:28:44.291 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-01 23:28:44.593 +03:00 [INF] Now listening on: https://localhost:7212
+2026-01-01 23:28:44.595 +03:00 [INF] Now listening on: http://localhost:5298
+2026-01-01 23:28:44.672 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-01 23:28:44.678 +03:00 [INF] Hosting environment: Development
+2026-01-01 23:28:44.680 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2026-01-01 23:28:45.109 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2026-01-01 23:28:45.599 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 492.7118ms
+2026-01-01 23:28:45.683 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-01 23:28:45.694 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 11.5508ms
+2026-01-01 23:28:45.714 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2026-01-01 23:28:45.770 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.5425ms
+2026-01-01 23:28:46.169 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2026-01-01 23:28:46.283 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly - null null
+2026-01-01 23:28:46.440 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 279.5498ms
+2026-01-01 23:28:46.981 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2026-01-01 23:28:47.061 +03:00 [INF] Route matched with {action = "GetMyTeamEvaluations", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTeamEvaluationsAsync(System.Nullable`1[System.Int32]) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2026-01-01 23:28:51.099 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2026-01-01 23:28:58.970 +03:00 [INF] Executed DbCommand (331ms) [Parameters=[@__callerId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450), @__year_1='2026'], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeId], COALESCE([a0].[FirstName], N'') + N' ' + COALESCE([a0].[LastName], N'') AS [EmployeeName], [e].[Attendance], [e].[Quality], [e].[Productivity], [e].[Teamwork], [e].[FinalScore], [e].[CreatedAt]
+FROM [EmployeeEvaluations] AS [e]
+INNER JOIN (
+    SELECT [e0].[Id], [e0].[UserId]
+    FROM [Employees] AS [e0]
+    WHERE [e0].[IsActive] = CAST(1 AS bit)
+) AS [t] ON [e].[EmployeeId] = [t].[Id]
+INNER JOIN [AspNetUsers] AS [a] ON [e].[ManagerId] = [a].[Id]
+LEFT JOIN [AspNetUsers] AS [a0] ON [t].[UserId] = [a0].[Id]
+WHERE [e].[ManagerId] = @__callerId_0 AND DATEPART(year, [e].[CreatedAt]) = @__year_1
+2026-01-01 23:28:59.029 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EMPLOYEE.Dtos.EmployeeEvaluationDashboardDto, EMPLOYEE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-01-01 23:28:59.050 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE) in 11979.7168ms
+2026-01-01 23:28:59.054 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2026-01-01 23:28:59.067 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly - 200 null application/json; charset=utf-8 12784.1875ms

@@ -1,0 +1,124 @@
+2025-12-24 00:32:37.646 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-24 00:32:38.006 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-24 00:32:38.010 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-24 00:32:38.125 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-24 00:32:38.129 +03:00 [INF] Hosting environment: Development
+2025-12-24 00:32:38.130 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-24 00:32:40.559 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly - null null
+2025-12-24 00:32:40.740 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-24 00:32:40.770 +03:00 [INF] Route matched with {action = "GetMyTeamEvaluations", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTeamEvaluationsAsync(System.Nullable`1[System.Int32]) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-24 00:32:42.499 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-24 00:32:42.516 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-24 00:32:42.719 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-24 00:33:01.080 +03:00 [INF] Executed DbCommand (253ms) [Parameters=[@__callerId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450), @__year_1='2025'], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork], [t].[Id], [t].[DepartmentId], [t].[IsActive], [t].[Position], [t].[Salary], [t].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [EmployeeEvaluations] AS [e]
+INNER JOIN (
+    SELECT [e0].[Id], [e0].[DepartmentId], [e0].[IsActive], [e0].[Position], [e0].[Salary], [e0].[UserId]
+    FROM [Employees] AS [e0]
+    WHERE [e0].[IsActive] = CAST(1 AS bit)
+) AS [t] ON [e].[EmployeeId] = [t].[Id]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+WHERE [e].[ManagerId] = @__callerId_0 AND DATEPART(year, [e].[CreatedAt]) = @__year_1
+ORDER BY [e].[EmployeeId], [e].[CreatedAt]
+2025-12-24 00:33:02.614 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EMPLOYEE.Dtos.EmployeeEvaluationDashboardDto, EMPLOYEE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-24 00:33:02.668 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE) in 21884.9674ms
+2025-12-24 00:33:02.764 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-24 00:33:02.789 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly - 200 null application/json; charset=utf-8 22233.5913ms
+2025-12-24 00:34:46.378 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly?month=3 - null null
+2025-12-24 00:34:46.393 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-24 00:34:46.395 +03:00 [INF] Route matched with {action = "GetMyTeamEvaluations", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTeamEvaluationsAsync(System.Nullable`1[System.Int32]) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-24 00:34:46.719 +03:00 [INF] Executed DbCommand (223ms) [Parameters=[@__callerId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450), @__month_Value_1='3', @__year_2='2025'], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork], [t].[Id], [t].[DepartmentId], [t].[IsActive], [t].[Position], [t].[Salary], [t].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [EmployeeEvaluations] AS [e]
+INNER JOIN (
+    SELECT [e0].[Id], [e0].[DepartmentId], [e0].[IsActive], [e0].[Position], [e0].[Salary], [e0].[UserId]
+    FROM [Employees] AS [e0]
+    WHERE [e0].[IsActive] = CAST(1 AS bit)
+) AS [t] ON [e].[EmployeeId] = [t].[Id]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+WHERE [e].[ManagerId] = @__callerId_0 AND DATEPART(month, [e].[CreatedAt]) = @__month_Value_1 AND DATEPART(year, [e].[CreatedAt]) = @__year_2
+ORDER BY [e].[EmployeeId], [e].[CreatedAt]
+2025-12-24 00:34:46.723 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EMPLOYEE.Dtos.EmployeeEvaluationDashboardDto, EMPLOYEE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-24 00:34:46.726 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE) in 325.0992ms
+2025-12-24 00:34:46.727 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-24 00:34:46.730 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly?month=3 - 200 null application/json; charset=utf-8 351.6944ms
+2025-12-24 00:35:04.132 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly?month=12 - null null
+2025-12-24 00:35:04.142 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-24 00:35:04.144 +03:00 [INF] Route matched with {action = "GetMyTeamEvaluations", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTeamEvaluationsAsync(System.Nullable`1[System.Int32]) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-24 00:35:04.583 +03:00 [INF] Executed DbCommand (339ms) [Parameters=[@__callerId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450), @__month_Value_1='12', @__year_2='2025'], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork], [t].[Id], [t].[DepartmentId], [t].[IsActive], [t].[Position], [t].[Salary], [t].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [EmployeeEvaluations] AS [e]
+INNER JOIN (
+    SELECT [e0].[Id], [e0].[DepartmentId], [e0].[IsActive], [e0].[Position], [e0].[Salary], [e0].[UserId]
+    FROM [Employees] AS [e0]
+    WHERE [e0].[IsActive] = CAST(1 AS bit)
+) AS [t] ON [e].[EmployeeId] = [t].[Id]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+WHERE [e].[ManagerId] = @__callerId_0 AND DATEPART(month, [e].[CreatedAt]) = @__month_Value_1 AND DATEPART(year, [e].[CreatedAt]) = @__year_2
+ORDER BY [e].[EmployeeId], [e].[CreatedAt]
+2025-12-24 00:35:04.595 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EMPLOYEE.Dtos.EmployeeEvaluationDashboardDto, EMPLOYEE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-24 00:35:04.600 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE) in 452.8605ms
+2025-12-24 00:35:04.605 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-24 00:35:04.608 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly?month=12 - 200 null application/json; charset=utf-8 476.0297ms
+2025-12-24 00:36:12.805 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly - null null
+2025-12-24 00:36:12.810 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-24 00:36:12.812 +03:00 [INF] Route matched with {action = "GetMyTeamEvaluations", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTeamEvaluationsAsync(System.Nullable`1[System.Int32]) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-24 00:36:12.861 +03:00 [INF] Executed DbCommand (45ms) [Parameters=[@__callerId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450), @__year_1='2025'], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork], [t].[Id], [t].[DepartmentId], [t].[IsActive], [t].[Position], [t].[Salary], [t].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [EmployeeEvaluations] AS [e]
+INNER JOIN (
+    SELECT [e0].[Id], [e0].[DepartmentId], [e0].[IsActive], [e0].[Position], [e0].[Salary], [e0].[UserId]
+    FROM [Employees] AS [e0]
+    WHERE [e0].[IsActive] = CAST(1 AS bit)
+) AS [t] ON [e].[EmployeeId] = [t].[Id]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+WHERE [e].[ManagerId] = @__callerId_0 AND DATEPART(year, [e].[CreatedAt]) = @__year_1
+ORDER BY [e].[EmployeeId], [e].[CreatedAt]
+2025-12-24 00:36:12.867 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EMPLOYEE.Dtos.EmployeeEvaluationDashboardDto, EMPLOYEE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-24 00:36:12.870 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE) in 56.0017ms
+2025-12-24 00:36:12.872 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-24 00:36:12.874 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly - 200 null application/json; charset=utf-8 69.8134ms
+2025-12-24 01:01:16.510 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-24 01:01:16.862 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-24 01:01:16.866 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-24 01:01:16.957 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-24 01:01:16.958 +03:00 [INF] Hosting environment: Development
+2025-12-24 01:01:16.960 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-24 01:01:20.361 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly - null null
+2025-12-24 01:01:20.521 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-24 01:01:20.547 +03:00 [INF] Route matched with {action = "GetMyTeamEvaluations", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTeamEvaluationsAsync(System.Nullable`1[System.Int32]) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-24 01:01:22.125 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-24 01:01:22.255 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-24 01:01:22.464 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-24 01:01:34.275 +03:00 [INF] Executed DbCommand (127ms) [Parameters=[@__callerId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450), @__year_1='2025'], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork], [t].[Id], [t].[DepartmentId], [t].[IsActive], [t].[Position], [t].[Salary], [t].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [EmployeeEvaluations] AS [e]
+INNER JOIN (
+    SELECT [e0].[Id], [e0].[DepartmentId], [e0].[IsActive], [e0].[Position], [e0].[Salary], [e0].[UserId]
+    FROM [Employees] AS [e0]
+    WHERE [e0].[IsActive] = CAST(1 AS bit)
+) AS [t] ON [e].[EmployeeId] = [t].[Id]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+WHERE [e].[ManagerId] = @__callerId_0 AND DATEPART(year, [e].[CreatedAt]) = @__year_1
+2025-12-24 01:01:34.616 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EMPLOYEE.Dtos.EmployeeEvaluationDashboardDto, EMPLOYEE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-24 01:01:34.663 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE) in 14101.717ms
+2025-12-24 01:01:34.673 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-24 01:01:34.699 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly - 200 null application/json; charset=utf-8 14338.7473ms
+2025-12-24 01:02:01.510 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly?month=12 - null null
+2025-12-24 01:02:01.524 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-24 01:02:01.527 +03:00 [INF] Route matched with {action = "GetMyTeamEvaluations", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMyTeamEvaluationsAsync(System.Nullable`1[System.Int32]) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-24 01:02:01.774 +03:00 [INF] Executed DbCommand (71ms) [Parameters=[@__callerId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450), @__year_1='2025', @__month_Value_2='12'], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[Attendance], [e].[Comments], [e].[CreatedAt], [e].[EmployeeId], [e].[FinalScore], [e].[ManagerId], [e].[Period], [e].[Productivity], [e].[Quality], [e].[Teamwork], [t].[Id], [t].[DepartmentId], [t].[IsActive], [t].[Position], [t].[Salary], [t].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [EmployeeEvaluations] AS [e]
+INNER JOIN (
+    SELECT [e0].[Id], [e0].[DepartmentId], [e0].[IsActive], [e0].[Position], [e0].[Salary], [e0].[UserId]
+    FROM [Employees] AS [e0]
+    WHERE [e0].[IsActive] = CAST(1 AS bit)
+) AS [t] ON [e].[EmployeeId] = [t].[Id]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+WHERE [e].[ManagerId] = @__callerId_0 AND DATEPART(year, [e].[CreatedAt]) = @__year_1 AND DATEPART(month, [e].[CreatedAt]) = @__month_Value_2
+2025-12-24 01:02:01.782 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EMPLOYEE.Dtos.EmployeeEvaluationDashboardDto, EMPLOYEE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-24 01:02:01.785 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE) in 254.5074ms
+2025-12-24 01:02:01.787 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetMyTeamEvaluationsAsync (EMPLOYEE)'
+2025-12-24 01:02:01.792 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/all_yearly?month=12 - 200 null application/json; charset=utf-8 282.0126ms

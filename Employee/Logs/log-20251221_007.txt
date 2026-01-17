@@ -1,0 +1,733 @@
+2025-12-21 22:42:16.322 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-21 22:42:16.405 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-21 22:42:16.513 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-21 22:42:16.993 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-21 22:42:17.059 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-21 22:42:17.064 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-12-21 22:42:17.065 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-12-21 22:42:17.090 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-12-21 22:42:17.116 +03:00 [INF] Applying migration '20251221190725_Period'.
+2025-12-21 22:42:17.233 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE EmployeeEvaluations
+                  SET Period = TRY_CONVERT(DATETIME, Period + '-01')
+2025-12-21 22:42:17.237 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE EmployeeEvaluations
+                  SET Period = DATEFROMPARTS(YEAR(GETDATE()), MONTH(GETDATE()), 1)
+                  WHERE Period IS NULL
+2025-12-21 22:42:17.262 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @var0 sysname;
+SELECT @var0 = [d].[name]
+FROM [sys].[default_constraints] [d]
+INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+WHERE ([d].[parent_object_id] = OBJECT_ID(N'[EmployeeEvaluations]') AND [c].[name] = N'Period');
+IF @var0 IS NOT NULL EXEC(N'ALTER TABLE [EmployeeEvaluations] DROP CONSTRAINT [' + @var0 + '];');
+ALTER TABLE [EmployeeEvaluations] ALTER COLUMN [Period] datetime2 NOT NULL;
+2025-12-21 22:42:17.264 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20251221190725_Period', N'8.0.22');
+2025-12-21 22:46:49.064 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-21 22:46:50.113 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-21 22:46:50.117 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-21 22:46:50.236 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-21 22:46:50.244 +03:00 [INF] Hosting environment: Development
+2025-12-21 22:46:50.251 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-21 22:46:51.472 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-21 22:46:52.079 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 586.1873ms
+2025-12-21 22:46:52.110 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-21 22:46:52.111 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-21 22:46:52.146 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 35.7918ms
+2025-12-21 22:46:52.304 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 192.6626ms
+2025-12-21 22:46:52.474 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-21 22:46:52.791 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 317.0678ms
+2025-12-21 22:46:58.306 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-21 22:46:58.593 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-21 22:46:58.595 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-21 22:46:58.698 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-21 22:46:58.712 +03:00 [INF] Hosting environment: Development
+2025-12-21 22:46:58.716 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-21 22:46:59.199 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-21 22:46:59.462 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-21 22:46:59.498 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 301.0046ms
+2025-12-21 22:46:59.498 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 33.9769ms
+2025-12-21 22:46:59.548 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-21 22:46:59.549 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-21 22:46:59.563 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 14.9276ms
+2025-12-21 22:46:59.666 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-21 22:46:59.686 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-21 22:46:59.727 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 177.9244ms
+2025-12-21 22:46:59.729 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 63.3711ms
+2025-12-21 22:46:59.744 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 58.0022ms
+2025-12-21 22:46:59.821 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-21 22:47:00.108 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 286.7071ms
+2025-12-21 22:47:00.120 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-21 22:47:00.216 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 96.1859ms
+2025-12-21 22:47:05.566 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-21 22:47:05.575 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 8.9484ms
+2025-12-21 22:47:05.632 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-21 22:47:05.632 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-21 22:47:05.642 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 9.5197ms
+2025-12-21 22:47:05.649 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.7332ms
+2025-12-21 22:47:05.784 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-21 22:47:05.815 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 30.937ms
+2025-12-21 22:47:21.997 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------855452139637729107351032 720
+2025-12-21 22:47:23.646 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-21 22:47:23.705 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-21 22:47:24.815 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-21 22:47:24.828 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-21 22:47:24.902 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-21 22:47:26.402 +03:00 [INF] Executed DbCommand (139ms) [Parameters=[@__dto_EmployeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DepartmentId], [e].[IsActive], [e].[Position], [e].[Salary], [e].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__dto_EmployeeId_0
+2025-12-21 22:47:26.787 +03:00 [INF] Executed DbCommand (85ms) [Parameters=[@__dto_EmployeeId_0='31', @__currentPeriod_1='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND [e].[Period] = @__currentPeriod_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-21 22:47:26.855 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-12-21 22:47:26.905 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 3190.5829ms
+2025-12-21 22:47:26.908 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-21 22:47:26.920 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 400 null text/plain; charset=utf-8 4922.868ms
+2025-12-21 22:48:45.862 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------627227500551062432077770 720
+2025-12-21 22:48:45.875 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-21 22:48:45.878 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-21 22:48:45.914 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__dto_EmployeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DepartmentId], [e].[IsActive], [e].[Position], [e].[Salary], [e].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__dto_EmployeeId_0
+2025-12-21 22:48:45.922 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__dto_EmployeeId_0='31', @__currentPeriod_1='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND [e].[Period] = @__currentPeriod_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-21 22:48:45.926 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-12-21 22:48:45.929 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 48.3928ms
+2025-12-21 22:48:45.933 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-21 22:48:45.937 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 400 null text/plain; charset=utf-8 75.1005ms
+2025-12-21 22:48:48.119 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------296685728840481881646603 720
+2025-12-21 22:48:48.129 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-21 22:48:48.131 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-21 22:48:48.225 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__dto_EmployeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DepartmentId], [e].[IsActive], [e].[Position], [e].[Salary], [e].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__dto_EmployeeId_0
+2025-12-21 22:48:48.231 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__dto_EmployeeId_0='31', @__currentPeriod_1='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND [e].[Period] = @__currentPeriod_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-21 22:48:48.235 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-12-21 22:48:48.237 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 102.2369ms
+2025-12-21 22:48:48.243 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-21 22:48:48.245 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 400 null text/plain; charset=utf-8 126.3373ms
+2025-12-21 22:49:14.998 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------136155397989713352405379 720
+2025-12-21 22:49:15.003 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-21 22:49:15.005 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-21 22:49:15.012 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__dto_EmployeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DepartmentId], [e].[IsActive], [e].[Position], [e].[Salary], [e].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__dto_EmployeeId_0
+2025-12-21 22:49:15.018 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__dto_EmployeeId_0='31', @__currentPeriod_1='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND [e].[Period] = @__currentPeriod_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-21 22:49:15.425 +03:00 [INF] Executed DbCommand (102ms) [Parameters=[@p0='5', @p1='good jobe' (Nullable = false) (Size = 4000), @p2='2025-12-21T19:49:15.0232856Z', @p3='31', @p4='4.75' (Precision = 18) (Scale = 2), @p5='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Nullable = false) (Size = 450), @p6='2025-12-01T00:00:00.0000000', @p7='5', @p8='4', @p9='5'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [EmployeeEvaluations] ([Attendance], [Comments], [CreatedAt], [EmployeeId], [FinalScore], [ManagerId], [Period], [Productivity], [Quality], [Teamwork])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2025-12-21 22:49:15.474 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Models.EmployeeEvaluation'.
+2025-12-21 22:49:15.516 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 508.03ms
+2025-12-21 22:49:15.519 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-21 22:49:15.522 +03:00 [ERR] Unhandled Exception
+System.Text.Json.JsonException: A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles. Path: $.Employee.Department.Employees.Department.Employees.Department.Employees.Department.Employees.Department.Employees.Department.Employees.Department.Employees.Department.Employees.Department.Employees.Department.Employees.Id.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_SerializerCycleDetected(Int32 maxDepth)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 27
+2025-12-21 22:49:18.817 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 500 null application/json; charset=utf-8 3819.426ms
+2025-12-21 22:58:00.719 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------160108928093561754784648 720
+2025-12-21 22:58:00.728 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-21 22:58:00.733 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-21 22:58:00.754 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__dto_EmployeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DepartmentId], [e].[IsActive], [e].[Position], [e].[Salary], [e].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__dto_EmployeeId_0
+2025-12-21 22:58:00.759 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__dto_EmployeeId_0='31', @__currentPeriod_1='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND [e].[Period] = @__currentPeriod_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-21 22:58:00.762 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2025-12-21 22:58:00.764 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 23.2586ms
+2025-12-21 22:58:00.767 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-21 22:58:00.769 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 400 null text/plain; charset=utf-8 49.6644ms
+2025-12-21 22:59:13.659 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------477004304235292659640486 720
+2025-12-21 22:59:13.664 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-21 22:59:13.666 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-21 22:59:13.672 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__dto_EmployeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DepartmentId], [e].[IsActive], [e].[Position], [e].[Salary], [e].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__dto_EmployeeId_0
+2025-12-21 22:59:13.678 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__dto_EmployeeId_0='31', @__currentPeriod_1='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND [e].[Period] = @__currentPeriod_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-21 22:59:13.847 +03:00 [INF] Executed DbCommand (162ms) [Parameters=[@p0='5', @p1='good jobe' (Nullable = false) (Size = 4000), @p2='2025-12-21T19:59:13.6820288Z', @p3='31', @p4='4.75' (Precision = 18) (Scale = 2), @p5='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Nullable = false) (Size = 450), @p6='2025-12-01T00:00:00.0000000', @p7='5', @p8='4', @p9='5'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [EmployeeEvaluations] ([Attendance], [Comments], [CreatedAt], [EmployeeId], [FinalScore], [ManagerId], [Period], [Productivity], [Quality], [Teamwork])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2025-12-21 22:59:13.851 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Models.EmployeeEvaluation'.
+2025-12-21 22:59:13.855 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 185.9977ms
+2025-12-21 22:59:13.857 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-21 22:59:13.861 +03:00 [ERR] Unhandled Exception
+System.Text.Json.JsonException: A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles. Path: $.Employee.Department.Employees.Department.Employees.Department.Employees.Department.Employees.Department.Employees.Department.Employees.Department.Employees.Department.Employees.Department.Employees.Department.Employees.Id.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_SerializerCycleDetected(Int32 maxDepth)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Converters.IEnumerableDefaultConverter`2.OnWriteResume(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryWrite(Utf8JsonWriter writer, TCollection value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(Stream utf8Json, T rootValue, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at SlackExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\Hashem\source\repos\Employee\EMPLOYEE\Middlware\SlackExceptionMiddleware.cs:line 27
+2025-12-21 22:59:16.101 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 500 null application/json; charset=utf-8 2442.0176ms
+2025-12-21 23:05:08.892 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-21 23:05:09.256 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-21 23:05:09.258 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-21 23:05:09.401 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-21 23:05:09.492 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-21 23:05:09.494 +03:00 [INF] Hosting environment: Development
+2025-12-21 23:05:09.503 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-21 23:05:09.769 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 279.8597ms
+2025-12-21 23:05:09.856 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-21 23:05:09.856 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-21 23:05:09.868 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 12.3197ms
+2025-12-21 23:05:09.940 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 84.802ms
+2025-12-21 23:05:10.408 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-21 23:05:10.442 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 34.0201ms
+2025-12-21 23:05:15.774 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------261476210198106698598919 720
+2025-12-21 23:05:16.005 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-21 23:05:16.060 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-21 23:05:17.946 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-21 23:05:17.968 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-21 23:05:18.090 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-21 23:05:19.525 +03:00 [INF] Executed DbCommand (53ms) [Parameters=[@__dto_EmployeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DepartmentId], [e].[IsActive], [e].[Position], [e].[Salary], [e].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__dto_EmployeeId_0
+2025-12-21 23:05:19.819 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__dto_EmployeeId_0='31', @__currentPeriod_1='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND [e].[Period] = @__currentPeriod_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-21 23:05:20.090 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='5', @p1='good jobe' (Nullable = false) (Size = 4000), @p2='2025-12-21T20:05:19.8264973Z', @p3='31', @p4='4.75' (Precision = 18) (Scale = 2), @p5='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Nullable = false) (Size = 450), @p6='2025-12-01T00:00:00.0000000', @p7='5', @p8='4', @p9='5'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [EmployeeEvaluations] ([Attendance], [Comments], [CreatedAt], [EmployeeId], [FinalScore], [ManagerId], [Period], [Productivity], [Quality], [Teamwork])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2025-12-21 23:05:20.147 +03:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2025-12-21 23:05:20.155 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 4087.1371ms
+2025-12-21 23:05:20.158 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-21 23:05:20.170 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 204 null null 4396.246ms
+2025-12-21 23:07:01.932 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-21 23:07:02.220 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-21 23:07:02.223 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-21 23:07:02.301 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-21 23:07:02.303 +03:00 [INF] Hosting environment: Development
+2025-12-21 23:07:02.305 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-21 23:07:02.624 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-21 23:07:02.867 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 246.3081ms
+2025-12-21 23:07:02.906 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-21 23:07:02.910 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-21 23:07:02.928 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 21.7222ms
+2025-12-21 23:07:02.978 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.71ms
+2025-12-21 23:07:03.647 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-21 23:07:03.678 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.574ms
+2025-12-21 23:07:06.330 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/evaluations - multipart/form-data; boundary=--------------------------250654913467381678856408 720
+2025-12-21 23:07:06.498 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-21 23:07:06.529 +03:00 [INF] Route matched with {action = "Create", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(EMPLOYEE.Dtos.CreateEvaluationDto) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-21 23:07:07.718 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-21 23:07:08.043 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-21 23:07:08.122 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-21 23:07:09.915 +03:00 [INF] Executed DbCommand (103ms) [Parameters=[@__dto_EmployeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[DepartmentId], [e].[IsActive], [e].[Position], [e].[Salary], [e].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [d].[Id], [d].[ManagerUserId], [d].[Name]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+LEFT JOIN [Departments] AS [d] ON [e].[DepartmentId] = [d].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__dto_EmployeeId_0
+2025-12-21 23:07:10.257 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__dto_EmployeeId_0='31', @__currentPeriod_1='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [EmployeeEvaluations] AS [e]
+        WHERE [e].[EmployeeId] = @__dto_EmployeeId_0 AND [e].[Period] = @__currentPeriod_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-12-21 23:07:10.617 +03:00 [INF] Executed DbCommand (64ms) [Parameters=[@p0='5', @p1='good jobe' (Nullable = false) (Size = 4000), @p2='2025-12-21T20:07:10.2669032Z', @p3='31', @p4='4.75' (Precision = 18) (Scale = 2), @p5='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Nullable = false) (Size = 450), @p6='2025-12-01T00:00:00.0000000', @p7='5', @p8='4', @p9='5'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [EmployeeEvaluations] ([Attendance], [Comments], [CreatedAt], [EmployeeId], [FinalScore], [ManagerId], [Period], [Productivity], [Quality], [Teamwork])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9);
+2025-12-21 23:07:10.710 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-12-21 23:07:10.725 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE) in 4187.0035ms
+2025-12-21 23:07:10.742 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Create (EMPLOYEE)'
+2025-12-21 23:07:10.768 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/evaluations - 200 null text/plain; charset=utf-8 4437.165ms
+2025-12-21 23:24:24.711 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-21 23:24:25.010 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-21 23:24:25.014 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-21 23:24:25.091 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-21 23:24:25.092 +03:00 [INF] Hosting environment: Development
+2025-12-21 23:24:25.094 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-21 23:24:25.568 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-21 23:24:26.022 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 459.0059ms
+2025-12-21 23:24:26.113 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-21 23:24:26.124 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 10.6287ms
+2025-12-21 23:24:26.139 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-21 23:24:26.193 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.7918ms
+2025-12-21 23:24:26.401 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-21 23:24:26.434 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.3117ms
+2025-12-21 23:24:52.394 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/22/average/all-periods - null null
+2025-12-21 23:24:52.520 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverageAllPeriods (EMPLOYEE)'
+2025-12-21 23:24:52.553 +03:00 [INF] Route matched with {action = "GetEmployeeAverageAllPeriods", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeAverageAllPeriods(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-21 23:24:53.862 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-21 23:24:53.873 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-21 23:24:53.955 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-21 23:24:55.233 +03:00 [INF] Executed DbCommand (53ms) [Parameters=[@__employeeId_0='22', @__startPeriod_1='2025-12-01T00:00:00.0000000', @__endPeriod_2='2026-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__startPeriod_1 AND [e].[Period] < @__endPeriod_2
+GROUP BY [e].[EmployeeId]
+2025-12-21 23:24:55.280 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__employeeId_0='22', @__startPeriod_1='2025-10-01T00:00:00.0000000', @__endPeriod_2='2026-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__startPeriod_1 AND [e].[Period] < @__endPeriod_2
+GROUP BY [e].[EmployeeId]
+2025-12-21 23:24:55.287 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='22', @__startPeriod_1='2025-01-01T00:00:00.0000000', @__endPeriod_2='2026-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__startPeriod_1 AND [e].[Period] < @__endPeriod_2
+GROUP BY [e].[EmployeeId]
+2025-12-21 23:24:55.296 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Dtos.EmployeeEvaluationAverageAllPeriodsDto'.
+2025-12-21 23:24:55.322 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverageAllPeriods (EMPLOYEE) in 2758.3514ms
+2025-12-21 23:24:55.325 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverageAllPeriods (EMPLOYEE)'
+2025-12-21 23:24:55.345 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/22/average/all-periods - 200 null application/json; charset=utf-8 2951.3915ms
+2025-12-21 23:25:42.553 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/average/all-periods - null null
+2025-12-21 23:25:42.568 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverageAllPeriods (EMPLOYEE)'
+2025-12-21 23:25:42.574 +03:00 [INF] Route matched with {action = "GetEmployeeAverageAllPeriods", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeAverageAllPeriods(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-21 23:25:42.614 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__employeeId_0='31', @__startPeriod_1='2025-12-01T00:00:00.0000000', @__endPeriod_2='2026-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__startPeriod_1 AND [e].[Period] < @__endPeriod_2
+GROUP BY [e].[EmployeeId]
+2025-12-21 23:25:42.619 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__startPeriod_1='2025-10-01T00:00:00.0000000', @__endPeriod_2='2026-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__startPeriod_1 AND [e].[Period] < @__endPeriod_2
+GROUP BY [e].[EmployeeId]
+2025-12-21 23:25:42.624 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__employeeId_0='31', @__startPeriod_1='2025-01-01T00:00:00.0000000', @__endPeriod_2='2026-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__startPeriod_1 AND [e].[Period] < @__endPeriod_2
+GROUP BY [e].[EmployeeId]
+2025-12-21 23:25:42.627 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Dtos.EmployeeEvaluationAverageAllPeriodsDto'.
+2025-12-21 23:25:42.630 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverageAllPeriods (EMPLOYEE) in 53.1282ms
+2025-12-21 23:25:42.631 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverageAllPeriods (EMPLOYEE)'
+2025-12-21 23:25:42.633 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/average/all-periods - 200 null application/json; charset=utf-8 79.9407ms
+2025-12-21 23:53:08.124 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly - null null
+2025-12-21 23:53:08.140 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/21/2025 8:34:53 PM', Current time (UTC): '12/21/2025 8:53:08 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-12-21 23:53:08.203 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/21/2025 8:34:53 PM', Current time (UTC): '12/21/2025 8:53:08 PM'.
+2025-12-21 23:53:08.205 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly - 404 0 null 81.0963ms
+2025-12-21 23:53:08.272 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly, Response status code: 404
+2025-12-21 23:53:48.988 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-21 23:53:49.311 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-21 23:53:49.321 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-21 23:53:49.468 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-21 23:53:49.474 +03:00 [INF] Hosting environment: Development
+2025-12-21 23:53:49.475 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-21 23:53:49.831 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-21 23:53:50.051 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 220.8182ms
+2025-12-21 23:53:50.112 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-21 23:53:50.123 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 10.1931ms
+2025-12-21 23:53:50.126 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-21 23:53:50.178 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.4943ms
+2025-12-21 23:53:50.466 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-21 23:53:50.511 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 44.5114ms
+2025-12-21 23:53:53.171 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly - null null
+2025-12-21 23:53:53.303 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/21/2025 8:34:53 PM', Current time (UTC): '12/21/2025 8:53:53 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-12-21 23:53:53.347 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '12/21/2025 8:34:53 PM', Current time (UTC): '12/21/2025 8:53:53 PM'.
+2025-12-21 23:53:53.367 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-12-21 23:53:53.480 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-12-21 23:53:53.484 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly - 401 0 null 312.4649ms
+2025-12-21 23:54:04.564 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/login - application/json 67
+2025-12-21 23:54:04.578 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2025-12-21 23:54:04.637 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EMPLOYEE.Dtos.LoginDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2025-12-21 23:54:06.024 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-21 23:54:06.041 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-21 23:54:06.175 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-21 23:54:21.085 +03:00 [INF] Executed DbCommand (174ms) [Parameters=[@__normalizedEmail_0='MANAGER1@COMPANY.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-12-21 23:54:21.713 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__userId_0='3698183a-8aa3-42bc-a3f4-0dcc2fbfe1c0' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-12-21 23:54:21.755 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-12-21 23:54:21.768 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE) in 17117.0359ms
+2025-12-21 23:54:21.771 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2025-12-21 23:54:21.789 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/login - 200 null application/json; charset=utf-8 17224.8072ms
+2025-12-21 23:54:37.669 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly - null null
+2025-12-21 23:54:37.704 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE)'
+2025-12-21 23:54:37.717 +03:00 [INF] Route matched with {action = "GetEmployeeYearlyDashboard", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeYearlyDashboard(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-21 23:54:38.496 +03:00 [INF] Executed DbCommand (157ms) [Parameters=[@__8__locals1_employeeId_0='31', @__startDate_1='2025-01-01T00:00:00.0000000', @__endDate_2='2025-02-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__8__locals1_employeeId_0 AND [e].[Period] >= @__startDate_1 AND [e].[Period] < @__endDate_2
+GROUP BY [e].[EmployeeId]
+2025-12-21 23:54:38.506 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_employeeId_0='31', @__startDate_1='2025-02-01T00:00:00.0000000', @__endDate_2='2025-03-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__8__locals1_employeeId_0 AND [e].[Period] >= @__startDate_1 AND [e].[Period] < @__endDate_2
+GROUP BY [e].[EmployeeId]
+2025-12-21 23:54:38.513 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_employeeId_0='31', @__startDate_1='2025-03-01T00:00:00.0000000', @__endDate_2='2025-04-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__8__locals1_employeeId_0 AND [e].[Period] >= @__startDate_1 AND [e].[Period] < @__endDate_2
+GROUP BY [e].[EmployeeId]
+2025-12-21 23:54:38.517 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_employeeId_0='31', @__startDate_1='2025-04-01T00:00:00.0000000', @__endDate_2='2025-05-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__8__locals1_employeeId_0 AND [e].[Period] >= @__startDate_1 AND [e].[Period] < @__endDate_2
+GROUP BY [e].[EmployeeId]
+2025-12-21 23:54:38.520 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_employeeId_0='31', @__startDate_1='2025-05-01T00:00:00.0000000', @__endDate_2='2025-06-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__8__locals1_employeeId_0 AND [e].[Period] >= @__startDate_1 AND [e].[Period] < @__endDate_2
+GROUP BY [e].[EmployeeId]
+2025-12-21 23:54:38.527 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__8__locals1_employeeId_0='31', @__startDate_1='2025-06-01T00:00:00.0000000', @__endDate_2='2025-07-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__8__locals1_employeeId_0 AND [e].[Period] >= @__startDate_1 AND [e].[Period] < @__endDate_2
+GROUP BY [e].[EmployeeId]
+2025-12-21 23:54:38.532 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_employeeId_0='31', @__startDate_1='2025-07-01T00:00:00.0000000', @__endDate_2='2025-08-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__8__locals1_employeeId_0 AND [e].[Period] >= @__startDate_1 AND [e].[Period] < @__endDate_2
+GROUP BY [e].[EmployeeId]
+2025-12-21 23:54:38.537 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_employeeId_0='31', @__startDate_1='2025-08-01T00:00:00.0000000', @__endDate_2='2025-09-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__8__locals1_employeeId_0 AND [e].[Period] >= @__startDate_1 AND [e].[Period] < @__endDate_2
+GROUP BY [e].[EmployeeId]
+2025-12-21 23:54:38.540 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_employeeId_0='31', @__startDate_1='2025-09-01T00:00:00.0000000', @__endDate_2='2025-10-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__8__locals1_employeeId_0 AND [e].[Period] >= @__startDate_1 AND [e].[Period] < @__endDate_2
+GROUP BY [e].[EmployeeId]
+2025-12-21 23:54:38.547 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_employeeId_0='31', @__startDate_1='2025-10-01T00:00:00.0000000', @__endDate_2='2025-11-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__8__locals1_employeeId_0 AND [e].[Period] >= @__startDate_1 AND [e].[Period] < @__endDate_2
+GROUP BY [e].[EmployeeId]
+2025-12-21 23:54:38.553 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__8__locals1_employeeId_0='31', @__startDate_1='2025-11-01T00:00:00.0000000', @__endDate_2='2025-12-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__8__locals1_employeeId_0 AND [e].[Period] >= @__startDate_1 AND [e].[Period] < @__endDate_2
+GROUP BY [e].[EmployeeId]
+2025-12-21 23:54:38.556 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__8__locals1_employeeId_0='31', @__startDate_1='2025-12-01T00:00:00.0000000', @__endDate_2='2026-01-01T00:00:00.0000000'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__8__locals1_employeeId_0 AND [e].[Period] >= @__startDate_1 AND [e].[Period] < @__endDate_2
+GROUP BY [e].[EmployeeId]
+2025-12-21 23:54:38.631 +03:00 [INF] Executed DbCommand (43ms) [Parameters=[@__employeeId_0='31'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) COALESCE([a].[FirstName], N'') + N' ' + COALESCE([a].[LastName], N'') AS [Name]
+FROM [Employees] AS [e]
+LEFT JOIN [AspNetUsers] AS [a] ON [e].[UserId] = [a].[Id]
+WHERE [e].[IsActive] = CAST(1 AS bit) AND [e].[Id] = @__employeeId_0
+2025-12-21 23:54:38.636 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Dtos.EmployeeYearlyDashboardDto'.
+2025-12-21 23:54:38.669 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE) in 949.4649ms
+2025-12-21 23:54:38.671 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeYearlyDashboard (EMPLOYEE)'
+2025-12-21 23:54:38.673 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/31/dashboard/yearly - 200 null application/json; charset=utf-8 1003.9668ms

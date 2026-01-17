@@ -1,0 +1,36 @@
+2025-12-27 21:27:53.090 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-27 21:27:53.442 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-27 21:27:53.446 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-27 21:27:53.541 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-27 21:27:53.585 +03:00 [INF] Hosting environment: Development
+2025-12-27 21:27:53.586 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-27 21:28:00.882 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-27 21:28:02.612 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 1733.378ms
+2025-12-27 21:28:03.094 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-27 21:28:03.105 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 10.8827ms
+2025-12-27 21:28:03.243 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-27 21:28:03.397 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 154.1346ms
+2025-12-27 21:28:03.935 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-27 21:28:03.967 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.4874ms
+2025-12-27 21:39:59.301 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-27 21:39:59.589 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-27 21:39:59.592 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-27 21:39:59.668 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-27 21:39:59.671 +03:00 [INF] Hosting environment: Development
+2025-12-27 21:39:59.672 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-27 21:40:14.917 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-27 21:40:17.155 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 2241.017ms
+2025-12-27 22:42:06.315 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-27 22:42:06.508 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-27 22:42:06.510 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-27 22:42:06.575 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-27 22:42:06.577 +03:00 [INF] Hosting environment: Development
+2025-12-27 22:42:06.578 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-27 22:42:07.279 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-27 22:42:07.717 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 440.7306ms
+2025-12-27 22:42:08.108 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-27 22:42:08.119 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 10.7093ms
+2025-12-27 22:42:08.193 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-27 22:42:08.689 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 495.967ms
+2025-12-27 22:42:08.807 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-27 22:42:09.066 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 257.9026ms

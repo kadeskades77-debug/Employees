@@ -1,0 +1,394 @@
+2025-12-19 00:00:37.510 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-19 00:00:37.732 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-19 00:00:37.734 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-19 00:00:37.811 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-19 00:00:37.814 +03:00 [INF] Hosting environment: Development
+2025-12-19 00:00:37.815 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-19 00:00:37.985 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-19 00:00:38.172 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-19 00:00:38.304 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 316.8378ms
+2025-12-19 00:00:38.341 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 168.2992ms
+2025-12-19 00:00:38.375 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-19 00:00:38.375 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-19 00:00:38.393 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 18.3624ms
+2025-12-19 00:00:38.488 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 110.141ms
+2025-12-19 00:00:38.568 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-19 00:00:38.609 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 41.4558ms
+2025-12-19 00:00:42.680 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/by_emp_email - null null
+2025-12-19 00:00:43.034 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEvaluationsByEmployeeEmai (EMPLOYEE)'
+2025-12-19 00:00:43.069 +03:00 [INF] Route matched with {action = "GetEvaluationsByEmployeeEmai", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEvaluationsByEmployeeEmai() on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-19 00:00:45.195 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-19 00:00:45.229 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-19 00:00:45.371 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-19 00:00:46.870 +03:00 [INF] Executed DbCommand (69ms) [Parameters=[@__email_0='5b66d222-cf2c-4316-918a-8938fb1ef712' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [t].[Id] AS [EmployeeId], COALESCE([a].[FirstName], N'') + N' ' + COALESCE([a].[LastName], N'') AS [EmployeeName], [a].[Email] AS [EmployeeEmail], [a0].[FirstName] + N' ' + [a0].[LastName] AS [ManagerName], [e].[Attendance], [e].[Quality], [e].[Productivity], [e].[Teamwork], CAST([e].[Attendance] + [e].[Quality] + [e].[Productivity] + [e].[Teamwork] AS decimal(18,2)) / 4.0 AS [FinalScore], [e].[Period], [e].[CreatedAt], [e].[Comments]
+FROM [EmployeeEvaluations] AS [e]
+INNER JOIN (
+    SELECT [e0].[Id], [e0].[UserId]
+    FROM [Employees] AS [e0]
+    WHERE [e0].[IsActive] = CAST(1 AS bit)
+) AS [t] ON [e].[EmployeeId] = [t].[Id]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+INNER JOIN [AspNetUsers] AS [a0] ON [e].[ManagerId] = [a0].[Id]
+WHERE [a].[Email] = @__email_0
+ORDER BY [e].[CreatedAt] DESC
+2025-12-19 00:00:46.927 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EMPLOYEE.Dtos.EvaluationDto, EMPLOYEE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-19 00:00:46.958 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEvaluationsByEmployeeEmai (EMPLOYEE) in 3878.0956ms
+2025-12-19 00:00:46.962 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEvaluationsByEmployeeEmai (EMPLOYEE)'
+2025-12-19 00:00:46.978 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/by_emp_email - 200 null application/json; charset=utf-8 4337.7781ms
+2025-12-19 00:03:27.410 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-19 00:03:27.778 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-19 00:03:27.780 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-19 00:03:27.846 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-19 00:03:27.853 +03:00 [INF] Hosting environment: Development
+2025-12-19 00:03:27.855 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-19 00:03:28.178 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-19 00:03:28.373 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 195.8472ms
+2025-12-19 00:03:28.429 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-19 00:03:28.439 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 10.1195ms
+2025-12-19 00:03:28.446 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-19 00:03:28.496 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.2114ms
+2025-12-19 00:03:28.633 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-19 00:03:28.662 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 28.4868ms
+2025-12-19 00:03:33.166 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7212/api/auth/login - application/json 64
+2025-12-19 00:03:33.224 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2025-12-19 00:03:33.263 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EMPLOYEE.Dtos.LoginDto) on controller EMPLOYEE.Controllers.AuthController (EMPLOYEE).
+2025-12-19 00:03:34.420 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-19 00:03:34.450 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-19 00:03:34.602 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-19 00:03:35.931 +03:00 [INF] Executed DbCommand (64ms) [Parameters=[@__normalizedEmail_0='EMP12@COMPANY.COM' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-12-19 00:03:36.371 +03:00 [INF] Executed DbCommand (47ms) [Parameters=[@__userId_0='5b66d222-cf2c-4316-918a-8938fb1ef712' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-12-19 00:03:36.418 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-12-19 00:03:36.434 +03:00 [INF] Executed action EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE) in 3160.9894ms
+2025-12-19 00:03:36.437 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.AuthController.Login (EMPLOYEE)'
+2025-12-19 00:03:36.456 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7212/api/auth/login - 200 null application/json; charset=utf-8 3289.839ms
+2025-12-19 00:03:40.944 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/by_emp_email - null null
+2025-12-19 00:03:41.042 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEvaluationsByEmployeeEmai (EMPLOYEE)'
+2025-12-19 00:03:41.055 +03:00 [INF] Route matched with {action = "GetEvaluationsByEmployeeEmai", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEvaluationsByEmployeeEmai() on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-19 00:03:41.277 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__email_0='5b66d222-cf2c-4316-918a-8938fb1ef712' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [t].[Id] AS [EmployeeId], COALESCE([a].[FirstName], N'') + N' ' + COALESCE([a].[LastName], N'') AS [EmployeeName], [a].[Email] AS [EmployeeEmail], [a0].[FirstName] + N' ' + [a0].[LastName] AS [ManagerName], [e].[Attendance], [e].[Quality], [e].[Productivity], [e].[Teamwork], CAST([e].[Attendance] + [e].[Quality] + [e].[Productivity] + [e].[Teamwork] AS decimal(18,2)) / 4.0 AS [FinalScore], [e].[Period], [e].[CreatedAt], [e].[Comments]
+FROM [EmployeeEvaluations] AS [e]
+INNER JOIN (
+    SELECT [e0].[Id], [e0].[UserId]
+    FROM [Employees] AS [e0]
+    WHERE [e0].[IsActive] = CAST(1 AS bit)
+) AS [t] ON [e].[EmployeeId] = [t].[Id]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+INNER JOIN [AspNetUsers] AS [a0] ON [e].[ManagerId] = [a0].[Id]
+WHERE [a].[Email] = @__email_0
+ORDER BY [e].[CreatedAt] DESC
+2025-12-19 00:03:41.282 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EMPLOYEE.Dtos.EvaluationDto, EMPLOYEE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-19 00:03:41.295 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEvaluationsByEmployeeEmai (EMPLOYEE) in 234.92ms
+2025-12-19 00:03:41.299 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEvaluationsByEmployeeEmai (EMPLOYEE)'
+2025-12-19 00:03:41.302 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/by_emp_email - 200 null application/json; charset=utf-8 357.6602ms
+2025-12-19 00:10:10.617 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-19 00:10:11.123 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-19 00:10:11.125 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-19 00:10:11.206 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-19 00:10:11.218 +03:00 [INF] Hosting environment: Development
+2025-12-19 00:10:11.221 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-19 00:10:11.604 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-19 00:10:12.062 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 457.3459ms
+2025-12-19 00:10:12.067 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-19 00:10:12.067 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-19 00:10:12.104 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 37.5298ms
+2025-12-19 00:10:13.329 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1261.6671ms
+2025-12-19 00:10:13.460 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-19 00:10:13.502 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 43.4379ms
+2025-12-19 00:10:16.892 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/by_emp_email - null null
+2025-12-19 00:10:17.020 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEvaluationsByEmployeeEmai (EMPLOYEE)'
+2025-12-19 00:10:17.043 +03:00 [INF] Route matched with {action = "GetEvaluationsByEmployeeEmai", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEvaluationsByEmployeeEmai() on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-19 00:10:18.042 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-19 00:10:18.053 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-19 00:10:18.155 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-19 00:10:19.645 +03:00 [INF] Executed DbCommand (75ms) [Parameters=[@__email_0='5b66d222-cf2c-4316-918a-8938fb1ef712' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[EmployeeId], COALESCE([a].[FirstName], N'') + N' ' + COALESCE([a].[LastName], N'') AS [EmployeeName], [a].[Email] AS [EmployeeEmail], [a0].[FirstName] + N' ' + [a0].[LastName] AS [ManagerName], [e].[Attendance], [e].[Quality], [e].[Productivity], [e].[Teamwork], [e].[FinalScore], [e].[Period], [e].[CreatedAt], [e].[Comments]
+FROM [EmployeeEvaluations] AS [e]
+INNER JOIN (
+    SELECT [e0].[Id], [e0].[UserId]
+    FROM [Employees] AS [e0]
+    WHERE [e0].[IsActive] = CAST(1 AS bit)
+) AS [t] ON [e].[EmployeeId] = [t].[Id]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+INNER JOIN [AspNetUsers] AS [a0] ON [e].[ManagerId] = [a0].[Id]
+WHERE [a].[Email] = @__email_0
+ORDER BY [e].[CreatedAt] DESC
+2025-12-19 00:10:19.700 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EMPLOYEE.Dtos.EvaluationDto, EMPLOYEE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-19 00:10:19.736 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEvaluationsByEmployeeEmai (EMPLOYEE) in 2682.6233ms
+2025-12-19 00:10:19.743 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEvaluationsByEmployeeEmai (EMPLOYEE)'
+2025-12-19 00:10:19.760 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/by_emp_email - 200 null application/json; charset=utf-8 2867.9213ms
+2025-12-19 00:17:37.689 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-19 00:17:37.960 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-19 00:17:37.963 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-19 00:17:38.064 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-19 00:17:38.066 +03:00 [INF] Hosting environment: Development
+2025-12-19 00:17:38.068 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-19 00:17:38.232 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-19 00:17:38.450 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 218.9923ms
+2025-12-19 00:17:38.556 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-19 00:17:38.567 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 11.699ms
+2025-12-19 00:17:38.578 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-19 00:17:38.622 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.4858ms
+2025-12-19 00:17:38.743 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-19 00:17:38.774 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 30.9803ms
+2025-12-19 00:17:45.314 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-19 00:17:45.325 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 11.8422ms
+2025-12-19 00:17:45.391 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-19 00:17:45.392 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-19 00:17:45.399 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 7.5801ms
+2025-12-19 00:17:45.422 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.9915ms
+2025-12-19 00:17:45.516 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-19 00:17:45.576 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 59.5451ms
+2025-12-19 00:17:49.682 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/by_emp_email - null null
+2025-12-19 00:17:49.809 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEvaluationsByEmployeeEmai (EMPLOYEE)'
+2025-12-19 00:17:49.831 +03:00 [INF] Route matched with {action = "GetEvaluationsByEmployeeEmai", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEvaluationsByEmployeeEmai() on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-19 00:17:51.091 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-19 00:17:51.107 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-19 00:17:51.194 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-19 00:17:52.317 +03:00 [INF] Executed DbCommand (187ms) [Parameters=[@__userId_0='5b66d222-cf2c-4316-918a-8938fb1ef712' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[EmployeeId], COALESCE([a].[FirstName], N'') + N' ' + COALESCE([a].[LastName], N'') AS [EmployeeName], [a].[Email] AS [EmployeeEmail], [a0].[FirstName] + N' ' + [a0].[LastName] AS [ManagerName], [e].[Attendance], [e].[Quality], [e].[Productivity], [e].[Teamwork], [e].[FinalScore], [e].[Period], [e].[CreatedAt], [e].[Comments]
+FROM [EmployeeEvaluations] AS [e]
+INNER JOIN (
+    SELECT [e0].[Id], [e0].[UserId]
+    FROM [Employees] AS [e0]
+    WHERE [e0].[IsActive] = CAST(1 AS bit)
+) AS [t] ON [e].[EmployeeId] = [t].[Id]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+INNER JOIN [AspNetUsers] AS [a0] ON [e].[ManagerId] = [a0].[Id]
+WHERE [t].[UserId] = @__userId_0
+ORDER BY [e].[CreatedAt] DESC
+2025-12-19 00:17:52.485 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[EMPLOYEE.Dtos.EvaluationDto, EMPLOYEE, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-12-19 00:17:52.605 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEvaluationsByEmployeeEmai (EMPLOYEE) in 2765.838ms
+2025-12-19 00:17:52.608 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEvaluationsByEmployeeEmai (EMPLOYEE)'
+2025-12-19 00:17:52.625 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/by_emp_email - 200 null application/json; charset=utf-8 2943.2745ms
+2025-12-19 00:29:27.184 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-19 00:29:27.382 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-19 00:29:27.384 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-19 00:29:27.493 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-19 00:29:27.504 +03:00 [INF] Hosting environment: Development
+2025-12-19 00:29:27.507 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-19 00:29:27.847 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-19 00:29:28.181 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 331.7471ms
+2025-12-19 00:29:28.269 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-19 00:29:28.269 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-19 00:29:28.283 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 14.3215ms
+2025-12-19 00:29:28.330 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 61.3479ms
+2025-12-19 00:29:28.923 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-19 00:29:28.988 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 65.0376ms
+2025-12-19 00:29:37.465 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/by_emp_email - null null
+2025-12-19 00:29:37.733 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEvaluationsByEmployeeEmai (EMPLOYEE)'
+2025-12-19 00:29:38.315 +03:00 [INF] Route matched with {action = "GetEvaluationsByEmployeeEmai", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEvaluationsByEmployeeEmai() on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-19 00:29:39.614 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-19 00:29:39.624 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-19 00:29:39.700 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-19 00:29:40.928 +03:00 [INF] Executed DbCommand (127ms) [Parameters=[@__userId_0='5b66d222-cf2c-4316-918a-8938fb1ef712' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[EmployeeId], COALESCE([a].[FirstName], N'') + N' ' + COALESCE([a].[LastName], N'') AS [EmployeeName], [a].[Email] AS [EmployeeEmail], [a0].[FirstName] + N' ' + [a0].[LastName] AS [ManagerName], [e].[Id], [e].[Attendance], [e].[Quality], [e].[Productivity], [e].[Teamwork], [e].[Comments], [e].[Period], [e].[FinalScore], [e].[CreatedAt]
+FROM [EmployeeEvaluations] AS [e]
+INNER JOIN (
+    SELECT [e0].[Id], [e0].[UserId]
+    FROM [Employees] AS [e0]
+    WHERE [e0].[IsActive] = CAST(1 AS bit)
+) AS [t] ON [e].[EmployeeId] = [t].[Id]
+LEFT JOIN [AspNetUsers] AS [a] ON [t].[UserId] = [a].[Id]
+INNER JOIN [AspNetUsers] AS [a0] ON [e].[ManagerId] = [a0].[Id]
+WHERE [t].[UserId] = @__userId_0
+ORDER BY [e].[CreatedAt] DESC
+2025-12-19 00:29:40.995 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Dtos.EmployeeEvaluationsResponseDto'.
+2025-12-19 00:29:41.036 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEvaluationsByEmployeeEmai (EMPLOYEE) in 2711.0526ms
+2025-12-19 00:29:41.039 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEvaluationsByEmployeeEmai (EMPLOYEE)'
+2025-12-19 00:29:41.058 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/by_emp_email - 200 null application/json; charset=utf-8 3592.9648ms
+2025-12-19 00:44:35.644 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-19 00:44:35.906 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-19 00:44:35.909 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-19 00:44:35.988 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-19 00:44:35.991 +03:00 [INF] Hosting environment: Development
+2025-12-19 00:44:35.993 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-19 00:45:57.186 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-19 00:45:57.439 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-19 00:45:57.442 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-19 00:45:57.509 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-19 00:45:57.512 +03:00 [INF] Hosting environment: Development
+2025-12-19 00:45:57.513 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-19 00:46:49.997 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/22/average - null null
+2025-12-19 00:46:50.170 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Average (EMPLOYEE)'
+2025-12-19 00:46:50.227 +03:00 [INF] Route matched with {action = "Average", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Average(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-19 00:46:51.237 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-19 00:46:51.247 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-19 00:46:51.319 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-19 00:46:52.396 +03:00 [INF] Executed DbCommand (132ms) [Parameters=[@__employeeId_0='22'], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore], COUNT(*) AS [Count]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0
+GROUP BY [e].[EmployeeId]
+2025-12-19 00:46:52.465 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Dtos.EmployeeEvaluationAverageDto'.
+2025-12-19 00:46:52.502 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.Average (EMPLOYEE) in 2265.801ms
+2025-12-19 00:46:52.506 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.Average (EMPLOYEE)'
+2025-12-19 00:46:52.525 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/22/average - 200 null application/json; charset=utf-8 2531.7086ms
+2025-12-19 01:04:36.833 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-19 01:04:37.034 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-19 01:04:37.036 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-19 01:04:37.099 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-19 01:04:37.101 +03:00 [INF] Hosting environment: Development
+2025-12-19 01:04:37.103 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-19 01:04:41.763 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/22/average?periodType=month - null null
+2025-12-19 01:04:41.954 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverage (EMPLOYEE)
+EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverage (EMPLOYEE)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-19 01:04:43.667 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/22/average?periodType=month - 500 null text/plain; charset=utf-8 1904.7497ms
+2025-12-19 01:04:50.893 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-19 01:04:51.108 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 214.9283ms
+2025-12-19 01:04:51.155 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-19 01:04:51.155 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-19 01:04:51.177 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 21.9972ms
+2025-12-19 01:04:51.226 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 70.6656ms
+2025-12-19 01:04:51.605 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-19 01:04:51.811 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 206.1635ms
+2025-12-19 01:04:56.032 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/22/average?periodType=month - null null
+2025-12-19 01:04:56.041 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverage (EMPLOYEE)
+EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverage (EMPLOYEE)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-19 01:04:56.048 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/22/average?periodType=month - 500 null text/plain; charset=utf-8 16.2941ms
+2025-12-19 01:05:57.694 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/22/average?periodType=month - null null
+2025-12-19 01:05:57.699 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverage (EMPLOYEE)
+EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverage (EMPLOYEE)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, Span`1 candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-19 01:05:57.702 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/22/average?periodType=month - 500 null text/plain; charset=utf-8 8.2965ms
+2025-12-19 01:09:04.824 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-19 01:09:05.017 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-19 01:09:05.019 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-19 01:09:05.090 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-19 01:09:05.091 +03:00 [INF] Hosting environment: Development
+2025-12-19 01:09:05.093 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-19 01:09:05.431 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-19 01:09:05.665 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 237.4969ms
+2025-12-19 01:09:05.728 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-19 01:09:05.738 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 9.8313ms
+2025-12-19 01:09:05.755 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-19 01:09:05.799 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.3258ms
+2025-12-19 01:09:06.051 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-19 01:09:06.070 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.9273ms
+2025-12-19 01:09:09.858 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-19 01:09:09.870 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 12.1994ms
+2025-12-19 01:09:09.942 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-19 01:09:09.943 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-19 01:09:09.952 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 8.9762ms
+2025-12-19 01:09:09.995 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.4074ms
+2025-12-19 01:09:10.076 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-19 01:09:10.125 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 49.0978ms
+2025-12-19 01:09:13.450 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/22/average?periodType=month - null null
+2025-12-19 01:09:13.593 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverage (EMPLOYEE)'
+2025-12-19 01:09:14.186 +03:00 [INF] Route matched with {action = "GetEmployeeAverage", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeAverage(Int32, System.String) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-19 01:09:15.255 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-19 01:09:15.266 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-19 01:09:15.339 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-19 01:09:16.784 +03:00 [INF] Executed DbCommand (155ms) [Parameters=[@__employeeId_0='22', @__startPeriod_1='2025-12' (Size = 4000), @__endPeriod_2='2025-12' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore], COUNT(*) AS [Count]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__startPeriod_1 AND [e].[Period] <= @__endPeriod_2
+GROUP BY [e].[EmployeeId]
+2025-12-19 01:09:16.840 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Dtos.EmployeeEvaluationAverageDto'.
+2025-12-19 01:09:16.868 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverage (EMPLOYEE) in 2661.2318ms
+2025-12-19 01:09:16.871 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverage (EMPLOYEE)'
+2025-12-19 01:09:16.884 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/22/average?periodType=month - 200 null application/json; charset=utf-8 3434.2983ms
+2025-12-19 01:14:05.716 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-19 01:14:06.000 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-19 01:14:06.002 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-19 01:14:06.082 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-19 01:14:06.088 +03:00 [INF] Hosting environment: Development
+2025-12-19 01:14:06.089 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-19 01:14:06.334 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-19 01:14:06.572 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 238.4486ms
+2025-12-19 01:14:06.638 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-19 01:14:06.639 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-19 01:14:06.663 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 24.7851ms
+2025-12-19 01:14:06.724 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 85.2468ms
+2025-12-19 01:14:07.185 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-19 01:14:07.218 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 33.2138ms
+2025-12-19 01:14:08.142 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/22/average?periodType=month - null null
+2025-12-19 01:14:08.328 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverage (EMPLOYEE)'
+2025-12-19 01:14:08.371 +03:00 [INF] Route matched with {action = "GetEmployeeAverage", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeAverage(Int32, System.String) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-19 01:14:09.900 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-19 01:14:09.913 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-19 01:14:10.031 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-19 01:14:11.070 +03:00 [INF] Executed DbCommand (59ms) [Parameters=[@__ToLower_3='month' (Size = 4000), @__employeeId_0='22', @__startPeriod_1='2025-12' (Size = 4000), @__endPeriod_2='2025-12' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) @__ToLower_3 AS [PeriodType], ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore], COUNT(*) AS [Count]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__startPeriod_1 AND [e].[Period] <= @__endPeriod_2
+GROUP BY [e].[EmployeeId]
+2025-12-19 01:14:11.118 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Dtos.EmployeeEvaluationAverageDto'.
+2025-12-19 01:14:11.138 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverage (EMPLOYEE) in 2759.6556ms
+2025-12-19 01:14:11.142 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverage (EMPLOYEE)'
+2025-12-19 01:14:11.156 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/22/average?periodType=month - 200 null application/json; charset=utf-8 3013.4441ms
+2025-12-19 01:23:26.293 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/22/average/all-periods - null null
+2025-12-19 01:23:26.305 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/22/average/all-periods - 404 0 null 11.72ms
+2025-12-19 01:23:26.416 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7212/api/evaluations/employee/22/average/all-periods, Response status code: 404
+2025-12-19 01:24:04.386 +03:00 [INF] User profile is available. Using 'C:\Users\Hashem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-19 01:24:04.606 +03:00 [INF] Now listening on: https://localhost:7212
+2025-12-19 01:24:04.609 +03:00 [INF] Now listening on: http://localhost:5298
+2025-12-19 01:24:04.683 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-19 01:24:04.684 +03:00 [INF] Hosting environment: Development
+2025-12-19 01:24:04.686 +03:00 [INF] Content root path: C:\Users\Hashem\source\repos\Employee\EMPLOYEE
+2025-12-19 01:24:08.689 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/index.html - null null
+2025-12-19 01:24:09.108 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/index.html - 200 null text/html;charset=utf-8 419.5592ms
+2025-12-19 01:24:09.121 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-19 01:24:09.121 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/_vs/browserLink - null null
+2025-12-19 01:24:09.167 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_framework/aspnetcore-browser-refresh.js - 200 16500 application/javascript; charset=utf-8 45.2799ms
+2025-12-19 01:24:09.332 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/_vs/browserLink - 200 null text/javascript; charset=UTF-8 210.7047ms
+2025-12-19 01:24:09.570 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - null null
+2025-12-19 01:24:09.632 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7212/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 61.7179ms
+2025-12-19 01:24:12.345 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/22/average/all-periods - null null
+2025-12-19 01:24:12.557 +03:00 [INF] Executing endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverageAllPeriods (EMPLOYEE)'
+2025-12-19 01:24:12.663 +03:00 [INF] Route matched with {action = "GetEmployeeAverageAllPeriods", controller = "EmployeeEvaluation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetEmployeeAverageAllPeriods(Int32) on controller EMPLOYEE.Controllers.EmployeeEvaluationController (EMPLOYEE).
+2025-12-19 01:24:14.034 +03:00 [WRN] Entity 'Employee' has a global query filter defined and is the required end of a relationship with the entity 'EmployeeEvaluation'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-19 01:24:14.050 +03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-12-19 01:24:14.166 +03:00 [WRN] No store type was specified for the decimal property 'FinalScore' on entity type 'EmployeeEvaluation'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-19 01:24:15.491 +03:00 [INF] Executed DbCommand (229ms) [Parameters=[@__ToLower_3='month' (Size = 4000), @__employeeId_0='22', @__startPeriod_1='2025-12' (Size = 4000), @__endPeriod_2='2025-12' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) @__ToLower_3 AS [PeriodType], ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore], COUNT(*) AS [Count]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__startPeriod_1 AND [e].[Period] <= @__endPeriod_2
+GROUP BY [e].[EmployeeId]
+2025-12-19 01:24:15.543 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ToLower_3='quarter' (Size = 4000), @__employeeId_0='22', @__startPeriod_1='2025-10' (Size = 4000), @__endPeriod_2='2025-12' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) @__ToLower_3 AS [PeriodType], ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore], COUNT(*) AS [Count]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__startPeriod_1 AND [e].[Period] <= @__endPeriod_2
+GROUP BY [e].[EmployeeId]
+2025-12-19 01:24:15.549 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__ToLower_3='year' (Size = 4000), @__employeeId_0='22', @__startPeriod_1='2025-01' (Size = 4000), @__endPeriod_2='2025-12' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) @__ToLower_3 AS [PeriodType], ROUND(CAST(AVG(CAST([e].[Attendance] AS float)) AS decimal(18,2)), 2) AS [Attendance], ROUND(CAST(AVG(CAST([e].[Quality] AS float)) AS decimal(18,2)), 2) AS [Quality], ROUND(CAST(AVG(CAST([e].[Productivity] AS float)) AS decimal(18,2)), 2) AS [Productivity], ROUND(CAST(AVG(CAST([e].[Teamwork] AS float)) AS decimal(18,2)), 2) AS [Teamwork], ROUND(AVG([e].[FinalScore]), 2) AS [FinalScore], COUNT(*) AS [Count]
+FROM [EmployeeEvaluations] AS [e]
+WHERE [e].[EmployeeId] = @__employeeId_0 AND [e].[Period] >= @__startPeriod_1 AND [e].[Period] <= @__endPeriod_2
+GROUP BY [e].[EmployeeId]
+2025-12-19 01:24:15.559 +03:00 [INF] Executing OkObjectResult, writing value of type 'EMPLOYEE.Dtos.EmployeeEvaluationAverageAllPeriodsDto'.
+2025-12-19 01:24:15.592 +03:00 [INF] Executed action EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverageAllPeriods (EMPLOYEE) in 2906.1164ms
+2025-12-19 01:24:15.595 +03:00 [INF] Executed endpoint 'EMPLOYEE.Controllers.EmployeeEvaluationController.GetEmployeeAverageAllPeriods (EMPLOYEE)'
+2025-12-19 01:24:15.612 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7212/api/evaluations/employee/22/average/all-periods - 200 null application/json; charset=utf-8 3266.7469ms
