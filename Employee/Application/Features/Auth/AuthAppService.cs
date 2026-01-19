@@ -123,7 +123,7 @@ namespace EMPLOYEE.Application.Features.Auth
             await _userManager.AddToRoleAsync(user, dto.Role);
             return Result.Ok();
         }
-        // ================= Add Permission =================
+        // ================= RequestOtp =================
 
         public async Task<Result> RequestOtpAsync(RequestResetDto dto)
         {
