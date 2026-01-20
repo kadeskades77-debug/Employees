@@ -1,8 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Hosting;
+﻿using EMPLOYEE.Middlware;
 using Serilog;
-using System;
-using System.Threading.Tasks;
 
 public class ExceptionHandlingMiddleware
 {
@@ -23,10 +20,8 @@ public class ExceptionHandlingMiddleware
         }
         catch (Exception ex)
         {
-
-            Log.Error(ex, "Unhandled Exception");
-
-            context.Response.ContentType = "application/json";
+            if (context.Response.HasStarted)
+                throw;
 
             int statusCode;
             string message;
@@ -38,27 +33,36 @@ public class ExceptionHandlingMiddleware
                     message = bex.Message;
                     break;
 
-                case UnauthorizedAccessException uex:
-                    statusCode = 403;
-                    message = uex.Message;
+                case UnauthorizedAccessException:
+                    statusCode = StatusCodes.Status401Unauthorized;
+                    message = "Unauthorized access.";
                     break;
 
                 default:
-                    statusCode = 500;
-                    message = ex.Message;
+                    statusCode = StatusCodes.Status500InternalServerError;
+                    message = _env.IsDevelopment()
+                        ? ex.Message
+                        : "An unexpected error occurred.";
                     break;
             }
 
+            Log.Error(ex,
+                "Unhandled exception. Path: {Path}, StatusCode: {StatusCode}",
+                context.Request.Path,
+                statusCode);
+
+            context.Response.Clear();
+            context.Response.ContentType = "application/json";
             context.Response.StatusCode = statusCode;
 
-            var response = new
+            var response = new ApiResponse<object>
             {
-                StatusCode = statusCode,
-                Message = message
+                Success = false,
+                Message = message,
+                Data = null
             };
 
             await context.Response.WriteAsJsonAsync(response);
         }
     }
-    }
-
+}

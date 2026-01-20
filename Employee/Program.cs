@@ -96,11 +96,22 @@ builder.Services.AddSwaggerGen();
 
 #region Build Application
 var app = builder.Build();
+using var scope = app.Services.CreateScope();
+var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+
+// طلب وهمي لجعل EF Core و Identity تعمل التحميل الأولي
+var dummyUser = await userManager.FindByEmailAsync("dummy@example.com");
+if (dummyUser != null)
+{
+    var roles = await userManager.GetRolesAsync(dummyUser);
+}
+
 #endregion
 
 //#region Global Exception Middleware (Slack)
 //var slackWebhookUrl = builder.Configuration["Slack:WebhookUrl"];
-app.UseMiddleware<ExceptionHandlingMiddleware>();
+
+
 //#endregion
 
 #region Development Tools
@@ -112,6 +123,8 @@ if (app.Environment.IsDevelopment())
 #endregion
 
 #region Security Middlewares
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+app.UseMiddleware<RequestTimingMiddleware>();
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();

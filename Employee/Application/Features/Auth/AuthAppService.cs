@@ -3,9 +3,11 @@ using EMPLOYEE.Application.Common;
 using EMPLOYEE.Application.Common.Authorization;
 using EMPLOYEE.Application.Dtos;
 using EMPLOYEE.Data;
+using EMPLOYEE.Middlware;
 using EMPLOYEE.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 using Result = EMPLOYEE.Application.Common.Result;
 
 namespace EMPLOYEE.Application.Features.Auth
@@ -17,33 +19,37 @@ namespace EMPLOYEE.Application.Features.Auth
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IJwtService _jwtService;
         private readonly OtpService _otpService;
+        private readonly ILogger<RequestTimingMiddleware> _logger;
 
         public AuthAppService(
             UserManager<ApplicationUser> userManager,
             RoleManager<IdentityRole> roleManager,
             IJwtService jwtService,
             OtpService otpService,
-            ApplicationDbContext context)
+            ApplicationDbContext context,
+            ILogger<RequestTimingMiddleware> logger)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _jwtService = jwtService;
             _otpService = otpService;
             _context = context;
+            _logger = logger;
         }
 
         public async Task<Result<string>> LoginAsync(LoginDto dto)
         {
+           
             var user = await _userManager.FindByEmailAsync(dto.Email);
             if (user == null)
                 return Result<string>.Fail("Wrong credentials");
-
+       
             if (!await _userManager.CheckPasswordAsync(user, dto.Password))
                 return Result<string>.Fail("Wrong credentials");
-
+          
             var roles = await _userManager.GetRolesAsync(user);
             var token =await _jwtService.GenerateTokenAsync(user.Id, user.Email ?? "", roles);
-
+           
             return Result<string>.Ok(token);
         }
 
@@ -86,7 +92,7 @@ namespace EMPLOYEE.Application.Features.Auth
                 nameChanged = true;
             }
 
-            // تحديث الايميل فقط للأدمين
+        
             bool emailChanged = false;
             if (!string.IsNullOrWhiteSpace(dto.Email))
             {
